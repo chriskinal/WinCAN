@@ -1,0 +1,89 @@
+# AGENTS.md — WinCAN
+
+WinCAN is a .NET 10 port of [SavvyCAN](https://github.com/collin80/SavvyCAN) (Qt6/C++17).
+Goal: full feature parity, equivalent UX (modernized visuals, not a Qt pixel clone), same
+connectivity and same log/DBC file formats.
+
+Reference implementation lives at `C:\Github\SavvyCAN`.
+
+**Hard rule: never modify `C:\Github\SavvyCAN` or anything outside `C:\Github\WinCAN` without
+explicit permission.** The reference repo is read-only; read it freely.
+
+## Locked decisions
+
+| Area | Decision |
+|---|---|
+| UI | **Avalonia** (equivalent UX, modernized look; not a Qt clone) |
+| Architecture | **Clean .NET layers** — not a 1:1 file/class mapping of the C++ |
+| Scope | **Full parity in one pass** (no partial shipping milestones) |
+| Bus connections | GVRET serial, Lawicel serial, socketcand (TCP), MQTT, PCAN-Basic, Vector XL via P/Invoke. No Qt SerialBus dependency. |
+| Scripting | **Jint**; existing SavvyCAN JS scripts must run unmodified |
+| Charts | **ScottPlot** (replaces QCustomPlot, incl. hex axis ticker) |
+| NuGet | Standard NuGet allowed: maintained, permissive licenses, versions pinned centrally |
+| Tests | **xUnit, new tests** (do not port QtTest suites mechanically) |
+| SavvyCAN compat | Same log/DBC/project file formats; **own** settings store (do not touch SavvyCAN's QSettings registry keys) |
+
+Because scope is full parity in one pass, build bottom-up: frame model + timestamp semantics →
+file I/O → connection abstraction/transports → DBC + scripting → bus protocols → UI/RE windows.
+Design layer boundaries before filling them in.
+
+## Planned solution layout
+
+```
+WinCAN.sln
+src/WinCAN.Core          frame model, timestamps, filters, file I/O, DBC, scripting host
+src/WinCAN.Connections   transport abstraction + GVRET, Lawicel, socketcand, MQTT, PCAN, Vector
+src/WinCAN.App           Avalonia UI, MVVM (CommunityToolkit.Mvvm)
+tests/WinCAN.Tests       xUnit: parser round-trips, protocol framing, DBC, filter logic
+```
+
+Update this section if the layout changes during scaffolding.
+
+## Reference repo map (read before porting anything)
+
+- `can_structs.h` — `CommFrame`: `secs` + `usecs` timestamp, `FrameType` (CAN, CAN-FD,
+  FlexRay, LIN, Error, RemoteRequest, Invalid), payload up to 254 bytes. Port these exact
+  semantics; every format and transport depends on them.
+- `framefileio.cpp` — all log formats (BusMaster, Microchip, CRTD/OVMS, GVRET, CSV, Vector
+  TRC/BLF, IXXAT, CAN-DO, Vehicle Spy, candump, PCAN, pcap). `examples/` has fixtures.
+- `connections/` — GVRET binary serial protocol, Lawicel, socketcand, MQTT, canserver /
+  canlogserver, connection window, `canconmanager` (bus/frame routing).
+- `bus_protocols/` — ISO-TP, J1939, OBD2 (PIDs, poller, DBC), UDS.
+- `dbc/` — DBC parse/edit/save (node, message, signal editors).
+- `re/` — sniffer, graphing/temporal/flow views, fuzzing, UDS scan + firmware upload, OBD2.
+- `scriptcontainer.cpp` + `examples/*.js` — JS surface: `host`, `can`, `isotp`, `uds` globals.
+  Preserve this API so existing scripts run unchanged under Jint.
+- `test/`, `unit_tests/` — QtTest suites; treat as behavioral specs, write fresh xUnit tests.
+- `main.cpp`, `mainwindow.cpp` — app wiring, docks/panes, settings, shortcuts (`shortcutcheck`).
+
+## Gotchas that will bite a naive port
+
+- Capture timestamps are **seconds + microseconds** (not `DateTime`). Keep microsecond
+  precision end-to-end; don't convert capture timing to `DateTime`.
+- Frames are not all classic 8-byte CAN: CAN-FD up to 64 bytes, FlexRay/LIN up to 254,
+  plus remote/error frames. Model them first-class.
+- IDs are 11-bit or 29-bit; preserve extended/remote flags through file formats.
+- File-format compatibility is semantic, not just parseable: validate with round-trip tests
+  against `C:\Github\SavvyCAN\examples` (read-only), including timestamps and flags.
+- Settings are QSettings (registry on Windows) in SavvyCAN. WinCAN uses its own store; do not
+  read/write SavvyCAN keys even for "compatibility".
+- SavvyCAN vendors everything; here NuGet is allowed. Prefer maintained, permissively
+  licensed packages and pin versions centrally.
+- `pico-flexray` (libusb) is optional in SavvyCAN; don't block parity work on it.
+- Licensing: SavvyCAN's `LICENSE` is MIT, but `can_structs.h` is derived from Qt's
+  `QCanBusFrame` (LGPL/GPL family) per its own comment. Keep attribution and flag licensing
+  before any distribution.
+
+## Commands
+
+Project not scaffolded yet. Once it exists, then keep this section current:
+
+```powershell
+dotnet build
+dotnet test
+dotnet run --project src/WinCAN.App
+dotnet test --filter FullyQualifiedName~FrameFileIO
+```
+
+Avalonia + vendor SDKs: PCAN-Basic / Vector XL DLLs are runtime-only dependencies on Windows;
+keep them behind interfaces so the app builds and tests run without hardware or those DLLs.
