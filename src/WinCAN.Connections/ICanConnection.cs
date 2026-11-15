@@ -7,6 +7,8 @@ public enum ConnectionType
     GvretSerial,
     LawicelSerial,
     SocketCanD,
+    CanServer,
+    CanLogServer,
     Mqtt,
     Pcan,
     VectorXl,

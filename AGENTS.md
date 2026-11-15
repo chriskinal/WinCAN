@@ -95,8 +95,11 @@ dotnet test --filter FullyQualifiedName~FileFormats
   IXXAT MiniLog, CAN-DO, Vehicle Spy, candump, Lawicel, PCAN, CANalyzer ASC, CARBUS, CANHacker,
   Generic CSV, Cabana, CANOpen Magic, IXXAT CSV, CANWise. Not yet: BLF, pcap/Wireshark,
   Tesla AP, CANServer, Kvaser, CLX000 (registry slots exist, `Format` is null).
-- `WinCAN.Connections`: `ICanConnection`, `CanConnectionManager`, option records, and the text
-  protocols `GvretProtocol`, `LawicelProtocol`, `SocketCanDProtocol`.
+- `WinCAN.Connections`: `ICanConnection`, `CanConnectionManager`, option records, text
+  protocols (`GvretProtocol`, `LawicelProtocol`, `SocketCanDProtocol`, `CanServerProtocol`,
+  `CanLogServerProtocol`, `MqttFrameCodec`), and transport implementations over serial/TCP/UDP
+  (`GvretConnection`, `LawicelConnection`, `SocketCanDConnection`, `CanServerConnection`,
+  `CanLogServerConnection`, `MqttConnection`).
 - Fixtures copied from SavvyCAN's `examples` live in `tests/WinCAN.Tests/Fixtures`; deviations from
   the reference are listed in `docs/research/log-formats.md`.
 
