@@ -506,3 +506,18 @@ TX: `frameId() & 0x20000000` (error frames) short-circuit without publishing; ex
 - **socketcand** and **CANlogserver** both assume line/`>`-delimited text; use a byte-oriented accumulator per socket, not `StreamReader` line reads (socketcand frames have no newline).
 - **CANserver/MQTT/GVRET-FD** carry binary payloads up to 64 bytes (GVRET FD), 254 is only reachable via FlexRay (not in these drivers).
 - Reproduce the reference's **deliberate quirks** (Lawicel decimal classic DLC, CANserver's naive timestamp concatenation, GVRET's drop on `len > 64`/`len > 8` clamping, socketcand's `token[2] as double` seconds), and **fix** the reference's clear bugs: GVRET `GET_ANALOG_INPUTS` never leaving the state, socketcand overwriting bus speed with 250000 in `piSetBusSettings`, and Lawicel DLC `toInt()` fallback reading mid-payload.
+
+## 8. WinCAN protocol deviations (deliberate fixes)
+
+Implemented in `src/WinCAN.Connections/Protocols`, each covered by tests in
+`tests/WinCAN.Tests/Protocols`:
+
+| Driver | Reference behaviour | WinCAN behaviour | Why |
+|---|---|---|---|
+| Lawicel TX | error-frame guard `frameId() & 0x20000000` can never fire (the accessor masks the bit off), so error frames are sent as ID 0 | error frames are not sent | Matches the guard's stated intent |
+| socketcand TX | extended IDs set bit 31 in a signed `int` and print with a minus sign (`-1f0e0000`) | ID printed as unsigned 32-bit hex with bit 31 set (`98daf110`) | The host parses the ID as unsigned; the reference's output can never be understood |
+| socketcand `piSetBusSettings` | stores the bus config, then overwrites the speed with 250000 | stores the config unchanged | Reference bug with no protocol meaning |
+
+The Lawicel and socketcand **receive** paths keep the reference grammar exactly (including
+Lawicel's DECIMAL classic DLC, HEX CAN FD DLC codes, 4-hex-digit hardware counter with the
+60 s wrap, and socketcand's `< hi >`/`< ok >` handshake with its partial-datagram buffer).
