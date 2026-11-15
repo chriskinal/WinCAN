@@ -185,8 +185,25 @@ Only lines with length > 70 are parsed.
 
 ## Known reference bugs
 
-- BusMaster/Vector-trace ms field multiplied by 100 (retained for load parity).
+- BusMaster's ms field is multiplied by 100 in the reference loader (see deviations below).
 - Microchip and Generic CSV detectors reject SavvyCAN's own writer output due to trailing
   separators (fix detectors; regression-tested).
 - Cabana writer emits `166.064000.0` (fix; loader tolerates it).
 - GVRET `GET_ANALOG_INPUTS` never returns to idle (fix in WinCAN).
+
+## WinCAN deviations (deliberate fixes)
+
+Implemented deviations, each covered by a test in `tests/WinCAN.Tests/FileFormats`:
+
+| Format | Reference behaviour | WinCAN behaviour | Why |
+|---|---|---|---|
+| BusMaster | ms field multiplied by 100 (100 µs units) | real milliseconds | Writer emits ms, so the reference never round-trips its own files |
+| BusMaster | ID column always loses its first two characters (assumes an `0x` prefix) | strip `0x` only when present | Real BusMaster files print bare zero-padded hex; truncation corrupts short IDs |
+| BusMaster | writer writes `bus + 1`, loader keeps the raw channel | writer writes the bus as-is | Loader is unchanged (third-party files read identically); round trips are now stable |
+| PCAN | writer writes `bus + 1`, loader keeps the raw bus | writer writes the bus as-is | Same reason as BusMaster |
+| CARBUS | a `# $LocalTime=...` line marks the whole file as failed | comment rows are skipped | Files with that note otherwise cannot be loaded at all |
+| CARBUS | DLC column parsed as hex | parsed as decimal | Hex parsing breaks every CAN FD frame with a DLC above 9 (`16`, `64`) |
+| CANHacker | loader indexes past the token list when the DLC exceeds the data | returns false | The reference "successfully" loads unrelated logs (e.g. CANWise) |
+| Microchip | detector accepts any line without `;` separators | requires four fields | Otherwise the detector matches every text file placed before it |
+| IXXAT CSV | extended flag always false | set when ID > 0x7FF | 29-bit IDs round-trip |
+

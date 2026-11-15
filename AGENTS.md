@@ -76,14 +76,29 @@ Update this section if the layout changes during scaffolding.
 
 ## Commands
 
-Project not scaffolded yet. Once it exists, then keep this section current:
+The solution is scaffolded (`WinCAN.slnx`, SDK pinned by `global.json`). Always run from the
+repo root so the pinned SDK is used:
 
 ```powershell
 dotnet build
-dotnet test
+dotnet test --nologo -v q
 dotnet run --project src/WinCAN.App
-dotnet test --filter FullyQualifiedName~FrameFileIO
+dotnet test --filter FullyQualifiedName~FileFormats
 ```
+
+## Progress so far
+
+- `WinCAN.Core`: `CanFrame` / `FrameTimestamp` (CommFrame semantics), `CanFilter`, `CanIdParser`,
+  `FrameStore`, settings store, and the log-format layer
+  (`src/WinCAN.Core/FileFormats`, `LogFormatRegistry`).
+- Log formats implemented: native GVRET CSV, CRTD, BusMaster, Microchip, Vector trace,
+  IXXAT MiniLog, CAN-DO, Vehicle Spy, candump, Lawicel, PCAN, CANalyzer ASC, CARBUS, CANHacker,
+  Generic CSV, Cabana, CANOpen Magic, IXXAT CSV, CANWise. Not yet: BLF, pcap/Wireshark,
+  Tesla AP, CANServer, Kvaser, CLX000 (registry slots exist, `Format` is null).
+- `WinCAN.Connections`: `ICanConnection`, `CanConnectionManager`, option records, GVRET protocol.
+- Fixtures copied from SavvyCAN's `examples` live in `tests/WinCAN.Tests/Fixtures`; deviations from
+  the reference are listed in `docs/research/log-formats.md`.
+
 
 Avalonia + vendor SDKs: PCAN-Basic / Vector XL DLLs are runtime-only dependencies on Windows;
 keep them behind interfaces so the app builds and tests run without hardware or those DLLs.
