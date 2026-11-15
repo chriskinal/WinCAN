@@ -1,0 +1,55 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: Node23 
+BO_ 2566800675 Hitchheight: 8 Node23
+   SG_ RearHitchInWorkIndication : 14|2@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ RearHitchExitCode : 40|6@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ RearHitchPositionLimitStatus : 8|3@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ RearHitchPosition : 0|8@1+ (0.4,0) [0|1] "" Vector__XXX
+   SG_ RearNominalLowerLinkForce : 16|8@1+ (0.8,-100) [0|1] "" Vector__XXX
+   SG_ RearDraft : 24|16@1+ (10,-32000) [0|1] "" Vector__XXX
+
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "matchingcriteria" 0;
+BA_DEF_DEF_ "filterlabeling" 1;
+BA_ "GenMsgForegroundColor" BO_ 2566800675 "#000000";
+VAL_ 2566800675 RearHitchInWorkIndication 0 "Hitch_position_is_out-of-work" 1 "Hitch_position_is_in-work" 2 "Error_indication" 3 "Not_available";
+VAL_ 2566800675 RearHitchExitCode 0 "No_Reason/All_clear" 1 "Operator_not_present" 2 "Implement_released_control_of_function" 3 "Operator_override_of_function" 4 "Operator_control_not_in_valid_position" 5 "Remote_command_timeout" 6 "Remote_command_out_of_range/timeout" 7 "Function_not_calibrated" 8 "Operator_control_fault" 9 "Function_fault" 20 "Hydraulic_oil_level_too_low" 21 "Hitch_locked_out" 0 "No Description";
+VAL_ 2566800675 RearHitchPositionLimitStatus 0 "Not_Limited" 1 "Operator_limited/controlled_(request_cannot_be_implemented)" 2 "Limited_High_(only_lower_command_values_result_in_a_change)" 3 "Limited_Low_(only_higher_command_values_result_in_a_change)" 4 "Reserved" 5 "Reserved" 110 "Non-recoverable_fault" 111 "Not_available_(parameter_not_supported)";

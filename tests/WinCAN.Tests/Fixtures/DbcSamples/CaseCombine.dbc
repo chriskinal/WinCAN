@@ -1,0 +1,68 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: Combine 
+BO_ 2566898596 MainSensors: 8 Combine
+   SG_ MoistureContent : 0|16@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FlowRate : 16|16@1+ (0.001,0) [0|1] "" Vector__XXX
+   SG_ YieldSensorMv : 32|16@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ MeanEdgeInScan : 48|8@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ PFState : 56|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566875536 MainSensorsAlt: 8 Combine
+   SG_ CropType : 0|16@1+ (0.001,0) [0|1] "" Combine
+   SG_ WorkingWidthMM : 48|16@1+ (1,0) [0|1] "" Combine
+   SG_ CropMoistureContent : 32|16@1+ (0.01,0) [0|1] "" Combine
+   SG_ CropMoistureContent65 : 32|16@1+ (0.01,0) [0|1] "" Combine
+
+BO_ 2566902000 GrainFlow: 8 Combine
+   SG_ GrainFlow : 0|16@1+ (0.001,0) [0|1] "" Vector__XXX
+
+CM_ SG_ 2566898596 FlowRate "kg/s_(Crop_mass_flow_(0.01_gram_per_second_per_bit))";
+CM_ SG_ 2566875536 CropType "Crop_mass_flow_(0.01_gram_per_second_per_bit)";
+CM_ SG_ 2566875536 WorkingWidthMM "Working_width_(mm)";
+CM_ SG_ 2566875536 CropMoistureContent "Crop_moisture_content_(0.01%_per_bit)";
+CM_ SG_ 2566875536 CropMoistureContent65 "Crop_moisture_content_(0.01%_per_bit)";
+CM_ SG_ 2566902000 GrainFlow "kg/s_(Crop_mass_flow_(0.01_gram_per_second_per_bit))";
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "matchingcriteria" 0;
+BA_DEF_DEF_ "filterlabeling" 0;
+BA_ "GenMsgBackgroundColor" BO_ 2566898596 "#55ff7f";
+BA_ "GenMsgBackgroundColor" BO_ 2566875536 "#00aaff";
+BA_ "GenMsgBackgroundColor" BO_ 2566902000 "#55ff00";

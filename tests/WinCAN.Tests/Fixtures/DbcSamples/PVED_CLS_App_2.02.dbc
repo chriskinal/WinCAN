@@ -1,0 +1,2573 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ELOBAU_RIGHT_R ELOBAU_RIGHT_P ELOBAU_LEFT_R ELOBAU_LEFT_P GPS2_Controller WAS AUX_JOYSTICK AUX_STW STW_sensor Service_tool Vehicle_speed_Controller MMI GPS_Controller SafetyUC MainUC
+VAL_TABLE_ Reply_WA_mov_status_L_S 11 "Information not available " 2 "Reserved" 1 "Completed" 0 "In Progress" ;
+VAL_TABLE_ Reply_WA_mov_status_L_M 11 "Information not available " 2 "Reserved" 1 "Completed" 0 "In Progress" ;
+VAL_TABLE_ Service_mode_state_M 255 "Information not available " 47 "Spool calibration complete" 46 "Spool calibration failure" 39 "Spool calibration counter update" 38 "Spool parameters update" 37 "Spool param ready to update" 36 "Spool param plausibility check" 35 "Spool calibration in progress" 34 "Spool calibration armed" 33 "Spool calibration getting armed" 32 "Spool calibration reset" 31 "WAS calibration complete" 30 "WAS calibration failure" 29 "WAS calibration counter update" 17 "WAS calibration in progress" 16 "WAS calibration Reset" 2 "Description for the value '0x2'" 1 "Direct output control " 0 "Direct output control reset" ;
+VAL_TABLE_ AUX_PRG_Request 52 "AUX Program 5" 51 "AUX Program 4" 50 "AUX Program 3" 49 "AUX Program 2" 48 "AUX Program 1" ;
+VAL_TABLE_ Desired_L2L 255 "Not Available" ;
+VAL_TABLE_ GPS_Receiver_lockout 3 "reserved" 2 "GPS2 receiver selected" 1 "GPS receiver selected" 0 "No GPS receiver selected" ;
+VAL_TABLE_ Spool_ctrl 3 "Information not available" 2 "Error condition" 1 "Spool control released" 0 "Spool is controlled actively" ;
+VAL_TABLE_ GPS_Receiver_Selection 3 "No information available" 2 "GPS2 receiver selected" 1 "GPS receiver selected" 0 "No GPS receiver selected (GPS steering prohibited)" ;
+VAL_TABLE_ SASA_Sensor_chip_error_code 15 "No error" 14 "Temperature Warning" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Memory failure" 5 "CPU failure" 4 "Power failure" 3 "CAN input message failure" 2 "Steering angle failure" 1 "Sensor Chip error" 0 "Reserved" ;
+VAL_TABLE_ AUX_Steering_Lockout 3 "Information not available" 2 "Error condition" 1 "AUX Steering prohobited" 0 "AUX steering allowed" ;
+VAL_TABLE_ EH_Steering_lockout 3 "Information not available" 2 "Error condition" 1 "EH-steering NOT allowed" 0 "EH-steering allowed" ;
+VAL_TABLE_ Direction_indication 3 "Not available" 2 "Error condition" 1 "Reverse driving" 0 "Forward driving" ;
+VAL_TABLE_ Mechanical_system_lockout 3 "Not available" 2 "Error Condition" 1 "Active" 0 "Not active" ;
+VAL_TABLE_ Machine_can_execute_cmd 3 "Not available" 2 "Error condition" 1 "System is ready" 0 "System is not ready" ;
+VAL_TABLE_ Steering_input_position_status 3 "Not available" 2 "Error condition" 1 "Correct position" 0 "Incorrect position" ;
+VAL_TABLE_ Request_reset_cmd_status 3 "Not available" 2 "Error condition" 1 "Reset required" 0 "Reset not required" ;
+VAL_TABLE_ Steering_cmd_status 3 "Not available" 2 "Error condition" 1 "Intended for steering" 0 "Not intended for steering" ;
+VAL_TABLE_ FMI 31 "Condition exists" 30 "Stuck Closed" 29 "Stuck Open" 28 "Not in neutral at Power-up" 27 "Unable to return to neutral" 26 "No steering" 25 "Signal crosscheck failed" 24 "Reserved" 23 "Unintended Steering" 22 "Message missing" 21 "Data drifted low" 20 "Data drifted high" 19 "Received network data in error" 18 "Data valid, but below normal operating range - Moderately severe level" 17 "Data valid, but below normal operating range - Least severe level" 16 "Data valid, but above normal operating range - Moderately severe level" 15 "Data valid, but above normal operating range - Least severe level" 14 "Special instructions" 13 "Out of calibration" 12 "Bad intelligent device or component" 11 "Unknown root-cause" 10 "Abnormal rate of change" 9 "Abnormal update rate" 8 "Abnormal frequency or pulse width or period" 7 "Mechanical system not responding or out of adjustement" 6 "Current above normal or grounded circuit" 5 "Current below normal or open circuit" 4 "Voltage below normal or short-circuit to low source" 3 "Voltage above normal or short-circuit to high source" 2 "Data erratic, intermittent or incorrect" 1 "Data valid, but below normal operational range - Most severe level" 0 "Data valid, but above normal operational range - Most severe level" ;
+VAL_TABLE_ Lock_out 3 "Information not available" 2 "Error Condition" 1 "Change prohibited" 0 "Change Allowed" ;
+VAL_TABLE_ Cut_off_valve_self_test 3 "Information not available" 2 "cut-off valve test passed" 1 "Cut-off valve test failed" 0 "No test result available" ;
+VAL_TABLE_ FDA_Fault_condition 3 "Not Available" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_TABLE_ FDA_table_device 3 "Not Available" 2 "Right" 1 "Neutral" 0 "Left" ;
+VAL_TABLE_ Transmission_rate 0 "OFF" ;
+VAL_TABLE_ service_mode_request 1437204735 "Enter service mode" ;
+VAL_TABLE_ Operation_status 226 "Service mode - Spool Calibration" 225 "Service mode - WAS Calibration" 65 "GPS2 steering" 52 "AUX Program 5" 51 "AUX Program 4" 50 "AUX Program 3" 49 "AUX Program 2" 208 "Off-Road safety Checks" 255 "Safe state" 240 "Initialization" 224 "Service mode - Direct spool control" 64 "GPS steering" 48 "AUX Program 1" 36 "STW program 5" 35 "STW program 4" 34 "STW program 3" 33 "STW program 2" 32 "STW program 1" 17 "Off-road non-reaction" 16 "Off-road reaction" 0 "On-road" ;
+VAL_TABLE_ J1939_BOOL 3 "Info not available" 2 "Error condition" 1 "ON" 0 "OFF" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ AUX_JOY_CRC_R : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ AUX_JOY_CRC_P : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2566858842 STAT_MSG_8_S: 8 SafetyUC
+ SG_ SVC_Integral_part_S : 16|16@1+ (1,-1000) [0|2000] "10um"  Service_tool
+ SG_ IMD_Status_S : 6|2@1+ (1,0) [0|3] ""  Service_tool
+ SG_ IMD_Confidence_Counter_S : 8|8@1+ (1,0) [0|255] "10ms"  Service_tool
+
+BO_ 2566858771 STAT_MSG_8_M: 8 MainUC
+ SG_ SVC_Integral_part_M : 16|16@1+ (1,-1000) [0|2000] "10um"  Service_tool
+ SG_ IMD_Status_M : 6|2@1+ (1,0) [0|3] ""  Service_tool
+ SG_ IMD_Confidence_Counter_M : 8|8@1+ (1,0) [0|255] "10ms"  Service_tool
+
+BO_ 2365446638 ELOBAU_EJM2_R: 8 ELOBAU_LEFT_R
+ SG_ ELOBAU_RIGHT_R : 4|2@1+ (1,0) [0|3] ""  SafetyUC
+ SG_ ELOBAU_POS_R : 6|10@1+ (1,0) [0|1000] "0.1%"  SafetyUC
+ SG_ ELOBAU_NEUTRAL_R : 0|2@1+ (1,0) [0|3] ""  SafetyUC
+ SG_ ELOBAU_LEFT_R : 2|2@1+ (1,0) [0|3] ""  SafetyUC
+
+BO_ 2365446125 ELOBAU_EJM1_R: 8 ELOBAU_RIGHT_R
+ SG_ ELOBAU_RIGHT_R : 4|2@1+ (1,0) [0|3] ""  SafetyUC
+ SG_ ELOBAU_POS_R : 6|10@1+ (1,0) [0|1000] "0.1%"  SafetyUC
+ SG_ ELOBAU_NEUTRAL_R : 0|2@1+ (1,0) [0|3] ""  SafetyUC
+ SG_ ELOBAU_LEFT_R : 2|2@1+ (1,0) [0|3] ""  SafetyUC
+
+BO_ 2365446636 ELOBAU_EJM2_P: 8 ELOBAU_LEFT_P
+ SG_ ELOBAU_RIGHT_P : 4|2@1+ (1,0) [0|3] ""  MainUC
+ SG_ ELOBAU_POS_P : 6|10@1+ (1,0) [0|1000] "0.1%"  MainUC
+ SG_ ELOBAU_NEUTRAL_P : 0|2@1+ (1,0) [0|3] ""  MainUC
+ SG_ ELOBAU_LEFT_P : 2|2@1+ (1,0) [0|3] ""  MainUC
+
+BO_ 2365446123 ELOBAU_EJM1_P: 8 ELOBAU_RIGHT_P
+ SG_ ELOBAU_RIGHT_P : 4|2@1+ (1,0) [0|3] ""  MainUC
+ SG_ ELOBAU_POS_P : 6|10@1+ (1,0) [0|1000] "0.1%"  MainUC
+ SG_ ELOBAU_NEUTRAL_P : 0|2@1+ (1,0) [0|3] ""  MainUC
+ SG_ ELOBAU_LEFT_P : 2|2@1+ (1,0) [0|3] ""  MainUC
+
+BO_ 2365446382 ELOBAU_BJM2_R: 8 ELOBAU_LEFT_R
+ SG_ ELOBAU_RIGHT_R : 4|2@1+ (1,0) [0|3] ""  SafetyUC
+ SG_ ELOBAU_POS_R : 6|10@1+ (1,0) [0|1000] "0.1%"  SafetyUC
+ SG_ ELOBAU_NEUTRAL_R : 0|2@1+ (1,0) [0|3] ""  SafetyUC
+ SG_ ELOBAU_LEFT_R : 2|2@1+ (1,0) [0|3] ""  SafetyUC
+
+BO_ 2365445869 ELOBAU_BJM1_R: 8 ELOBAU_RIGHT_R
+ SG_ ELOBAU_RIGHT_R : 4|2@1+ (1,0) [0|3] ""  SafetyUC
+ SG_ ELOBAU_POS_R : 6|10@1+ (1,0) [0|1000] "0.1%"  SafetyUC
+ SG_ ELOBAU_NEUTRAL_R : 0|2@1+ (1,0) [0|3] ""  SafetyUC
+ SG_ ELOBAU_LEFT_R : 2|2@1+ (1,0) [0|3] ""  SafetyUC
+
+BO_ 2365446380 ELOBAU_BJM2_P: 8 ELOBAU_LEFT_P
+ SG_ ELOBAU_RIGHT_P : 4|2@1+ (1,0) [0|3] ""  MainUC
+ SG_ ELOBAU_POS_P : 6|10@1+ (1,0) [0|1000] "0.1%"  MainUC
+ SG_ ELOBAU_NEUTRAL_P : 0|2@1+ (1,0) [0|3] ""  MainUC
+ SG_ ELOBAU_LEFT_P : 2|2@1+ (1,0) [0|3] ""  MainUC
+
+BO_ 2365445867 ELOBAU_BJM1_P: 8 ELOBAU_RIGHT_P
+ SG_ ELOBAU_RIGHT_P : 4|2@1+ (1,0) [0|3] ""  MainUC
+ SG_ ELOBAU_POS_P : 6|10@1+ (1,0) [0|1000] "0.1%"  MainUC
+ SG_ ELOBAU_NEUTRAL_P : 0|2@1+ (1,0) [0|3] ""  MainUC
+ SG_ ELOBAU_LEFT_P : 2|2@1+ (1,0) [0|3] ""  MainUC
+
+BO_ 2566858586 STAT_MSG_7_S: 8 SafetyUC
+ SG_ JOY_FLW_REQ_S : 32|16@1+ (1,-1000) [-1000|1000] "0.1%" Vector__XXX
+ SG_ JOY2_S : 16|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+ SG_ JOY1_S : 0|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+
+BO_ 2566858515 STAT_MSG_7_M: 8 MainUC
+ SG_ JOY_FLW_REQ_M : 32|16@1+ (1,-1000) [-1000|1000] "0.1%" Vector__XXX
+ SG_ JOY2_M : 16|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+ SG_ JOY1_M : 0|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+
+BO_ 2360089875 GPS2_GMS: 8 MainUC
+ SG_ GPS2_Limit_status : 29|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ GPS2_Exit_reason : 32|6@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ GPS2_System_ready : 18|2@1+ (1,0) [0|3] ""  GPS2_Controller
+ SG_ GPS2_System_lockout : 16|2@1+ (1,0) [0|3] ""  GPS2_Controller
+ SG_ GPS2_Str_input_pos_status : 20|2@1+ (1,0) [0|3] ""  GPS2_Controller
+ SG_ GPS2_Req_reset : 22|2@1+ (1,0) [0|3] ""  GPS2_Controller
+ SG_ GPS2_Estimated_curvature : 0|16@1+ (0.25,-8032) [-8032|8032] "1/km"  GPS2_Controller
+
+BO_ 2360152861 GPS2_GMC: 8 GPS2_Controller
+ SG_ GPS2_Str_cmd_status : 16|2@1+ (1,0) [0|3] ""  MainUC
+ SG_ GPS2_Curvature_cmd : 0|16@1+ (0.25,-8032) [-8032|8032] "1/km"  MainUC
+
+BO_ 2565406554 J1939_ACK_S: 8 SafetyUC
+ SG_ Control_byte_S : 0|8@1+ (1,0) [0|0] ""  Service_tool
+
+BO_ 2565406483 J1939_ACK_M: 8 MainUC
+ SG_ Control_byte_M : 0|8@1+ (1,0) [0|0] ""  Service_tool
+
+BO_ 2565495550 REQ_PGN_S: 3 Service_tool
+ SG_ REQ_PGN_MSB_S : 0|8@1+ (1,0) [0|255] ""  SafetyUC
+ SG_ REQ_PGN_LSB_S : 8|8@1+ (1,0) [0|255] ""  SafetyUC
+
+BO_ 2565477374 REQ_PGN_M: 3 Service_tool
+ SG_ REQ_PGN_LSB_M : 8|8@1+ (1,0) [0|255] ""  MainUC
+ SG_ REQ_PGN_MSB_M : 0|8@1+ (1,0) [0|255] ""  MainUC
+
+BO_ 2566834778 DM1_S: 8 SafetyUC
+
+BO_ 2566834707 DM1_M: 8 MainUC
+
+BO_ 2565865050 SER_TOOL_REPLY_S: 8 SafetyUC
+ SG_ P3822_S m3822 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3814_S m3814 : 32|8@1+ (1,0) [1|25] "%" Vector__XXX
+ SG_ P3812_S m3812 : 32|16@1+ (1,0) [5|400] "dDeg" Vector__XXX
+ SG_ P3811_S m3811 : 32|8@1+ (1,0) [1|10] "" Vector__XXX
+ SG_ P3810_S m3810 : 32|8@1+ (1,0) [1|10] "" Vector__XXX
+ SG_ P3808_S m3808 : 32|16@1+ (1,0) [10|600] "100ms" Vector__XXX
+ SG_ P3806_S m3806 : 32|16@1+ (1,0) [10|600] "100ms" Vector__XXX
+ SG_ P3804_S m3804 : 32|16@1+ (1,0) [5|400] "dDeg" Vector__XXX
+ SG_ P3802_S m3802 : 32|16@1+ (1,0) [50|300] "10um" Vector__XXX
+ SG_ P3801_S m3801 : 32|8@1+ (1,0) [0|60] "" Vector__XXX
+ SG_ P3799_S m3799 : 32|16@1+ (1,0) [0|300] "10um" Vector__XXX
+ SG_ P3797_S m3797 : 32|16@1+ (1,0) [0|300] "10um" Vector__XXX
+ SG_ P3795_S m3795 : 32|16@1+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ P3793_S m3793 : 32|16@1+ (1,0) [0|2500] "mv" Vector__XXX
+ SG_ P3791_S m3791 : 32|16@1+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ P3789_S m3789 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3776_S m3776 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3775_S m3775 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3774_S m3774 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3773_S m3773 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3772_S m3772 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3771_S m3771 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3769_S m3769 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3719_S m3719 : 32|8@1+ (1,0) [0|45] "deg" Vector__XXX
+ SG_ P3718_S m3718 : 32|8@1+ (1,0) [5|200] "dHz" Vector__XXX
+ SG_ P3716_S m3716 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3714_S m3714 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3712_S m3712 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3710_S m3710 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3708_S m3708 : 32|16@1+ (1,0) [100|1000] "IR" Vector__XXX
+ SG_ P3706_S m3706 : 32|16@1+ (1,0) [1|180] "Deg" Vector__XXX
+ SG_ P3705_S m3705 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3703_S m3703 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3701_S m3701 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3700_S m3700 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3699_S m3699 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3698_S m3698 : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ P3697_S m3697 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3696_S m3696 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3694_S m3694 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3692_S m3692 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3690_S m3690 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3689_S m3689 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3688_S m3688 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3686_S m3686 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3684_S m3684 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3682_S m3682 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3681_S m3681 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3680_S m3680 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3678_S m3678 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3676_S m3676 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3674_S m3674 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3673_S m3673 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3672_S m3672 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3670_S m3670 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3668_S m3668 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3666_S m3666 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3665_S m3665 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3664_S m3664 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3662_S m3662 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3660_S m3660 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3658_S m3658 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3657_S m3657 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3656_S m3656 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3654_S m3654 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3652_S m3652 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3650_S m3650 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3649_S m3649 : 32|8@1+ (1,0) [0|100] "dRpm" Vector__XXX
+ SG_ P3648_S m3648 : 32|8@1+ (1,0) [0|100] "IR" Vector__XXX
+ SG_ P3647_S m3647 : 32|8@1+ (1,0) [0|100] "IR" Vector__XXX
+ SG_ P3646_S m3646 : 32|8@1+ (1,0) [0|100] "dRpm" Vector__XXX
+ SG_ P3644_S m3644 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3584_S m3584 : 32|8@1+ (1,0) [0|45] "deg" Vector__XXX
+ SG_ P3583_S m3583 : 32|8@1+ (1,0) [1|100] "drpm" Vector__XXX
+ SG_ P3582_S m3582 : 32|8@1+ (1,0) [5|200] "dHz" Vector__XXX
+ SG_ P3580_S m3580 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3578_S m3578 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3576_S m3576 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3574_S m3574 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3573_S m3573 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3572_S m3572 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3571_S m3571 : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ P3570_S m3570 : 32|8@1+ (1,0) [0|200] "dDeg" Vector__XXX
+ SG_ P3569_S m3569 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3568_S m3568 : 32|8@1+ (1,0) [1|180] "" Vector__XXX
+ SG_ P3566_S m3566 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3564_S m3564 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3562_S m3562 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3561_S m3561 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3560_S m3560 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3558_S m3558 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3556_S m3556 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3554_S m3554 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3553_S m3553 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3552_S m3552 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3550_S m3550 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3548_S m3548 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3546_S m3546 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3545_S m3545 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3544_S m3544 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3542_S m3542 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3540_S m3540 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3538_S m3538 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3537_S m3537 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3536_S m3536 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3534_S m3534 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3532_S m3532 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3530_S m3530 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3529_S m3529 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3528_S m3528 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3526_S m3526 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3524_S m3524 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3522_S m3522 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3521_S m3521 : 32|8@1+ (1,0) [0|100] "drpm" Vector__XXX
+ SG_ P3519_S m3519 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3484_S m3484 : 32|8@1+ (1,0) [0|200] "dHz" Vector__XXX
+ SG_ P3483_S m3483 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3482_S m3482 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3481_S m3481 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3480_S m3480 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3479_S m3479 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3478_S m3478 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3477_S m3477 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3476_S m3476 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3475_S m3475 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3474_S m3474 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3473_S m3473 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3469_S m3469 : 32|16@1+ (1,0) [0|89] "deg" Vector__XXX
+ SG_ P3467_S m3467 : 32|16@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3465_S m3465 : 32|16@1+ (1,0) [0|89] "deg" Vector__XXX
+ SG_ P3463_S m3463 : 32|16@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3461_S m3461 : 32|16@1+ (1,0) [0|89] "deg" Vector__XXX
+ SG_ P3459_S m3459 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3457_S m3457 : 32|16@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3455_S m3455 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3453_S m3453 : 32|16@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3451_S m3451 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3449_S m3449 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3428_S m3428 : 32|16@1+ (1,0) [0|89] "deg" Vector__XXX
+ SG_ P3426_S m3426 : 32|16@1+ (1,0) [0|89] "deg" Vector__XXX
+ SG_ P3424_S m3424 : 32|16@1+ (1,0) [1000|10000] "mm" Vector__XXX
+ SG_ P3422_S m3422 : 32|16@1+ (1,0) [1000|10000] "mm" Vector__XXX
+ SG_ P3421_S m3421 : 32|8@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ P3419_S m3419 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3383_S m3383 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3381_S m3381 : 32|16@1+ (1,0) [0|60000] "" Vector__XXX
+ SG_ P3379_S m3379 : 32|16@1+ (1,0) [100|400] "10ms" Vector__XXX
+ SG_ P3378_S m3378 : 32|8@1+ (1,0) [1|75] "10ms" Vector__XXX
+ SG_ P3377_S m3377 : 32|8@1+ (1,0) [0|200] "10um" Vector__XXX
+ SG_ P3375_S m3375 : 32|16@1+ (1,0) [0|2000] "IR" Vector__XXX
+ SG_ P3374_S m3374 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3372_S m3372 : 32|16@1+ (1,0) [0|360] "deg" Vector__XXX
+ SG_ P3371_S m3371 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3369_S m3369 : 32|16@1+ (1,0) [0|2000] "IR" Vector__XXX
+ SG_ P3368_S m3368 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3366_S m3366 : 32|16@1+ (1,0) [0|4800] "dRpm" Vector__XXX
+ SG_ P3365_S m3365 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3364_S m3364 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3363_S m3363 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3361_S m3361 : 32|16@1+ (1,0) [0|2000] "IR" Vector__XXX
+ SG_ P3360_S m3360 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3358_S m3358 : 32|16@1+ (1,0) [0|4800] "dRpm" Vector__XXX
+ SG_ P3357_S m3357 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3355_S m3355 : 32|16@1+ (1,0) [0|360] "deg" Vector__XXX
+ SG_ P3354_S m3354 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3352_S m3352 : 32|16@1+ (1,0) [0|2000] "IR" Vector__XXX
+ SG_ P3351_S m3351 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3349_S m3349 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3323_S m3323 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3322_S m3322 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3321_S m3321 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3320_S m3320 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3319_S m3319 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3318_S m3318 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3317_S m3317 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3316_S m3316 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3315_S m3315 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3314_S m3314 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3313_S m3313 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3312_S m3312 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3311_S m3311 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3310_S m3310 : 32|8@1+ (1,0) [0|32] "" Vector__XXX
+ SG_ P3309_S m3309 : 32|8@1+ (1,0) [1|10] "10ms" Vector__XXX
+ SG_ P3308_S m3308 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3307_S m3307 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3306_S m3306 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3305_S m3305 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3304_S m3304 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3303_S m3303 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3302_S m3302 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3301_S m3301 : 32|8@1+ (1,0) [1|254] "10ms" Vector__XXX
+ SG_ P3300_S m3300 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3299_S m3299 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3298_S m3298 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3297_S m3297 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3296_S m3296 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3295_S m3295 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3294_S m3294 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3293_S m3293 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3292_S m3292 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3291_S m3291 : 32|8@1+ (1,0) [5|255] "10ms" Vector__XXX
+ SG_ P3290_S m3290 : 32|8@1+ (1,0) [2|255] "10ms" Vector__XXX
+ SG_ P3289_S m3289 : 32|8@1+ (1,0) [10|255] "10ms" Vector__XXX
+ SG_ P3288_S m3288 : 32|8@1+ (1,0) [10|255] "10ms" Vector__XXX
+ SG_ P3287_S m3287 : 32|8@1+ (1,0) [5|255] "10ms" Vector__XXX
+ SG_ P3285_S m3285 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3253_S m3253 : 32|8@1+ (1,0) [5|100] "kmph" Vector__XXX
+ SG_ P3252_S m3252 : 32|8@1+ (1,0) [0|200] "damph" Vector__XXX
+ SG_ P3251_S m3251 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3250_S m3250 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3249_S m3249 : 32|8@1+ (1,0) [5|200] "dHz" Vector__XXX
+ SG_ P3248_S m3248 : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ P3247_S m3247 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3246_S m3246 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3245_S m3245 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3244_S m3244 : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ P3243_S m3243 : 32|8@1+ (1,0) [10|255] "mA" Vector__XXX
+ SG_ P3242_S m3242 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3241_S m3241 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3240_S m3240 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3239_S m3239 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3238_S m3238 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3237_S m3237 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3235_S m3235 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3219_S m3219 : 32|16@1+ (1,0) [4650|5350] "mV" Vector__XXX
+ SG_ P3217_S m3217 : 32|16@1+ (1,0) [4650|5350] "mV" Vector__XXX
+ SG_ P3215_S m3215 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3213_S m3213 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3211_S m3211 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3209_S m3209 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3207_S m3207 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3205_S m3205 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3203_S m3203 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3189_S m3189 : 32|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ P3187_S m3187 : 32|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ P3185_S m3185 : 32|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ P3183_S m3183 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3170_S m3170 : 32|16@1- (1,0) [0|150] "10um" Vector__XXX
+ SG_ P3168_S m3168 : 32|16@1- (1,0) [0|300] "10um" Vector__XXX
+ SG_ P3166_S m3166 : 32|16@1- (1,0) [-300|0] "10um" Vector__XXX
+ SG_ P3164_S m3164 : 32|16@1- (1,0) [300|1000] "10um" Vector__XXX
+ SG_ P3162_S m3162 : 32|16@1- (1,0) [-1000|300] "10um" Vector__XXX
+ SG_ P3160_S m3160 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3134_S m3134 : 32|8@1+ (1,0) [0|10] "kmph" Vector__XXX
+ SG_ P3133_S m3133 : 32|8@1+ (1,0) [0|200] "dDeg" Vector__XXX
+ SG_ P3132_S m3132 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3130_S m3130 : 32|16@1- (1,0) [-200|200] "10um" Vector__XXX
+ SG_ P3128_S m3128 : 32|16@1- (1,0) [-200|200] "10um" Vector__XXX
+ SG_ P3126_S m3126 : 32|16@1+ (1,0) [0|2000] "10ms" Vector__XXX
+ SG_ P3125_S m3125 : 32|8@1+ (1,0) [0|10] "10ms" Vector__XXX
+ SG_ P3124_S m3124 : 32|8@1+ (1,0) [1|20] "10ms" Vector__XXX
+ SG_ P3123_S m3123 : 32|8@1+ (1,0) [0|200] "IR" Vector__XXX
+ SG_ P3122_S m3122 : 32|8@1+ (1,0) [0|150] "dRpm" Vector__XXX
+ SG_ P3120_S m3120 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3097_S m3097 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3095_S m3095 : 32|16@1- (1,0) [0|150] "10um" Vector__XXX
+ SG_ P3093_S m3093 : 32|16@1- (1,0) [0|1000] "10um" Vector__XXX
+ SG_ P3091_S m3091 : 32|16@1- (1,1000) [0|1000] "10um" Vector__XXX
+ SG_ P3090_S m3090 : 32|8@1+ (1,0) [0|200] "10um" Vector__XXX
+ SG_ P3089_S m3089 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3088_S m3088 : 32|8@1+ (1,0) [5|120] "lpm" Vector__XXX
+ SG_ P3086_S m3086 : 32|16@1+ (1,0) [100|10000] "ccm" Vector__XXX
+ SG_ P3084_S m3084 : 32|16@1+ (1,0) [0|1200] "ccm" Vector__XXX
+ SG_ P3082_S m3082 : 32|16@1+ (1,0) [100|1000] "" Vector__XXX
+ SG_ P3081_S m3081 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3080_S m3080 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3078_S m3078 : 32|16@1+ (1,0) [0|1000] "10ms" Vector__XXX
+ SG_ P3076_S m3076 : 32|16@1+ (1,0) [100|2000] "mA" Vector__XXX
+ SG_ P3074_S m3074 : 32|16@1+ (1,0) [100|2000] "mA" Vector__XXX
+ SG_ P3073_S m3073 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3072_S m3072 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Reply_Calibration_progress_S m145 : 24|8@1+ (1,0) [0|255] "%"  Service_tool
+ SG_ Reply_Sensor_voltage_S m143 : 48|16@1+ (1,0) [0|65535] "mV"  Service_tool
+ SG_ Reply_param_address_S m135M : 16|16@1+ (1,0) [0|65535] ""  Service_tool
+ SG_ Reply_param_data_length_S m135 : 8|8@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_T_last_move_S m145 : 48|16@1+ (1,-20) [0|65514] "0.1s"  Service_tool
+ SG_ Reply_Spl_set_last_S m145 : 32|16@1+ (1,-1000) [-1000|1000] "10um"  Service_tool
+ SG_ Reply_WA_mov_status_L_S m145 : 22|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_WA_mov_status_R_S m145 : 20|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_Calib_err_code_S m145 : 8|8@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_WAS_captured_S m143 : 14|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_result_from_ECU_S m143 : 12|1@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_Pos_captured_S m143 : 13|1@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_Input_status_S m143 : 10|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_Consistency_chk_S m143 : 8|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_AD2_S m143 : 32|16@1+ (1,0) [0|65535] "mV"  Service_tool
+ SG_ Reply_AD1_S m143 : 16|16@1+ (1,0) [0|65535] "mV"  Service_tool
+ SG_ SER_TOOL_REPLY_XID_S M : 0|8@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_Sensor5V_state_S m131 : 12|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_req_spool_pos_S m131 : 16|16@1+ (1,-1000) [-1000|1000] "10um"  Service_tool
+ SG_ Reply_req_COV_PWM_S m131 : 32|8@1+ (1,0) [0|255] "%"  Service_tool
+ SG_ Reply_CSS_state_S m131 : 14|2@1+ (1,0) [0|0] ""  Service_tool
+
+BO_ 2565864979 SER_TOOL_REPLY_M: 8 MainUC
+ SG_ P3822_M m3822 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3814_M m3814 : 32|8@1+ (1,0) [1|25] "%" Vector__XXX
+ SG_ P3812_M m3812 : 32|16@1+ (1,0) [5|400] "dDeg" Vector__XXX
+ SG_ P3811_M m3811 : 32|8@1+ (1,0) [1|10] "" Vector__XXX
+ SG_ P3810_M m3810 : 32|8@1+ (1,0) [1|10] "" Vector__XXX
+ SG_ P3808_M m3808 : 32|16@1+ (1,0) [10|600] "100ms" Vector__XXX
+ SG_ P3806_M m3806 : 32|16@1+ (1,0) [10|600] "100ms" Vector__XXX
+ SG_ P3804_M m3804 : 32|16@1+ (1,0) [5|400] "dDeg" Vector__XXX
+ SG_ P3802_M m3802 : 32|16@1+ (1,0) [50|300] "10um" Vector__XXX
+ SG_ P3801_M m3801 : 32|8@1+ (1,0) [0|60] "" Vector__XXX
+ SG_ P3799_M m3799 : 32|16@1+ (1,0) [0|300] "10um" Vector__XXX
+ SG_ P3797_M m3797 : 32|16@1+ (1,0) [0|300] "10um" Vector__XXX
+ SG_ P3795_M m3795 : 32|16@1+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ P3793_M m3793 : 32|16@1+ (1,0) [0|2500] "mv" Vector__XXX
+ SG_ P3791_M m3791 : 32|16@1+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ P3789_M m3789 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3776_M m3776 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3775_M m3775 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3774_M m3774 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3773_M m3773 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3772_M m3772 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3771_M m3771 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3769_M m3769 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3719_M m3719 : 32|8@1+ (1,0) [0|45] "deg" Vector__XXX
+ SG_ P3718_M m3718 : 32|8@1+ (1,0) [5|200] "dHz" Vector__XXX
+ SG_ P3716_M m3716 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3714_M m3714 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3712_M m3712 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3710_M m3710 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3708_M m3708 : 32|16@1+ (1,0) [100|1000] "IR" Vector__XXX
+ SG_ P3706_M m3706 : 32|16@1+ (1,0) [1|180] "Deg" Vector__XXX
+ SG_ P3705_M m3705 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3703_M m3703 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3701_M m3701 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3700_M m3700 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3699_M m3699 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3698_M m3698 : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ P3697_M m3697 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3696_M m3696 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3694_M m3694 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3692_M m3692 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3690_M m3690 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3689_M m3689 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3688_M m3688 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3686_M m3686 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3684_M m3684 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3682_M m3682 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3681_M m3681 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3680_M m3680 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3678_M m3678 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3676_M m3676 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3674_M m3674 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3673_M m3673 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3672_M m3672 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3670_M m3670 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3668_M m3668 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3666_M m3666 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3665_M m3665 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3664_M m3664 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3662_M m3662 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3660_M m3660 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3658_M m3658 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3657_M m3657 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3656_M m3656 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3654_M m3654 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3652_M m3652 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3650_M m3650 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3649_M m3649 : 32|8@1+ (1,0) [0|100] "dRpm" Vector__XXX
+ SG_ P3648_M m3648 : 32|8@1+ (1,0) [0|100] "IR" Vector__XXX
+ SG_ P3647_M m3647 : 32|8@1+ (1,0) [0|100] "IR" Vector__XXX
+ SG_ P3646_M m3646 : 32|8@1+ (1,0) [0|100] "dRpm" Vector__XXX
+ SG_ P3644_M m3644 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3584_M m3584 : 32|8@1+ (1,0) [0|45] "deg" Vector__XXX
+ SG_ P3583_M m3583 : 32|8@1+ (1,0) [1|100] "drpm" Vector__XXX
+ SG_ P3582_M m3582 : 32|8@1+ (1,0) [5|200] "dHz" Vector__XXX
+ SG_ P3580_M m3580 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3578_M m3578 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3576_M m3576 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3574_M m3574 : 32|16@1+ (1,0) [1|1000] "IR" Vector__XXX
+ SG_ P3573_M m3573 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3572_M m3572 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3571_M m3571 : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ P3570_M m3570 : 32|8@1+ (1,0) [0|200] "dDeg" Vector__XXX
+ SG_ P3569_M m3569 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3568_M m3568 : 32|8@1+ (1,0) [1|180] "" Vector__XXX
+ SG_ P3566_M m3566 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3564_M m3564 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3562_M m3562 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3561_M m3561 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3560_M m3560 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3558_M m3558 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3556_M m3556 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3554_M m3554 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3553_M m3553 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3552_M m3552 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3550_M m3550 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3548_M m3548 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3546_M m3546 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3545_M m3545 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3544_M m3544 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3542_M m3542 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3540_M m3540 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3538_M m3538 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3537_M m3537 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3536_M m3536 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3534_M m3534 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3532_M m3532 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3530_M m3530 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3529_M m3529 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3528_M m3528 : 32|8@1+ (1,0) [1|100] "kmph" Vector__XXX
+ SG_ P3526_M m3526 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3524_M m3524 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3522_M m3522 : 32|16@1+ (1,0) [10|800] "" Vector__XXX
+ SG_ P3521_M m3521 : 32|8@1+ (1,0) [0|100] "drpm" Vector__XXX
+ SG_ P3519_M m3519 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3484_M m3484 : 32|8@1+ (1,0) [0|200] "dHz" Vector__XXX
+ SG_ P3483_M m3483 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3482_M m3482 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3481_M m3481 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3480_M m3480 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3479_M m3479 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3478_M m3478 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3477_M m3477 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3476_M m3476 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3475_M m3475 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3474_M m3474 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3473_M m3473 : 32|8@1+ (1,0) [0|200] "%" Vector__XXX
+ SG_ P3469_M m3469 : 32|16@1+ (1,0) [0|89] "deg" Vector__XXX
+ SG_ P3467_M m3467 : 32|16@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3465_M m3465 : 32|16@1+ (1,0) [0|89] "deg" Vector__XXX
+ SG_ P3463_M m3463 : 32|16@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3461_M m3461 : 32|16@1+ (1,0) [0|89] "deg" Vector__XXX
+ SG_ P3459_M m3459 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3457_M m3457 : 32|16@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3455_M m3455 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3453_M m3453 : 32|16@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3451_M m3451 : 32|16@1+ (1,0) [0|1000] "IR" Vector__XXX
+ SG_ P3449_M m3449 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3428_M m3428 : 32|16@1+ (1,0) [0|89] "deg" Vector__XXX
+ SG_ P3426_M m3426 : 32|16@1+ (1,0) [0|89] "deg" Vector__XXX
+ SG_ P3424_M m3424 : 32|16@1+ (1,0) [1000|10000] "mm" Vector__XXX
+ SG_ P3422_M m3422 : 32|16@1+ (1,0) [1000|10000] "mm" Vector__XXX
+ SG_ P3421_M m3421 : 32|8@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ P3419_M m3419 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3383_M m3383 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3381_M m3381 : 32|16@1+ (1,0) [0|60000] "" Vector__XXX
+ SG_ P3379_M m3379 : 32|16@1+ (1,0) [100|400] "10ms" Vector__XXX
+ SG_ P3378_M m3378 : 32|8@1+ (1,0) [1|75] "10ms" Vector__XXX
+ SG_ P3377_M m3377 : 32|8@1+ (1,0) [0|200] "10um" Vector__XXX
+ SG_ P3375_M m3375 : 32|16@1+ (1,0) [0|2000] "IR" Vector__XXX
+ SG_ P3374_M m3374 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3372_M m3372 : 32|16@1+ (1,0) [0|360] "deg" Vector__XXX
+ SG_ P3371_M m3371 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3369_M m3369 : 32|16@1+ (1,0) [0|2000] "IR" Vector__XXX
+ SG_ P3368_M m3368 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3366_M m3366 : 32|16@1+ (1,0) [0|4800] "dRpm" Vector__XXX
+ SG_ P3365_M m3365 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3364_M m3364 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3363_M m3363 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3361_M m3361 : 32|16@1+ (1,0) [0|2000] "IR" Vector__XXX
+ SG_ P3360_M m3360 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3358_M m3358 : 32|16@1+ (1,0) [0|4800] "dRpm" Vector__XXX
+ SG_ P3357_M m3357 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3355_M m3355 : 32|16@1+ (1,0) [0|360] "deg" Vector__XXX
+ SG_ P3354_M m3354 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3352_M m3352 : 32|16@1+ (1,0) [0|2000] "IR" Vector__XXX
+ SG_ P3351_M m3351 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3349_M m3349 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3323_M m3323 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3322_M m3322 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3321_M m3321 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3320_M m3320 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3319_M m3319 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3318_M m3318 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3317_M m3317 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3316_M m3316 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3315_M m3315 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3314_M m3314 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3313_M m3313 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3312_M m3312 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3311_M m3311 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3310_M m3310 : 32|8@1+ (1,0) [0|32] "" Vector__XXX
+ SG_ P3309_M m3309 : 32|8@1+ (1,0) [1|10] "10ms" Vector__XXX
+ SG_ P3308_M m3308 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3307_M m3307 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3306_M m3306 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3305_M m3305 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3304_M m3304 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3303_M m3303 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3302_M m3302 : 32|8@1+ (1,0) [0|255] "10ms" Vector__XXX
+ SG_ P3301_M m3301 : 32|8@1+ (1,0) [1|254] "10ms" Vector__XXX
+ SG_ P3300_M m3300 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3299_M m3299 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3298_M m3298 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3297_M m3297 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3296_M m3296 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3295_M m3295 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3294_M m3294 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3293_M m3293 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3292_M m3292 : 32|8@1+ (1,0) [0|253] "" Vector__XXX
+ SG_ P3291_M m3291 : 32|8@1+ (1,0) [5|255] "10ms" Vector__XXX
+ SG_ P3290_M m3290 : 32|8@1+ (1,0) [2|255] "10ms" Vector__XXX
+ SG_ P3289_M m3289 : 32|8@1+ (1,0) [10|255] "10ms" Vector__XXX
+ SG_ P3288_M m3288 : 32|8@1+ (1,0) [10|255] "10ms" Vector__XXX
+ SG_ P3287_M m3287 : 32|8@1+ (1,0) [5|255] "10ms" Vector__XXX
+ SG_ P3285_M m3285 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3253_M m3253 : 32|8@1+ (1,0) [5|100] "kmph" Vector__XXX
+ SG_ P3252_M m3252 : 32|8@1+ (1,0) [0|200] "damph" Vector__XXX
+ SG_ P3251_M m3251 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3250_M m3250 : 32|8@1+ (1,0) [0|100] "kmph" Vector__XXX
+ SG_ P3249_M m3249 : 32|8@1+ (1,0) [5|200] "dHz" Vector__XXX
+ SG_ P3248_M m3248 : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ P3247_M m3247 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3246_M m3246 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3245_M m3245 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3244_M m3244 : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ P3243_M m3243 : 32|8@1+ (1,0) [10|255] "mA" Vector__XXX
+ SG_ P3242_M m3242 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3241_M m3241 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3240_M m3240 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3239_M m3239 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3238_M m3238 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3237_M m3237 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3235_M m3235 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3219_M m3219 : 32|16@1+ (1,0) [4650|5350] "mV" Vector__XXX
+ SG_ P3217_M m3217 : 32|16@1+ (1,0) [4650|5350] "mV" Vector__XXX
+ SG_ P3215_M m3215 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3213_M m3213 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3211_M m3211 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3209_M m3209 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3207_M m3207 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3205_M m3205 : 32|16@1+ (1,0) [0|6000] "mV" Vector__XXX
+ SG_ P3203_M m3203 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3189_M m3189 : 32|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ P3187_M m3187 : 32|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ P3185_M m3185 : 32|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ P3183_M m3183 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3170_M m3170 : 32|16@1- (1,0) [0|150] "10um" Vector__XXX
+ SG_ P3168_M m3168 : 32|16@1- (1,0) [0|300] "10um" Vector__XXX
+ SG_ P3166_M m3166 : 32|16@1- (1,0) [-300|0] "10um" Vector__XXX
+ SG_ P3164_M m3164 : 32|16@1- (1,0) [300|1000] "10um" Vector__XXX
+ SG_ P3162_M m3162 : 32|16@1- (1,0) [-1000|1000] "10um" Vector__XXX
+ SG_ P3160_M m3160 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3134_M m3134 : 32|8@1+ (1,0) [0|10] "kmph" Vector__XXX
+ SG_ P3133_M m3133 : 32|8@1+ (1,0) [0|200] "dDeg" Vector__XXX
+ SG_ P3132_M m3132 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3130_M m3130 : 32|16@1- (1,0) [-200|200] "10um" Vector__XXX
+ SG_ P3128_M m3128 : 32|16@1- (1,0) [-200|200] "10um" Vector__XXX
+ SG_ P3126_M m3126 : 32|16@1+ (1,0) [0|2000] "10ms" Vector__XXX
+ SG_ P3125_M m3125 : 32|8@1+ (1,0) [0|10] "10ms" Vector__XXX
+ SG_ P3124_M m3124 : 32|8@1+ (1,0) [1|20] "10ms" Vector__XXX
+ SG_ P3123_M m3123 : 32|8@1+ (1,0) [0|200] "IR" Vector__XXX
+ SG_ P3122_M m3122 : 32|8@1+ (1,0) [0|150] "dRpm" Vector__XXX
+ SG_ P3120_M m3120 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ P3097_M m3097 : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ P3095_M m3095 : 32|16@1- (1,0) [0|150] "10um" Vector__XXX
+ SG_ P3093_M m3093 : 32|16@1- (1,0) [0|1000] "10um" Vector__XXX
+ SG_ P3091_M m3091 : 32|16@1- (1,1000) [0|1000] "10um" Vector__XXX
+ SG_ P3090_M m3090 : 32|8@1+ (1,0) [0|200] "10um" Vector__XXX
+ SG_ P3089_M m3089 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3088_M m3088 : 32|8@1+ (1,0) [5|120] "lpm" Vector__XXX
+ SG_ P3086_M m3086 : 32|16@1+ (1,0) [100|10000] "ccm" Vector__XXX
+ SG_ P3084_M m3084 : 32|16@1+ (1,0) [0|1200] "ccm" Vector__XXX
+ SG_ P3082_M m3082 : 32|16@1+ (1,0) [100|1000] "" Vector__XXX
+ SG_ P3081_M m3081 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3080_M m3080 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3078_M m3078 : 32|16@1+ (1,0) [0|1000] "10ms" Vector__XXX
+ SG_ P3076_M m3076 : 32|16@1+ (1,0) [100|2000] "mA" Vector__XXX
+ SG_ P3074_M m3074 : 32|16@1+ (1,0) [100|2000] "mA" Vector__XXX
+ SG_ P3073_M m3073 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ P3072_M m3072 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Reply_Calibration_progress_M m145 : 24|8@1+ (1,0) [0|255] "%"  Service_tool
+ SG_ Reply_WA_mov_status_L_M m145 : 22|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_Sensor_voltage_M m143 : 48|16@1+ (1,0) [0|65535] "mV"  Service_tool
+ SG_ Reply_param_address_M m135M : 16|16@1+ (1,0) [0|65535] ""  Service_tool
+ SG_ Reply_param_data_length_M m135 : 8|8@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_T_last_move_M m145 : 48|16@1+ (1,-20) [0|65514] "0.1s"  Service_tool
+ SG_ Reply_Spl_set_last_M m145 : 32|16@1+ (1,-1000) [-1000|1000] "10um"  Service_tool
+ SG_ Reply_WA_mov_status_R_M m145 : 20|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_Calib_err_code_M m145 : 8|8@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_result_from_ECU_M m143 : 12|1@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_Pos_captured_M m143 : 13|1@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_Input_status_M m143 : 10|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_Consistency_chk_M m143 : 8|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_AD2_M m143 : 32|16@1+ (1,0) [0|65535] "mV"  Service_tool
+ SG_ Reply_AD1_M m143 : 16|16@1+ (1,0) [0|65535] "mV"  Service_tool
+ SG_ Reply_WAS_captured_M m143 : 14|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_req_COV_PWM_M m131 : 32|8@1+ (1,0) [0|255] "%"  Service_tool
+ SG_ Reply_req_spool_pos_M m131 : 16|16@1+ (1,-1000) [-1000|1000] "10um"  Service_tool
+ SG_ Reply_Sensor5V_state_M m131 : 12|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ Reply_CSS_state_M m131 : 14|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ SER_TOOL_REPLY_XID_M M : 0|8@1+ (1,0) [0|0] ""  Service_tool
+
+BO_ 2565823230 SER_TOOL_REQ_S: 8 Service_tool
+ SG_ TX_Rate_stat_msg_8_S m136 : 16|8@1+ (10,0) [0|2550] "ms" Vector__XXX
+ SG_ TX_Rate_stat_msg_7_S m136 : 8|8@1+ (10,0) [0|2550] "ms" Vector__XXX
+ SG_ Req_WA_sweep_angle_S m140 : 8|8@1+ (1,0) [0|255] "0.1deg"  SafetyUC
+ SG_ Req_param_address_S m134 : 16|16@1+ (1,0) [0|65535] ""  SafetyUC
+ SG_ Req_param_data_length_S m134 : 8|8@1+ (1,0) [0|255] ""  SafetyUC
+ SG_ TX_Rate_stat_msg_6_S m132 : 56|8@1+ (10,0) [0|2550] "ms"  SafetyUC
+ SG_ TX_Rate_stat_msg_5_S m132 : 48|8@1+ (10,0) [0|2550] "ms"  SafetyUC
+ SG_ TX_Rate_stat_msg_4_S m132 : 40|8@1+ (10,0) [0|2550] "ms"  SafetyUC
+ SG_ TX_Rate_stat_msg_3_S m132 : 32|8@1+ (10,0) [0|2550] "ms"  SafetyUC
+ SG_ TX_Rate_stat_msg_2_S m132 : 24|8@1+ (10,0) [0|2550] "ms"  SafetyUC
+ SG_ TX_Rate_stat_msg_1_S m132 : 16|8@1+ (10,0) [0|2550] "ms"  SafetyUC
+ SG_ TX_Rate_stat_msg_OP_S m132 : 8|8@1+ (10,0) [0|2550] "ms"  SafetyUC
+ SG_ Req_Spl_calib_Tmin_S m140 : 32|8@1+ (1,0) [0|255] "0.1s"  SafetyUC
+ SG_ Req_Spl_calib_Tmax_S m140 : 40|8@1+ (1,0) [0|255] "0.1s"  SafetyUC
+ SG_ Req_Spl_init_SP_S m140 : 16|16@1+ (1,0) [0|65535] "10um"  SafetyUC
+ SG_ Req_ANS_capture_S m142 : 14|2@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ Req_COV_PWM_S m130 : 32|8@1+ (1,0) [0|255] "%"  SafetyUC
+ SG_ Req_spool_pos_S m130 : 16|16@1+ (1,-1000) [-1000|1000] "10um"  SafetyUC
+ SG_ Req_Sensor5V_S m130 : 12|2@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ Req_CSS_S m130 : 14|2@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ Req_service_mode_S m128 : 8|8@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ Req_service_mode_chk_S m128 : 16|16@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ SER_TOOL_REQ_XID_S M : 0|8@1+ (1,0) [0|0] ""  SafetyUC
+
+BO_ 2565805054 SER_TOOL_REQ_M: 8 Service_tool
+ SG_ TX_Rate_stat_msg_8_M m136 : 16|8@1+ (10,0) [0|2550] "ms" Vector__XXX
+ SG_ TX_Rate_stat_msg_7_M m136 : 8|8@1+ (10,0) [0|2550] "ms" Vector__XXX
+ SG_ Req_param_address_M m134 : 16|16@1+ (1,0) [0|65535] ""  MainUC
+ SG_ Req_param_data_length_M m134 : 8|8@1+ (1,0) [0|255] ""  MainUC
+ SG_ TX_Rate_stat_msg_OP_M m132 : 8|8@1+ (10,0) [0|2550] "ms"  MainUC
+ SG_ TX_Rate_stat_msg_6_M m132 : 56|8@1+ (10,0) [0|2550] "ms"  MainUC
+ SG_ TX_Rate_stat_msg_5_M m132 : 48|8@1+ (10,0) [0|2550] "ms"  MainUC
+ SG_ TX_Rate_stat_msg_4_M m132 : 40|8@1+ (10,0) [0|2550] "ms"  MainUC
+ SG_ TX_Rate_stat_msg_3_M m132 : 32|8@1+ (10,0) [0|2550] "ms"  MainUC
+ SG_ TX_Rate_stat_msg_2_M m132 : 24|8@1+ (10,0) [0|2550] "ms"  MainUC
+ SG_ TX_Rate_stat_msg_1_M m132 : 16|8@1+ (10,0) [0|2550] "ms"  MainUC
+ SG_ Req_Spl_calib_Tmax_M m140 : 40|8@1+ (1,0) [0|255] "0.1s"  MainUC
+ SG_ Req_Spl_calib_Tmin_M m140 : 32|8@1+ (1,0) [0|255] "0.1s"  MainUC
+ SG_ Req_Spl_init_SP_M m140 : 16|16@1+ (1,0) [0|65535] "10um"  MainUC
+ SG_ Req_WA_sweep_angle_M m140 : 8|8@1+ (1,0) [0|255] "0.1deg"  MainUC
+ SG_ Req_ANS_capture_M m142 : 14|2@1+ (1,0) [0|0] ""  MainUC
+ SG_ Req_COV_PWM_M m130 : 32|8@1+ (1,0) [0|255] "%"  MainUC
+ SG_ Req_spool_pos_M m130 : 16|16@1+ (1,-1000) [-1000|1000] "10um"  MainUC
+ SG_ Req_Sensor5V_M m130 : 12|2@1+ (1,0) [0|0] ""  MainUC
+ SG_ Req_CSS_M m130 : 14|2@1+ (1,0) [0|0] ""  MainUC
+ SG_ Req_service_mode_M m128 : 8|8@1+ (1,0) [0|0] ""  MainUC
+ SG_ Req_service_mode_chk_M m128 : 16|16@1+ (1,0) [0|0] ""  MainUC
+ SG_ SER_TOOL_REQ_XID_M M : 0|8@1+ (1,0) [0|0] ""  MainUC
+
+BO_ 2365528154 STR_FB_MSG_S: 8 SafetyUC
+ SG_ IMD_STW_Status_S : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ STR_FB_CRC_S : 48|16@1+ (1,0) [0|65535] ""  AUX_JOYSTICK,AUX_STW,MMI,Service_tool
+ SG_ STR_FB_Seq_S : 40|4@1+ (1,0) [0|15] ""  AUX_JOYSTICK,AUX_STW,MMI,Service_tool
+ SG_ STR_FB_STW_L2L_S : 32|8@1+ (0.1,0) [0|8] "Rev"  AUX_JOYSTICK,AUX_STW,MMI,Service_tool
+ SG_ STR_FB_Est_WA_S : 16|16@1+ (1,-1000) [-1000|1000] "0.1%"  AUX_JOYSTICK,AUX_STW,MMI,Service_tool
+ SG_ STR_FB_Est_flow_S : 0|16@1+ (1,-1000) [-1000|1000] "0.1%"  AUX_JOYSTICK,AUX_STW,MMI,Service_tool
+
+BO_ 2365528083 STR_FB_MSG_M: 8 MainUC
+ SG_ IMD_STW_Status_M : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ STR_FB_CRC_M : 48|16@1+ (1,0) [0|65535] ""  Service_tool,MMI,AUX_STW,AUX_JOYSTICK
+ SG_ STR_FB_Seq_M : 40|4@1+ (1,0) [0|15] ""  Service_tool,MMI,AUX_STW,AUX_JOYSTICK
+ SG_ STR_FB_STW_L2L_M : 32|8@1+ (0.1,0) [0|8] "Rev"  Service_tool,MMI,AUX_STW,AUX_JOYSTICK
+ SG_ STR_FB_Est_WA_M : 16|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool,MMI,AUX_STW,AUX_JOYSTICK
+ SG_ STR_FB_Est_flow_M : 0|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool,MMI,AUX_STW,AUX_JOYSTICK
+
+BO_ 2365527630 AUX_JOY_P: 8 AUX_JOYSTICK
+ SG_ AUX_JOY_CL_trim_P : 16|16@1+ (1,-200) [-200|200] "0.1%" Vector__XXX
+ SG_ AUX_JOY_CL_error_code_P : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ AUX_JOY_CL_enable_P : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AUX_JOY_POS_P : 0|16@1+ (1,-1000) [-1000|1000] "0.1%" Vector__XXX
+ SG_ AUX_JOY_Seq_P : 40|4@1+ (1,0) [0|15] ""  MainUC
+ SG_ AUX_JOY_CRC_P : 48|16@1+ (1,0) [0|65535] ""  MainUC
+
+BO_ 2365527886 AUX_JOY_R: 8 AUX_JOYSTICK
+ SG_ AUX_JOY_CL_trim_R : 16|16@1+ (1,-200) [-200|200] "0.1%" Vector__XXX
+ SG_ AUX_JOY_CL_error_code_R : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ AUX_JOY_CL_enable_R : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AUX_JOY_POS_R : 0|16@1+ (1,-1000) [-1000|1000] "0.1%" Vector__XXX
+ SG_ AUX_JOY_Seq_R : 40|4@1+ (1,0) [0|15] ""  SafetyUC
+ SG_ AUX_JOY_CRC_R : 48|16@1+ (1,0) [0|65535] ""  SafetyUC
+
+BO_ 2365527375 AUX_STW_R: 8 AUX_STW
+ SG_ AUX_STW_pos_R : 0|16@1+ (0.08789063,0) [0|359.912] "degree"  SafetyUC
+ SG_ AUX_STW_error_code_R : 44|4@1+ (1,0) [0|15] ""  SafetyUC
+ SG_ AUX_STW_Seq_R : 40|4@1+ (1,0) [0|15] ""  SafetyUC
+ SG_ AUX_STW_CRC_R : 48|16@1+ (1,0) [0|65535] ""  SafetyUC
+ SG_ AUX_STW_velocity_R : 16|16@1+ (0.014648438,-300) [-300|300] "RPM"  SafetyUC
+
+BO_ 2365527119 AUX_STW_P: 8 AUX_STW
+ SG_ AUX_STW_error_code_P : 44|4@1+ (1,0) [0|15] ""  MainUC
+ SG_ AUX_STW_Seq_P : 40|4@1+ (1,0) [0|15] ""  MainUC
+ SG_ AUX_STW_CRC_P : 48|16@1+ (1,0) [0|65535] ""  MainUC
+ SG_ AUX_STW_velocity_P : 16|16@1+ (0.014648438,-300) [-300|300] "RPM"  MainUC
+ SG_ AUX_STW_pos_P : 0|16@1+ (0.08789063,0) [0|359.912] "degree"  MainUC
+
+BO_ 2365526778 WAS_P: 8 WAS
+ SG_ WAS_WA_P : 8|16@1+ (1,0) [0|65535] ""  MainUC
+ SG_ WAS_Seq_P : 40|4@1+ (1,0) [0|15] ""  MainUC
+ SG_ WAS_CRC_P : 48|16@1+ (1,0) [0|65535] ""  MainUC
+
+BO_ 2365527034 WAS_R: 8 WAS
+ SG_ WAS_WA_R : 8|16@1+ (1,0) [0|65535] ""  SafetyUC
+ SG_ WAS_Seq_R : 40|4@1+ (1,0) [0|15] ""  SafetyUC
+ SG_ WAS_CRC_R : 48|16@1+ (1,0) [0|65535] ""  SafetyUC
+
+BO_ 2365526349 STW_R: 8 STW_sensor
+ SG_ STW_error_code_R : 44|4@1+ (1,0) [0|15] ""  SafetyUC
+ SG_ STW_velocity_R : 16|16@1+ (0.014648438,-300) [-300|300] "RPM"  SafetyUC
+ SG_ STW_pos_R : 0|16@1+ (0.08789063,0) [0|359.912] "degree"  SafetyUC
+ SG_ STW_seq_R : 40|4@1+ (1,0) [0|15] ""  SafetyUC
+ SG_ STW_CRC_R : 48|16@1+ (1,0) [0|65535] ""  SafetyUC
+
+BO_ 2365526093 STW_P: 8 STW_sensor
+ SG_ STW_error_code_P : 44|4@1+ (1,0) [0|15] ""  MainUC
+ SG_ STW_velocity_P : 16|16@1+ (0.014648438,-300) [-300|300] "RPM"  MainUC
+ SG_ STW_pos_P : 0|16@1+ (0.08789063,0) [0|359.912] "degree"  MainUC
+ SG_ STW_CRC_P : 48|16@1+ (1,0) [0|65535] ""  MainUC
+ SG_ STW_Seq_P : 40|4@1+ (1,0) [0|15] ""  MainUC
+
+BO_ 2566858330 STAT_MSG_6_S: 8 SafetyUC
+ SG_ WAS2_S : 32|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+ SG_ Spool_monitoring_time_S : 56|8@1+ (10,0) [0|2550] "[ms]"  Service_tool
+ SG_ SPI_Flow_command_S : 16|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+ SG_ Spool_monitoring_timeout_S : 48|8@1+ (10,0) [0|2550] "ms"  Service_tool
+ SG_ Avg_CPU_load_S : 0|16@1+ (0.01,0) [0|0] "%"  Service_tool
+
+BO_ 2566858259 STAT_MSG_6_M: 8 MainUC
+ SG_ WAS2_M : 32|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+ SG_ Spool_monitoring_time_M : 56|8@1+ (10,0) [0|2550] "ms"  Service_tool
+ SG_ SPI_Flow_command_M : 16|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+ SG_ Spool_monitoring_timeout_M : 48|8@1+ (10,0) [0|2550] "ms"  Service_tool
+ SG_ Avg_CPU_load_M : 0|16@1+ (0.01,0) [0|0] "%"  Service_tool
+
+BO_ 2566858074 STAT_MSG_5_S: 8 SafetyUC
+ SG_ Spl_Diag_S : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Spl_Ctrl_S : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FDA_Muted_S : 62|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_Spool_position_S : 21|11@1+ (1,-1000) [-1000|1000] "10um"  Service_tool
+ SG_ FDA_WAS_indication_S : 4|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_STW_velocity_S : 42|13@1+ (0.1,-300) [-300|300] "RPM"  Service_tool
+ SG_ FDA_STW_indication_S : 6|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_Spl_indication_S : 2|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_Fault_condition_S : 8|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_Err_condition_S : 0|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_Confidence_counter_S : 32|10@1+ (10,0) [0|10240] "ms"  Service_tool
+ SG_ WAS_S : 10|11@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+
+BO_ 2566857818 STAT_MSG_4_S: 8 SafetyUC
+ SG_ Flow_Cmd_S : 0|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+ SG_ EFU_STW_difference_S : 48|16@1+ (0.1,0) [0|3600] "deg"  Service_tool
+ SG_ Ideal_oil_vol_S : 16|16@1+ (1,0) [0|65535] "ccm"  Service_tool
+ SG_ Flow_setpoint_S : 32|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+
+BO_ 2566857747 STAT_MSG_4_M: 8 MainUC
+ SG_ Flow_Cmd_M : 0|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+ SG_ EFU_STW_difference_M : 48|16@1+ (0.1,0) [0|3600] "deg"  Service_tool
+ SG_ Ideal_oil_vol_M : 16|16@1+ (1,0) [0|65535] "ccm"  Service_tool
+ SG_ Flow_setpoint_M : 32|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+
+BO_ 2565799770 ADR_CLAIMED_S: 8 SafetyUC
+
+BO_ 2565799699 ADR_CLAIMED_M: 8 MainUC
+
+BO_ 2566858003 STAT_MSG_5_M: 8 MainUC
+ SG_ Spl_Diag_M : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Spl_Ctrl_M : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FDA_Muted_M : 62|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_Spool_position_M : 21|11@1+ (1,-1000) [-1000|1000] "10um"  Service_tool
+ SG_ FDA_WAS_indication_M : 4|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_STW_velocity_M : 42|13@1+ (0.1,-300) [-300|300] "RPM"  Service_tool
+ SG_ FDA_STW_indication_M : 6|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_Spl_indication_M : 2|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_Fault_condition_M : 8|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_Err_condition_M : 0|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ FDA_Confidence_counter_M : 32|10@1+ (10,0) [0|10240] "ms"  Service_tool
+ SG_ WAS_M : 10|11@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+
+BO_ 2360089619 GPS1_GMS: 8 MainUC
+ SG_ GPS1_Limit_status : 29|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ GPS1_Exit_reason : 32|6@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ GPS1_System_ready : 18|2@1+ (1,0) [0|3] ""  GPS_Controller
+ SG_ GPS1_Str_input_pos_status : 20|2@1+ (1,0) [0|3] ""  GPS_Controller
+ SG_ GPS1_Req_reset : 22|2@1+ (1,0) [0|3] ""  GPS_Controller
+ SG_ GPS1_System_lockout : 16|2@1+ (1,0) [0|3] ""  GPS_Controller
+ SG_ GPS1_Estimated_curvature : 0|16@1+ (0.25,-8032) [-8032|8032] "1/km"  GPS_Controller
+
+BO_ 2360152860 GPS1_GMC: 8 GPS_Controller
+ SG_ GPS1_Str_cmd_status : 16|2@1+ (1,0) [0|3] ""  MainUC
+ SG_ GPS1_Curvature_cmd : 0|16@1+ (0.25,-8032) [-8032|8032] "1/km"  MainUC
+
+BO_ 2364496636 MMI_R: 8 MMI
+ SG_ MMI_XID_Res_R : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MMI_AUX_mode_req_R : 24|8@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ MMI_Lockout_GPS_R : 22|2@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ MMI_Lockout_AUX_R : 20|2@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ MMI_Seq_R : 40|4@1+ (1,0) [0|15] ""  SafetyUC
+ SG_ MMI_CRC_R : 48|16@1+ (1,0) [0|65535] ""  SafetyUC
+ SG_ MMI_Str_mode_req_R : 8|8@1+ (1,0) [0|0] ""  SafetyUC
+
+BO_ 2364478460 MMI_P: 8 MMI
+ SG_ MMI_XID_Res_P : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MMI_AUX_mode_req_P : 24|8@1+ (1,0) [0|0] ""  MainUC
+ SG_ MMI_Lockout_GPS_P : 22|2@1+ (1,0) [0|0] ""  MainUC
+ SG_ MMI_Lockout_AUX_P : 20|2@1+ (1,0) [0|0] ""  MainUC
+ SG_ MMI_Seq_P : 40|4@1+ (1,0) [0|15] ""  MainUC
+ SG_ MMI_CRC_P : 48|16@1+ (1,0) [0|65535] ""  MainUC
+ SG_ MMI_Str_mode_req_P : 8|8@1+ (1,0) [0|0] ""  MainUC
+
+BO_ 2365538811 VSP_R: 8 Vehicle_speed_Controller
+ SG_ VSP_Seq_R : 40|4@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ VSP_CRC_R : 48|16@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ VSP_Dir_R : 14|2@1+ (1,0) [0|0] ""  SafetyUC
+ SG_ VSP_Speed_R : 16|16@1+ (0.00390625,0) [0|0] "km/h"  SafetyUC
+
+BO_ 2365538555 VSP_P: 8 Vehicle_speed_Controller
+ SG_ VSP_Seq_P : 40|4@1+ (1,0) [0|15] ""  MainUC
+ SG_ VSP_CRC_P : 48|16@1+ (1,0) [0|65535] ""  MainUC
+ SG_ VSP_Dir_P : 14|2@1+ (1,0) [0|0] ""  MainUC
+ SG_ VSP_Speed_P : 16|16@1+ (0.00390625,0) [0|0] "km/h"  MainUC
+
+BO_ 2566857562 STAT_MSG_3_S: 8 SafetyUC
+ SG_ Spl_ctrl_status_S : 60|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ LVDT_comp_count_S : 56|4@1+ (1,0) [0|15] ""  Service_tool
+ SG_ LVDT_neut_comp_S : 48|8@1+ (1,-100) [-50|50] "10um"  Service_tool
+ SG_ Sensor5V_volt_S : 32|16@1+ (1,0) [0|65535] "mV"  Service_tool
+ SG_ PCB_temp_S : 0|16@1+ (1,-40) [0|0] "deg C"  Service_tool
+ SG_ Batt_volt_S : 16|16@1+ (1,0) [0|65535] "mV"  Service_tool
+
+BO_ 2566857491 STAT_MSG_3_M: 8 MainUC
+ SG_ Spl_ctrl_status_M : 60|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ LVDT_comp_count_M : 56|4@1+ (1,0) [0|15] ""  Service_tool
+ SG_ LVDT_neut_comp_M : 48|8@1+ (1,-100) [-50|50] "10um"  Service_tool
+ SG_ Sensor5V_volt_M : 32|16@1+ (1,0) [0|65535] "mV"  Service_tool
+ SG_ PCB_temp_M : 0|16@1+ (1,-40) [0|0] "deg C"  Service_tool
+ SG_ Batt_volt_M : 16|16@1+ (1,0) [0|65535] "mV"  Service_tool
+
+BO_ 2566857306 STAT_MSG_2_S: 8 SafetyUC
+ SG_ SRC_CL_WA_setpoint_S : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CL_WA_setpoint_S : 48|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+ SG_ Dout_current_S : 32|16@1+ (1,0) [0|65535] "mA"  Service_tool
+ SG_ State_CSS_S : 6|2@1+ (1,0) [0|0] "BOOL"  Service_tool
+ SG_ Dout_state_S : 4|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ AD3_S : 16|16@1+ (1,0) [0|65535] "mV"  Service_tool
+
+BO_ 2566857235 STAT_MSG_2_M: 8 MainUC
+ SG_ SRC_CL_WA_setpoint_M : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CL_WA_setpoint_M : 48|16@1+ (1,-1000) [-1000|1000] "0.1%"  Service_tool
+ SG_ Dout_current_M : 32|16@1+ (1,0) [0|65535] "mA"  Service_tool
+ SG_ State_CSS_M : 6|2@1+ (1,0) [0|0] "BOOL"  Service_tool
+ SG_ Dout_state_M : 4|2@1+ (1,0) [0|0] ""  Service_tool
+ SG_ AD3_M : 16|16@1+ (1,0) [0|65535] "mV"  Service_tool
+
+BO_ 2566857050 STAT_MSG_1_S: 8 SafetyUC
+ SG_ Spool_setpoint_S : 0|16@1+ (1,-1000) [-1000|1000] "10um"  Service_tool
+ SG_ Spool_position_S : 16|16@1+ (1,-1000) [-1000|1000] "10um"  Service_tool
+ SG_ AD2_S : 48|16@1+ (1,0) [0|65535] "mV"  Service_tool
+ SG_ AD1_S : 32|16@1+ (1,0) [0|65535] "mV"  Service_tool
+
+BO_ 2566856979 STAT_MSG_1_M: 8 MainUC
+ SG_ Spool_setpoint_M : 0|16@1+ (1,-1000) [-1000|1000] "10um"  Service_tool
+ SG_ Spool_position_M : 16|16@1+ (1,-1000) [-1000|1000] "10um"  Service_tool
+ SG_ AD2_M : 48|16@1+ (1,0) [0|65535] "mV"  Service_tool
+ SG_ AD1_M : 32|16@1+ (1,0) [0|65535] "mV"  Service_tool
+
+BO_ 2566856794 STAT_MSG_OP_S: 8 SafetyUC
+ SG_ OperationState_Seq_S : 40|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ OperationState_CRC_S : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Service_mode_state_S : 24|8@1+ (1,0) [0|0] ""  MMI,Service_tool
+ SG_ Lockout_GPS_S : 22|2@1+ (1,0) [0|0] ""  MMI,Service_tool
+ SG_ Lockout_AUX_S : 8|2@1+ (1,0) [0|0] ""  MMI,Service_tool
+ SG_ Lockout_EH_steering_S : 10|2@1+ (1,0) [0|3] ""  MMI,Service_tool
+ SG_ Lockout_program_change_S : 12|2@1+ (1,0) [0|0] ""  MMI,Service_tool
+ SG_ Lockout_device_change_S : 14|2@1+ (1,0) [0|0] ""  MMI,Service_tool
+ SG_ OperationState_S : 0|8@1+ (1,0) [0|0] ""  MMI,Service_tool
+
+BO_ 2566856723 STAT_MSG_OP_M: 8 MainUC
+ SG_ OperationState_Seq_M : 40|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ OperationState_CRC_M : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Service_mode_state_M : 24|8@1+ (1,0) [0|0] ""  MMI,Service_tool
+ SG_ Lockout_GPS_M : 22|2@1+ (1,0) [0|0] ""  MMI,Service_tool
+ SG_ Lockout_AUX_M : 8|2@1+ (1,0) [0|0] ""  MMI,Service_tool
+ SG_ Lockout_EH_steering_M : 10|2@1+ (1,0) [0|3] ""  MMI,Service_tool
+ SG_ Lockout_program_change_M : 12|2@1+ (1,0) [0|0] ""  MMI,Service_tool
+ SG_ Lockout_device_change_M : 14|2@1+ (1,0) [0|0] ""  MMI,Service_tool
+ SG_ OperationState_M : 0|8@1+ (1,0) [0|0] ""  MMI,Service_tool
+
+
+
+CM_ "21-Aug-2017: PVED-CLS Communication Protocol V 3.44";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ BO_ 2566858842 "Main_C";
+CM_ BO_ 2566858771 "Main_C";
+CM_ BO_ 2566858586 "Safe_C";
+CM_ BO_ 2566858515 "Main_C";
+CM_ BO_ 2360089875 "Main_C";
+CM_ BO_ 2360152861 "Main_C";
+CM_ BO_ 2565406554 "Safe_E";
+CM_ BO_ 2565406483 "Main_E";
+CM_ BO_ 2565495550 "Safe_E";
+CM_ BO_ 2565477374 "Main_E";
+CM_ BO_ 2566834778 "Safe_C";
+CM_ BO_ 2566834707 "Main_C";
+CM_ BO_ 2565865050 "Safe_E";
+CM_ BO_ 2565864979 "Main_E";
+CM_ BO_ 2565823230 "Safe_E";
+CM_ BO_ 2565805054 "Main_E";
+CM_ BO_ 2365528154 "Safe_C";
+CM_ BO_ 2365528083 "Main_C";
+CM_ BO_ 2365527630 "Main_C";
+CM_ BO_ 2365527886 "Safe_C";
+CM_ BO_ 2365527375 "Safe_C";
+CM_ BO_ 2365527119 "Main_C";
+CM_ BO_ 2365526778 "Main_C";
+CM_ BO_ 2365527034 "Safe_C";
+CM_ BO_ 2365526349 "Safe_C";
+CM_ BO_ 2365526093 "Main_C";
+CM_ BO_ 2566858330 "Safe_C";
+CM_ BO_ 2566858259 "Main_C";
+CM_ BO_ 2566858074 "Safe_C";
+CM_ BO_ 2566857818 "Safe_C";
+CM_ BO_ 2566857747 "Main_C";
+CM_ BO_ 2565799770 "Safe_E";
+CM_ BO_ 2565799699 "Main_E";
+CM_ BO_ 2566858003 "Main_C";
+CM_ BO_ 2360089619 "Main_C";
+CM_ BO_ 2360152860 "Main_C";
+CM_ BO_ 2364496636 "Safe_C";
+CM_ BO_ 2364478460 "Main_C";
+CM_ BO_ 2365538811 "Safe_C";
+CM_ BO_ 2365538555 "Main_C";
+CM_ BO_ 2566857562 "Safe_C";
+CM_ BO_ 2566857491 "Main_C";
+CM_ BO_ 2566857306 "Safe_C";
+CM_ BO_ 2566857235 "Main_C";
+CM_ BO_ 2566857050 "Safe_C";
+CM_ BO_ 2566856979 "Main_C";
+CM_ BO_ 2566856794 "Safe_C";
+CM_ BO_ 2566856723 "Main_C";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 10000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "No";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "DBName" "PVED_CLS_appplication_database";
+BA_ "NmStationAddress" BU_ ELOBAU_RIGHT_R 237;
+BA_ "NmStationAddress" BU_ ELOBAU_RIGHT_P 235;
+BA_ "NmStationAddress" BU_ ELOBAU_LEFT_R 238;
+BA_ "NmStationAddress" BU_ ELOBAU_LEFT_P 236;
+BA_ "NmStationAddress" BU_ GPS2_Controller 29;
+BA_ "NmStationAddress" BU_ WAS 250;
+BA_ "NmStationAddress" BU_ AUX_JOYSTICK 78;
+BA_ "NmStationAddress" BU_ AUX_STW 79;
+BA_ "NmStationAddress" BU_ STW_sensor 77;
+BA_ "NmStationAddress" BU_ Service_tool 254;
+BA_ "NmStationAddress" BU_ Vehicle_speed_Controller 251;
+BA_ "NmStationAddress" BU_ MMI 252;
+BA_ "NmStationAddress" BU_ GPS_Controller 28;
+BA_ "NmStationAddress" BU_ SafetyUC 90;
+BA_ "NmJ1939Function" BU_ SafetyUC 0;
+BA_ "NmStationAddress" BU_ MainUC 19;
+BA_ "VFrameFormat" BO_ 2566858842 3;
+BA_ "VFrameFormat" BO_ 2566858771 3;
+BA_ "VFrameFormat" BO_ 2365446638 3;
+BA_ "VFrameFormat" BO_ 2365446125 3;
+BA_ "VFrameFormat" BO_ 2365446636 3;
+BA_ "VFrameFormat" BO_ 2365446123 3;
+BA_ "VFrameFormat" BO_ 2365446382 3;
+BA_ "VFrameFormat" BO_ 2365445869 3;
+BA_ "VFrameFormat" BO_ 2365446380 3;
+BA_ "VFrameFormat" BO_ 2365445867 3;
+BA_ "VFrameFormat" BO_ 2566858586 3;
+BA_ "VFrameFormat" BO_ 2566858515 3;
+BA_ "VFrameFormat" BO_ 2360089875 3;
+BA_ "VFrameFormat" BO_ 2360152861 3;
+BA_ "VFrameFormat" BO_ 2565406554 3;
+BA_ "VFrameFormat" BO_ 2565406483 3;
+BA_ "VFrameFormat" BO_ 2565495550 3;
+BA_ "VFrameFormat" BO_ 2565477374 3;
+BA_ "VFrameFormat" BO_ 2566834778 3;
+BA_ "VFrameFormat" BO_ 2566834707 3;
+BA_ "VFrameFormat" BO_ 2565865050 3;
+BA_ "VFrameFormat" BO_ 2565864979 3;
+BA_ "VFrameFormat" BO_ 2565823230 3;
+BA_ "VFrameFormat" BO_ 2565805054 3;
+BA_ "VFrameFormat" BO_ 2365528154 3;
+BA_ "VFrameFormat" BO_ 2365528083 3;
+BA_ "VFrameFormat" BO_ 2365527630 3;
+BA_ "VFrameFormat" BO_ 2365527886 3;
+BA_ "VFrameFormat" BO_ 2365527375 3;
+BA_ "VFrameFormat" BO_ 2365527119 3;
+BA_ "VFrameFormat" BO_ 2365526778 3;
+BA_ "GenMsgCycleTime" BO_ 2365527034 0;
+BA_ "VFrameFormat" BO_ 2365527034 3;
+BA_ "VFrameFormat" BO_ 2365526349 3;
+BA_ "VFrameFormat" BO_ 2365526093 3;
+BA_ "VFrameFormat" BO_ 2566858330 3;
+BA_ "VFrameFormat" BO_ 2566858259 3;
+BA_ "VFrameFormat" BO_ 2566858074 3;
+BA_ "VFrameFormat" BO_ 2566857818 3;
+BA_ "VFrameFormat" BO_ 2566857747 3;
+BA_ "VFrameFormat" BO_ 2565799770 3;
+BA_ "VFrameFormat" BO_ 2565799699 3;
+BA_ "VFrameFormat" BO_ 2566858003 3;
+BA_ "VFrameFormat" BO_ 2360089619 3;
+BA_ "VFrameFormat" BO_ 2360152860 3;
+BA_ "VFrameFormat" BO_ 2364496636 3;
+BA_ "VFrameFormat" BO_ 2364478460 3;
+BA_ "VFrameFormat" BO_ 2365538811 3;
+BA_ "VFrameFormat" BO_ 2365538555 3;
+BA_ "VFrameFormat" BO_ 2566857562 3;
+BA_ "VFrameFormat" BO_ 2566857491 3;
+BA_ "VFrameFormat" BO_ 2566857306 3;
+BA_ "VFrameFormat" BO_ 2566857235 3;
+BA_ "VFrameFormat" BO_ 2566857050 3;
+BA_ "VFrameFormat" BO_ 2566856979 3;
+BA_ "VFrameFormat" BO_ 2566856794 3;
+BA_ "VFrameFormat" BO_ 2566856723 3;
+BA_ "GenSigStartValue" SG_ 2566858842 SVC_Integral_part_S 1000;
+BA_ "GenSigStartValue" SG_ 2566858771 SVC_Integral_part_M 1000;
+BA_ "GenSigStartValue" SG_ 2566858586 JOY_FLW_REQ_S 1000;
+BA_ "GenSigStartValue" SG_ 2566858586 JOY2_S 1000;
+BA_ "GenSigStartValue" SG_ 2566858586 JOY1_S 1000;
+BA_ "GenSigStartValue" SG_ 2566858515 JOY_FLW_REQ_M 1000;
+BA_ "GenSigStartValue" SG_ 2566858515 JOY2_M 1000;
+BA_ "GenSigStartValue" SG_ 2566858515 JOY1_M 1000;
+BA_ "GenSigStartValue" SG_ 2360089875 GPS2_Estimated_curvature 0;
+BA_ "GenSigStartValue" SG_ 2360152861 GPS2_Curvature_cmd 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3822_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3814_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3812_S 5;
+BA_ "GenSigStartValue" SG_ 2565865050 P3811_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3810_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3808_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3806_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3804_S 5;
+BA_ "GenSigStartValue" SG_ 2565865050 P3802_S 50;
+BA_ "GenSigStartValue" SG_ 2565865050 P3801_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3799_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3797_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3795_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3793_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3791_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3789_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3776_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3775_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3774_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3773_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3772_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3771_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3769_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3719_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3718_S 5;
+BA_ "GenSigStartValue" SG_ 2565865050 P3716_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3714_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3712_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3710_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3708_S 100;
+BA_ "GenSigStartValue" SG_ 2565865050 P3706_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3705_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3703_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3701_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3700_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3699_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3698_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3697_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3696_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3694_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3692_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3690_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3689_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3688_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3686_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3684_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3682_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3681_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3680_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3678_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3676_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3674_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3673_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3672_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3670_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3668_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3666_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3665_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3664_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3662_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3660_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3658_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3657_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3656_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3654_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3652_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3650_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3649_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3648_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3647_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3646_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3644_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3584_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3583_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3582_S 5;
+BA_ "GenSigStartValue" SG_ 2565865050 P3580_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3578_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3576_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3574_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3573_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3572_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3571_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3570_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3569_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3568_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3566_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3564_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3562_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3561_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3560_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3558_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3556_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3554_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3553_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3552_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3550_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3548_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3546_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3545_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3544_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3542_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3540_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3538_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3537_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3536_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3534_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3532_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3530_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3529_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3528_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3526_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3524_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3522_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3521_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3519_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3484_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3483_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3482_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3481_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3480_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3479_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3478_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3477_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3476_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3475_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3474_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3473_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3469_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3467_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3465_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3463_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3461_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3459_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3457_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3455_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3453_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3451_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3449_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3428_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3426_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3424_S 1000;
+BA_ "GenSigStartValue" SG_ 2565865050 P3422_S 1000;
+BA_ "GenSigStartValue" SG_ 2565865050 P3421_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3419_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3383_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3381_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3379_S 100;
+BA_ "GenSigStartValue" SG_ 2565865050 P3378_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3377_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3375_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3374_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3372_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3371_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3369_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3368_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3366_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3365_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3364_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3363_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3361_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3360_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3358_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3357_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3355_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3354_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3352_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3351_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3349_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3323_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3322_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3321_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3320_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3319_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3318_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3317_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3316_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3315_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3314_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3313_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3312_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3311_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3310_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3309_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3308_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3307_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3306_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3305_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3304_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3303_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3302_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3301_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3300_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3299_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3298_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3297_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3296_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3295_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3294_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3293_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3292_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3291_S 5;
+BA_ "GenSigStartValue" SG_ 2565865050 P3290_S 2;
+BA_ "GenSigStartValue" SG_ 2565865050 P3289_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3288_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3287_S 5;
+BA_ "GenSigStartValue" SG_ 2565865050 P3285_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3253_S 5;
+BA_ "GenSigStartValue" SG_ 2565865050 P3252_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3251_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3250_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3249_S 5;
+BA_ "GenSigStartValue" SG_ 2565865050 P3248_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3247_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3246_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3245_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3244_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3243_S 10;
+BA_ "GenSigStartValue" SG_ 2565865050 P3242_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3241_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3240_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3239_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3238_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3237_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3235_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3219_S 4650;
+BA_ "GenSigStartValue" SG_ 2565865050 P3217_S 4650;
+BA_ "GenSigStartValue" SG_ 2565865050 P3215_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3213_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3211_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3209_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3207_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3205_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3203_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3189_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3187_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3185_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3183_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3170_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3168_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3166_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3164_S 300;
+BA_ "GenSigStartValue" SG_ 2565865050 P3162_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3160_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3134_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3133_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3132_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3130_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3128_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3126_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3125_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3124_S 1;
+BA_ "GenSigStartValue" SG_ 2565865050 P3123_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3122_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3120_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3097_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3095_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3093_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3091_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3090_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3089_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3088_S 5;
+BA_ "GenSigStartValue" SG_ 2565865050 P3086_S 100;
+BA_ "GenSigStartValue" SG_ 2565865050 P3084_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3082_S 100;
+BA_ "GenSigStartValue" SG_ 2565865050 P3078_S 0;
+BA_ "GenSigStartValue" SG_ 2565865050 P3076_S 100;
+BA_ "GenSigStartValue" SG_ 2565865050 P3074_S 100;
+BA_ "GenSigStartValue" SG_ 2565865050 Reply_T_last_move_S 20;
+BA_ "GenSigStartValue" SG_ 2565865050 Reply_Spl_set_last_S 1000;
+BA_ "GenSigStartValue" SG_ 2565865050 Reply_req_spool_pos_S 1000;
+BA_ "GenSigStartValue" SG_ 2565864979 P3822_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3814_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3812_M 5;
+BA_ "GenSigStartValue" SG_ 2565864979 P3811_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3810_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3808_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3806_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3804_M 5;
+BA_ "GenSigStartValue" SG_ 2565864979 P3802_M 50;
+BA_ "GenSigStartValue" SG_ 2565864979 P3801_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3799_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3797_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3795_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3793_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3791_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3789_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3776_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3775_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3774_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3773_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3772_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3771_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3769_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3719_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3718_M 5;
+BA_ "GenSigStartValue" SG_ 2565864979 P3716_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3714_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3712_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3710_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3708_M 100;
+BA_ "GenSigStartValue" SG_ 2565864979 P3706_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3705_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3703_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3701_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3700_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3699_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3698_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3697_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3696_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3694_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3692_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3690_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3689_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3688_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3686_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3684_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3682_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3681_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3680_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3678_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3676_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3674_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3673_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3672_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3670_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3668_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3666_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3665_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3664_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3662_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3660_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3658_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3657_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3656_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3654_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3652_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3650_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3649_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3648_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3647_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3646_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3644_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3584_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3583_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3582_M 5;
+BA_ "GenSigStartValue" SG_ 2565864979 P3580_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3578_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3576_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3574_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3573_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3572_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3571_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3570_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3569_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3568_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3566_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3564_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3562_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3561_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3560_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3558_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3556_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3554_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3553_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3552_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3550_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3548_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3546_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3545_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3544_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3542_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3540_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3538_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3537_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3536_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3534_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3532_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3530_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3529_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3528_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3526_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3524_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3522_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3521_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3519_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3484_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3483_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3482_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3481_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3480_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3479_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3478_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3477_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3476_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3475_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3474_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3473_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3469_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3467_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3465_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3463_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3461_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3459_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3457_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3455_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3453_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3451_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3449_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3428_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3426_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3424_M 1000;
+BA_ "GenSigStartValue" SG_ 2565864979 P3422_M 1000;
+BA_ "GenSigStartValue" SG_ 2565864979 P3421_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3419_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3383_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3381_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3379_M 100;
+BA_ "GenSigStartValue" SG_ 2565864979 P3378_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3377_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3375_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3374_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3372_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3371_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3369_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3368_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3366_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3365_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3364_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3363_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3361_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3360_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3358_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3357_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3355_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3354_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3352_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3351_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3349_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3323_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3322_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3321_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3320_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3319_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3318_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3317_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3316_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3315_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3314_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3313_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3312_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3311_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3310_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3309_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3308_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3307_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3306_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3305_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3304_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3303_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3302_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3301_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3300_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3299_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3298_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3297_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3296_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3295_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3294_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3293_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3292_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3291_M 5;
+BA_ "GenSigStartValue" SG_ 2565864979 P3290_M 2;
+BA_ "GenSigStartValue" SG_ 2565864979 P3289_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3288_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3287_M 5;
+BA_ "GenSigStartValue" SG_ 2565864979 P3285_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3253_M 5;
+BA_ "GenSigStartValue" SG_ 2565864979 P3252_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3251_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3250_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3249_M 5;
+BA_ "GenSigStartValue" SG_ 2565864979 P3248_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3247_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3246_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3245_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3244_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3243_M 10;
+BA_ "GenSigStartValue" SG_ 2565864979 P3242_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3241_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3240_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3239_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3238_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3237_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3235_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3219_M 4650;
+BA_ "GenSigStartValue" SG_ 2565864979 P3217_M 4650;
+BA_ "GenSigStartValue" SG_ 2565864979 P3215_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3213_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3211_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3209_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3207_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3205_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3203_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3189_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3187_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3185_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3183_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3170_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3168_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3166_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3164_M 300;
+BA_ "GenSigStartValue" SG_ 2565864979 P3162_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3160_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3134_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3133_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3132_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3130_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3128_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3126_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3125_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3124_M 1;
+BA_ "GenSigStartValue" SG_ 2565864979 P3123_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3122_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3120_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3097_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3095_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3093_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3091_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3090_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3089_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3088_M 5;
+BA_ "GenSigStartValue" SG_ 2565864979 P3086_M 100;
+BA_ "GenSigStartValue" SG_ 2565864979 P3084_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3082_M 100;
+BA_ "GenSigStartValue" SG_ 2565864979 P3078_M 0;
+BA_ "GenSigStartValue" SG_ 2565864979 P3076_M 100;
+BA_ "GenSigStartValue" SG_ 2565864979 P3074_M 100;
+BA_ "GenSigStartValue" SG_ 2565864979 Reply_T_last_move_M 20;
+BA_ "GenSigStartValue" SG_ 2565864979 Reply_Spl_set_last_M 1000;
+BA_ "GenSigStartValue" SG_ 2565864979 Reply_req_spool_pos_M 1000;
+BA_ "GenSigStartValue" SG_ 2565823230 Req_spool_pos_S 1000;
+BA_ "GenSigStartValue" SG_ 2565805054 Req_Spl_init_SP_M 0;
+BA_ "GenSigStartValue" SG_ 2565805054 Req_spool_pos_M 1000;
+BA_ "GenSigStartValue" SG_ 2365528154 STR_FB_Est_WA_S 1000;
+BA_ "GenSigStartValue" SG_ 2365528154 STR_FB_Est_flow_S 1000;
+BA_ "GenSigStartValue" SG_ 2365528083 STR_FB_Est_WA_M 1000;
+BA_ "GenSigStartValue" SG_ 2365528083 STR_FB_Est_flow_M 1000;
+BA_ "GenSigStartValue" SG_ 2365527630 AUX_JOY_CL_trim_P 200;
+BA_ "GenSigStartValue" SG_ 2365527630 AUX_JOY_POS_P 1000;
+BA_ "GenSigStartValue" SG_ 2365527886 AUX_JOY_CL_trim_R 200;
+BA_ "GenSigStartValue" SG_ 2365527886 AUX_JOY_POS_R 1000;
+BA_ "GenSigStartValue" SG_ 2365527375 AUX_STW_velocity_R 0;
+BA_ "GenSigStartValue" SG_ 2365527119 AUX_STW_velocity_P 0;
+BA_ "GenSigStartValue" SG_ 2365526349 STW_velocity_R 0;
+BA_ "GenSigStartValue" SG_ 2365526093 STW_velocity_P 0;
+BA_ "GenSigStartValue" SG_ 2566858330 WAS2_S 1000;
+BA_ "GenSigStartValue" SG_ 2566858330 SPI_Flow_command_S 1000;
+BA_ "GenSigStartValue" SG_ 2566858259 WAS2_M 1000;
+BA_ "GenSigStartValue" SG_ 2566858259 SPI_Flow_command_M 1000;
+BA_ "GenSigStartValue" SG_ 2566858074 FDA_Spool_position_S 1000;
+BA_ "GenSigStartValue" SG_ 2566858074 FDA_STW_velocity_S 3000;
+BA_ "GenSigStartValue" SG_ 2566858074 WAS_S 1000;
+BA_ "GenSigStartValue" SG_ 2566857818 Flow_Cmd_S 1000;
+BA_ "GenSigStartValue" SG_ 2566857818 EFU_STW_difference_S 0;
+BA_ "GenSigStartValue" SG_ 2566857818 Flow_setpoint_S 1000;
+BA_ "GenSigStartValue" SG_ 2566857747 Flow_Cmd_M 1000;
+BA_ "GenSigStartValue" SG_ 2566857747 EFU_STW_difference_M 0;
+BA_ "GenSigStartValue" SG_ 2566857747 Flow_setpoint_M 1000;
+BA_ "GenSigStartValue" SG_ 2566858003 FDA_Spool_position_M 1000;
+BA_ "GenSigStartValue" SG_ 2566858003 FDA_STW_velocity_M 3000;
+BA_ "GenSigStartValue" SG_ 2566858003 WAS_M 1000;
+BA_ "GenSigStartValue" SG_ 2360089619 GPS1_Estimated_curvature 0;
+BA_ "GenSigStartValue" SG_ 2360152860 GPS1_Curvature_cmd 0;
+BA_ "GenSigStartValue" SG_ 2566857562 LVDT_neut_comp_S 100;
+BA_ "GenSigStartValue" SG_ 2566857562 PCB_temp_S 40;
+BA_ "GenSigStartValue" SG_ 2566857491 LVDT_neut_comp_M 100;
+BA_ "GenSigStartValue" SG_ 2566857491 PCB_temp_M 40;
+BA_ "GenSigEVName" SG_ 2566857306 SRC_CL_WA_setpoint_S "Env@Nodename_@Signame";
+BA_ "GenSigStartValue" SG_ 2566857306 CL_WA_setpoint_S 1000;
+BA_ "GenSigEVName" SG_ 2566857235 SRC_CL_WA_setpoint_M "Env@Nodename_@Signame";
+BA_ "GenSigStartValue" SG_ 2566857235 CL_WA_setpoint_M 1000;
+BA_ "GenSigEVName" SG_ 2566857235 Dout_state_M "Env@Nodename_@Signame";
+BA_ "GenSigStartValue" SG_ 2566857050 Spool_setpoint_S 1000;
+BA_ "GenSigStartValue" SG_ 2566857050 Spool_position_S 1000;
+BA_ "GenSigStartValue" SG_ 2566856979 Spool_setpoint_M 1000;
+BA_ "GenSigStartValue" SG_ 2566856979 Spool_position_M 1000;
+VAL_ 2566858842 IMD_Status_S 3 "Information not available" 2 "Reserved" 1 "Steering wheel inactive" 0 "Steering wheel active" ;
+VAL_ 2566858771 IMD_Status_M 3 "Information not available" 2 "Reserved" 1 "Steering wheel inactive" 0 "Steering wheel active" ;
+VAL_ 2365446638 ELOBAU_RIGHT_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446638 ELOBAU_NEUTRAL_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446638 ELOBAU_LEFT_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446125 ELOBAU_RIGHT_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446125 ELOBAU_NEUTRAL_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446125 ELOBAU_LEFT_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446636 ELOBAU_RIGHT_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446636 ELOBAU_NEUTRAL_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446636 ELOBAU_LEFT_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446123 ELOBAU_RIGHT_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446123 ELOBAU_NEUTRAL_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446123 ELOBAU_LEFT_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446382 ELOBAU_RIGHT_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446382 ELOBAU_NEUTRAL_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446382 ELOBAU_LEFT_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365445869 ELOBAU_RIGHT_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365445869 ELOBAU_NEUTRAL_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365445869 ELOBAU_LEFT_R 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446380 ELOBAU_RIGHT_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446380 ELOBAU_NEUTRAL_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365446380 ELOBAU_LEFT_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365445867 ELOBAU_RIGHT_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365445867 ELOBAU_NEUTRAL_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2365445867 ELOBAU_LEFT_P 3 "Not Available" 2 "Error Indicator" 1 "In Position" 0 "Not In Position" ;
+VAL_ 2360089875 GPS2_Limit_status 7 "Reserved" 6 "Non-recoverable fault" 5 "Reserved" 4 "Reserved" 3 "Limited low " 2 "Limited high" 1 "Reserved" 0 "Not limited" ;
+VAL_ 2360089875 GPS2_Exit_reason 63 "Reserved" 62 "Error (Safe state)" 61 "Reserved" 60 "Reserved" 59 "Reserved" 58 "Reserved" 57 "Reserved" 56 "Reserved" 55 "Reserved" 54 "Reserved" 53 "Reserved" 52 "Reserved" 51 "Reserved" 50 "Reserved" 49 "Reserved" 48 "Reserved" 47 "Reserved" 46 "Reserved" 45 "Reserved" 44 "Reserved" 43 "Reserved" 42 "Reserved" 41 "Reserved" 40 "Reserved" 39 "Reserved" 38 "Reserved" 37 "Reserved" 36 "Reserved" 35 "Reserved" 34 "Reserved" 33 "Reserved" 32 "Reserved" 31 "Reserved" 30 "Reserved" 29 "Reserved" 28 "Reserved" 27 "Reserved" 26 "Reserved" 25 "Altrnte guidnce or no sys active" 24 "Vehicle speed too high" 23 "Reserved" 22 "Reserved" 21 "Reserved" 20 "Reserved" 19 "Reserved" 18 "Reserved" 17 "Reserved" 16 "Reserved" 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "GMC out of range/invalid" 5 "GMC timeout" 4 "Reserved" 3 "Operator override of function" 2 "Reserved" 1 "Reserved" 0 "No reason/all clear" ;
+VAL_ 2360089875 GPS2_System_ready 3 "Information not available" 2 "Error condition" 1 "System is ready" 0 "System is not ready" ;
+VAL_ 2360089875 GPS2_System_lockout 3 "Information Not available" 2 "Error Condition" 1 "Active" 0 "Not active" ;
+VAL_ 2360089875 GPS2_Str_input_pos_status 3 "Information Not available" 2 "Error condition" 1 "Correct position" 0 "Incorrect position" ;
+VAL_ 2360089875 GPS2_Req_reset 3 "Not available" 2 "Error condition" 1 "Reset required" 0 "Reset not required" ;
+VAL_ 2360152861 GPS2_Str_cmd_status 3 "Information not available" 2 "Error condition" 1 "Intended for steering" 0 "Not intended for steering" ;
+VAL_ 2565406554 Control_byte_S 2 "Access Denied" 1 "Negative ACK " 0 "Positive ACK" ;
+VAL_ 2565406483 Control_byte_M 2 "Access Denied" 1 "Negative ACK " 0 "Positive ACK" ;
+VAL_ 2565865050 Reply_param_address_S 3814 "P3814" 3822 "P3822" 3812 "P3812" 3811 "P3811" 3810 "P3810" 3808 "P3808" 3806 "P3806" 3804 "P3804" 3802 "P3802" 3801 "P3801" 3799 "P3799" 3797 "P3797" 3795 "P3795" 3793 "P3793" 3791 "P3791" 3789 "P3789" 3776 "P3776" 3774 "P3774" 3772 "P3772" 3775 "P3775" 3773 "P3773" 3771 "P3771" 3769 "P3769" 3719 "P3719" 3718 "P3718" 3716 "P3716" 3714 "P3714" 3712 "P3712" 3710 "P3710" 3708 "P3708" 3706 "P3706" 3705 "P3705" 3703 "P3703" 3701 "P3701" 3700 "P3700" 3699 "P3699" 3698 "P3698" 3697 "P3697" 3696 "P3696" 3694 "P3694" 3692 "P3692" 3690 "P3690" 3689 "P3689" 3688 "P3688" 3686 "P3686" 3684 "P3684" 3682 "P3682" 3681 "P3681" 3680 "P3680" 3678 "P3678" 3676 "P3676" 3674 "P3674" 3673 "P3673" 3672 "P3672" 3670 "P3670" 3668 "P3668" 3666 "P3666" 3665 "P3665" 3664 "P3664" 3662 "P3662" 3660 "P3660" 3658 "P3658" 3657 "P3657" 3656 "P3656" 3654 "P3654" 3652 "P3652" 3650 "P3650" 3649 "P3649" 3648 "P3648" 3647 "P3647" 3646 "P3646" 3644 "P3644" 3584 "P3584" 3583 "P3583" 3582 "P3582" 3580 "P3580" 3578 "P3578" 3576 "P3576" 3574 "P3574" 3573 "P3573" 3572 "P3572" 3571 "P3571" 3570 "P3570" 3569 "P3569" 3568 "P3568" 3566 "P3566" 3564 "P3564" 3562 "P3562" 3561 "P3561" 3560 "P3560" 3558 "P3558" 3556 "P3556" 3554 "P3554" 3553 "P3553" 3552 "P3552" 3550 "P3550" 3548 "P3548" 3546 "P3546" 3545 "P3545" 3544 "P3544" 3542 "P3542" 3540 "P3540" 3538 "P3538" 3537 "P3537" 3536 "P3536" 3534 "P3534" 3532 "P3532" 3530 "P3530" 3529 "P3529" 3528 "P3528" 3526 "P3526" 3524 "P3524" 3522 "P3522" 3521 "P3521" 3519 "P3519" 3484 "P3484" 3483 "P3483" 3482 "P3482" 3481 "P3481" 3480 "P3480" 3479 "P3479" 3478 "P3478" 3477 "P3477" 3476 "P3476" 3475 "P3475" 3474 "P3474" 3473 "P3473" 3469 "P3469" 3467 "P3467" 3465 "P3465" 3463 "P3463" 3461 "P3461" 3459 "P3459" 3457 "P3457" 3455 "P3455" 3453 "P3453" 3451 "P3451" 3449 "P3449" 3428 "P3428" 3426 "P3426" 3424 "P3424" 3422 "P3422" 3421 "P3421" 3419 "P3419" 3383 "P3383" 3381 "P3381" 3379 "P3379" 3378 "P3378" 3377 "P3377" 3375 "P3375" 3374 "P3374" 3372 "P3372" 3371 "P3371" 3369 "P3369" 3368 "P3368" 3366 "P3366" 3365 "P3365" 3364 "P3364" 3363 "P3363" 3361 "P3361" 3360 "P3360" 3358 "P3358" 3357 "P3357" 3355 "P3355" 3354 "P3354" 3352 "P3352" 3351 "P3351" 3349 "P3349" 3323 "P3323" 3322 "P3322" 3321 "P3321" 3320 "P3320" 3319 "P3319" 3318 "P3318" 3317 "P3317" 3316 "P3316" 3315 "P3315" 3314 "P3314" 3313 "P3313" 3312 "P3312" 3311 "P3311" 3310 "P3310" 3309 "P3309" 3308 "P3308" 3307 "P3307" 3306 "P3306" 3305 "P3305" 3304 "P3304" 3303 "P3303" 3302 "P3302" 3301 "P3301" 3300 "P3300" 3299 "P3299" 3298 "P3298" 3297 "P3297" 3296 "P3296" 3295 "P3295" 3294 "P3294" 3293 "P3293" 3292 "P3292" 3291 "P3291" 3290 "P3290" 3289 "P3289" 3288 "P3288" 3287 "P3287" 3285 "P3285" 3253 "P3253" 3252 "P3252" 3251 "P3251" 3250 "P3250" 3249 "P3249" 3248 "P3248" 3247 "P3247" 3246 "P3246" 3245 "P3245" 3244 "P3244" 3243 "P3243" 3242 "P3242" 3241 "P3241" 3240 "P3240" 3239 "P3239" 3238 "P3238" 3237 "P3237" 3235 "P3235" 3219 "P3219" 3217 "P3217" 3215 "P3215" 3213 "P3213" 3211 "P3211" 3209 "P3209" 3207 "P3207" 3205 "P3205" 3203 "P3203" 3189 "P3189" 3187 "P3187" 3185 "P3185" 3183 "P3183" 3170 "P3170" 3168 "P3168" 3166 "P3166" 3164 "P3164" 3162 "P3162" 3160 "P3160" 3134 "P3134" 3133 "P3133" 3132 "P3132" 3130 "P3130" 3128 "P3128" 3126 "P3126" 3125 "P3125" 3124 "P3124" 3123 "P3123" 3122 "P3122" 3120 "P3120" 3097 "P3097" 3095 "P3095" 3093 "P3093" 3091 "P3091" 3090 "P3090" 3089 "P3089" 3088 "P3088" 3086 "P3086" 3084 "P3084" 3082 "P3082" 3081 "P3081" 3080 "P3080" 3078 "P3078" 3076 "P3076" 3074 "P3074" 3073 "P3073" 3072 "P3072" ;
+VAL_ 2565865050 Reply_param_data_length_S 4 "4 Bytes to read" 3 "3 Bytes to read" 2 "2 Bytes to read" 1 "1 Byte to read" 0 "Reserved" ;
+VAL_ 2565865050 Reply_T_last_move_S 10 "Timeout occurred" 0 "No time recorded yet" 65535 "Information not available " ;
+VAL_ 2565865050 Reply_WA_mov_status_L_S 11 "Information not available " 2 "Reserved" 1 "Completed" 0 "In Progress" ;
+VAL_ 2565865050 Reply_WA_mov_status_R_S 11 "Info not available" 2 "Reserved" 1 "Completed " 0 "In progress" ;
+VAL_ 2565865050 Reply_Calib_err_code_S 15 "Calculated Cylinder stroke volume cross check between Main and Safety failed" 14 "Calculated max WA cross check between Main and Safety failed" 13 "Calibration inp param mismatch" 12 "Timeout ocurd at move to max pnt" 11 "Cn't cal val wthn spl st pnt lmt" 255 "No Error" 10 "Invalid wheel angle observed" 9 "Calibration cntr update failure" 8 "Param update failre in safetyuc" 7 "Param update failre in mainuc" 6 "Consis Check fail in safetyuc" 5 "Consis Check fail in mainuc" 4 "Not data to perfrm consis chck" 3 "steer wheel movement observed" 2 "Inp sig cross check failure" 1 "Nec inp sig not avail to safeuc" 0 "Nec inp sig not avail to mainuc" ;
+VAL_ 2565865050 Reply_WAS_captured_S 3 "Reserved" 2 "Rightmost position" 1 "Neutral position" 0 "Leftmost position" ;
+VAL_ 2565865050 Reply_result_from_ECU_S 1 "Safety Micro-controller" 0 "Main Micro-controller" ;
+VAL_ 2565865050 Reply_Pos_captured_S 1 "Position captured" 0 "Position not captured" ;
+VAL_ 2565865050 Reply_Input_status_S 3 "Description for the value '0x3'" 2 "Nece inp sign out of val range " 1 "Neces input signals avail" 0 "Neces input signals not avail" ;
+VAL_ 2565865050 Reply_Consistency_chk_S 3 "Information not available " 2 "Reserved" 1 "Consistency check has passed" 0 "Consistency check has failed" ;
+VAL_ 2565865050 SER_TOOL_REPLY_XID_S 145 "Calibration status " 151 "Soft reset reply" 143 "Position Capture Reply " 135 "Param read reply" 131 "Direct output control reply " ;
+VAL_ 2565865050 Reply_Sensor5V_state_S 3 "Information not availlable" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_ 2565865050 Reply_CSS_state_S 3 "Information not available" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_ 2565864979 Reply_WA_mov_status_L_M 11 "Information not available " 2 "Reserved" 1 "Completed" 0 "In Progress" ;
+VAL_ 2565864979 Reply_param_address_M 3814 "P3814" 3822 "P3822" 3812 "P3812" 3811 "P3811" 3810 "P3810" 3808 "P3808" 3806 "P3806" 3804 "P3804" 3802 "P3802" 3801 "P3801" 3799 "P3799" 3797 "P3797" 3795 "P3795" 3793 "P3793" 3791 "P3791" 3789 "P3789" 3776 "P3776" 3774 "P3774" 3772 "P3772" 3775 "P3775" 3773 "P3773" 3771 "P3771" 3769 "P3769" 3719 "P3719" 3718 "P3718" 3716 "P3716" 3714 "P3714" 3712 "P3712" 3710 "P3710" 3708 "P3708" 3706 "P3706" 3705 "P3705" 3703 "P3703" 3701 "P3701" 3700 "P3700" 3699 "P3699" 3698 "P3698" 3697 "P3697" 3696 "P3696" 3694 "P3694" 3692 "P3692" 3690 "P3690" 3689 "P3689" 3688 "P3688" 3686 "P3686" 3684 "P3684" 3682 "P3682" 3681 "P3681" 3680 "P3680" 3678 "P3678" 3676 "P3676" 3674 "P3674" 3673 "P3673" 3672 "P3672" 3670 "P3670" 3668 "P3668" 3666 "P3666" 3665 "P3665" 3664 "P3664" 3662 "P3662" 3660 "P3660" 3658 "P3658" 3657 "P3657" 3656 "P3656" 3654 "P3654" 3652 "P3652" 3650 "P3650" 3649 "P3649" 3648 "P3648" 3647 "P3647" 3646 "P3646" 3644 "P3644" 3584 "P3584" 3583 "P3583" 3582 "P3582" 3580 "P3580" 3578 "P3578" 3576 "P3576" 3574 "P3574" 3573 "P3573" 3572 "P3572" 3571 "P3571" 3570 "P3570" 3569 "P3569" 3568 "P3568" 3566 "P3566" 3564 "P3564" 3562 "P3562" 3561 "P3561" 3560 "P3560" 3558 "P3558" 3556 "P3556" 3554 "P3554" 3553 "P3553" 3552 "P3552" 3550 "P3550" 3548 "P3548" 3546 "P3546" 3545 "P3545" 3544 "P3544" 3542 "P3542" 3540 "P3540" 3538 "P3538" 3537 "P3537" 3536 "P3536" 3534 "P3534" 3532 "P3532" 3530 "P3530" 3529 "P3529" 3528 "P3528" 3526 "P3526" 3524 "P3524" 3522 "P3522" 3521 "P3521" 3519 "P3519" 3484 "P3484" 3483 "P3483" 3482 "P3482" 3481 "P3481" 3480 "P3480" 3479 "P3479" 3478 "P3478" 3477 "P3477" 3476 "P3476" 3475 "P3475" 3474 "P3474" 3473 "P3473" 3469 "P3469" 3467 "P3467" 3465 "P3465" 3463 "P3463" 3461 "P3461" 3459 "P3459" 3457 "P3457" 3455 "P3455" 3453 "P3453" 3451 "P3451" 3449 "P3449" 3428 "P3428" 3426 "P3426" 3424 "P3424" 3422 "P3422" 3421 "P3421" 3419 "P3419" 3383 "P3383" 3381 "P3381" 3379 "P3379" 3378 "P3378" 3377 "P3377" 3375 "P3375" 3374 "P3374" 3372 "P3372" 3371 "P3371" 3369 "P3369" 3368 "P3368" 3366 "P3366" 3365 "P3365" 3364 "P3364" 3363 "P3363" 3361 "P3361" 3360 "P3360" 3358 "P3358" 3357 "P3357" 3355 "P3355" 3354 "P3354" 3352 "P3352" 3351 "P3351" 3349 "P3349" 3323 "P3323" 3322 "P3322" 3321 "P3321" 3320 "P3320" 3319 "P3319" 3318 "P3318" 3317 "P3317" 3316 "P3316" 3315 "P3315" 3314 "P3314" 3313 "P3313" 3312 "P3312" 3311 "P3311" 3310 "P3310" 3309 "P3309" 3308 "P3308" 3307 "P3307" 3306 "P3306" 3305 "P3305" 3304 "P3304" 3303 "P3303" 3302 "P3302" 3301 "P3301" 3300 "P3300" 3299 "P3299" 3298 "P3298" 3297 "P3297" 3296 "P3296" 3295 "P3295" 3294 "P3294" 3293 "P3293" 3292 "P3292" 3291 "P3291" 3290 "P3290" 3289 "P3289" 3288 "P3288" 3287 "P3287" 3285 "P3285" 3253 "P3253" 3252 "P3252" 3251 "P3251" 3250 "P3250" 3249 "P3249" 3248 "P3248" 3247 "P3247" 3246 "P3246" 3245 "P3245" 3244 "P3244" 3243 "P3243" 3242 "P3242" 3241 "P3241" 3240 "P3240" 3239 "P3239" 3238 "P3238" 3237 "P3237" 3235 "P3235" 3219 "P3219" 3217 "P3217" 3215 "P3215" 3213 "P3213" 3211 "P3211" 3209 "P3209" 3207 "P3207" 3205 "P3205" 3203 "P3203" 3189 "P3189" 3187 "P3187" 3185 "P3185" 3183 "P3183" 3170 "P3170" 3168 "P3168" 3166 "P3166" 3164 "P3164" 3162 "P3162" 3160 "P3160" 3134 "P3134" 3133 "P3133" 3132 "P3132" 3130 "P3130" 3128 "P3128" 3126 "P3126" 3125 "P3125" 3124 "P3124" 3123 "P3123" 3122 "P3122" 3120 "P3120" 3097 "P3097" 3095 "P3095" 3093 "P3093" 3091 "P3091" 3090 "P3090" 3089 "P3089" 3088 "P3088" 3086 "P3086" 3084 "P3084" 3082 "P3082" 3081 "P3081" 3080 "P3080" 3078 "P3078" 3076 "P3076" 3074 "P3074" 3073 "P3073" 3072 "P3072" ;
+VAL_ 2565864979 Reply_param_data_length_M 4 "4 Bytes to read" 3 "3 Bytes to read" 2 "2 Bytes to read" 1 "1 Byte to read" 0 "Reserved" ;
+VAL_ 2565864979 Reply_T_last_move_M 10 "Timeout occurred" 0 "No time recorded yet" 65535 "Information not available " ;
+VAL_ 2565864979 Reply_WA_mov_status_R_M 11 "Info not available" 2 "Reserved" 1 "Completed " 0 "In progress" ;
+VAL_ 2565864979 Reply_Calib_err_code_M 15 "Calculated Cylinder stroke volume cross check between Main and Safety failed" 14 "Calculated max WA cross check between Main and Safety failed" 13 "Calibration inp param mismatch" 12 "Timeout ocurd at move to max pnt" 11 "Cn't cal val wthn spl st pnt lmt" 10 "Invalid wheel angle observed" 255 "No Error" 9 "Calibration cntr update failure" 8 "Param update failre in safetyuc" 7 "Param update failre in mainuc" 6 "Consis Check fail in safetyuc" 5 "Consis Check fail in mainuc" 4 "Not data to perfrm consis chck" 3 "steer wheel movement observed" 2 "Inp sig cross check failure" 1 "Nec inp sig not avail to safeuc" 0 "Nec inp sig not avail to mainuc" ;
+VAL_ 2565864979 Reply_result_from_ECU_M 1 "Safety Micro-controller" 0 "Main Micro-controller" ;
+VAL_ 2565864979 Reply_Pos_captured_M 1 "Position captured" 0 "Position not captured" ;
+VAL_ 2565864979 Reply_Input_status_M 3 "Description for the value '0x3'" 2 "Nece inp sign out of val range " 1 "Neces input signals avail" 0 "Neces input signals not avail" ;
+VAL_ 2565864979 Reply_Consistency_chk_M 3 "Information not available " 2 "Reserved" 1 "Consistency check has passed" 0 "Consistency check has failed" ;
+VAL_ 2565864979 Reply_WAS_captured_M 3 "Reserved" 2 "Rightmost position" 1 "Neutral position" 0 "Leftmost position" ;
+VAL_ 2565864979 Reply_Sensor5V_state_M 3 "Information not availlable" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_ 2565864979 Reply_CSS_state_M 3 "Information not available" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_ 2565864979 SER_TOOL_REPLY_XID_M 145 "Calibration status " 151 "Soft reset reply" 143 "Position Capture Reply " 135 "Param read reply" 131 "Direct output control reply " ;
+VAL_ 2565823230 TX_Rate_stat_msg_8_S 255 "No change" 0 "Transmission Stop" ;
+VAL_ 2565823230 TX_Rate_stat_msg_7_S 255 "No change" 0 "Transmission Stop" ;
+VAL_ 2565823230 Req_param_address_S 3814 "P3814" 3822 "P3822" 3812 "P3812" 3811 "P3811" 3810 "P3810" 3808 "P3808" 3806 "P3806" 3804 "P3804" 3802 "P3802" 3801 "P3801" 3799 "P3799" 3797 "P3797" 3795 "P3795" 3793 "P3793" 3791 "P3791" 3789 "P3789" 3776 "P3776" 3774 "P3774" 3772 "P3772" 3775 "P3775" 3773 "P3773" 3771 "P3771" 3769 "P3769" 3719 "P3719" 3718 "P3718" 3716 "P3716" 3714 "P3714" 3712 "P3712" 3710 "P3710" 3708 "P3708" 3706 "P3706" 3705 "P3705" 3703 "P3703" 3701 "P3701" 3700 "P3700" 3699 "P3699" 3698 "P3698" 3697 "P3697" 3696 "P3696" 3694 "P3694" 3692 "P3692" 3690 "P3690" 3689 "P3689" 3688 "P3688" 3686 "P3686" 3684 "P3684" 3682 "P3682" 3681 "P3681" 3680 "P3680" 3678 "P3678" 3676 "P3676" 3674 "P3674" 3673 "P3673" 3672 "P3672" 3670 "P3670" 3668 "P3668" 3666 "P3666" 3665 "P3665" 3664 "P3664" 3662 "P3662" 3660 "P3660" 3658 "P3658" 3657 "P3657" 3656 "P3656" 3654 "P3654" 3652 "P3652" 3650 "P3650" 3649 "P3649" 3648 "P3648" 3647 "P3647" 3646 "P3646" 3644 "P3644" 3584 "P3584" 3583 "P3583" 3582 "P3582" 3580 "P3580" 3578 "P3578" 3576 "P3576" 3574 "P3574" 3573 "P3573" 3572 "P3572" 3571 "P3571" 3570 "P3570" 3569 "P3569" 3568 "P3568" 3566 "P3566" 3564 "P3564" 3562 "P3562" 3561 "P3561" 3560 "P3560" 3558 "P3558" 3556 "P3556" 3554 "P3554" 3553 "P3553" 3552 "P3552" 3550 "P3550" 3548 "P3548" 3546 "P3546" 3545 "P3545" 3544 "P3544" 3542 "P3542" 3540 "P3540" 3538 "P3538" 3537 "P3537" 3536 "P3536" 3534 "P3534" 3532 "P3532" 3530 "P3530" 3529 "P3529" 3528 "P3528" 3526 "P3526" 3524 "P3524" 3522 "P3522" 3521 "P3521" 3519 "P3519" 3484 "P3484" 3483 "P3483" 3482 "P3482" 3481 "P3481" 3480 "P3480" 3479 "P3479" 3478 "P3478" 3477 "P3477" 3476 "P3476" 3475 "P3475" 3474 "P3474" 3473 "P3473" 3469 "P3469" 3467 "P3467" 3465 "P3465" 3463 "P3463" 3461 "P3461" 3459 "P3459" 3457 "P3457" 3455 "P3455" 3453 "P3453" 3451 "P3451" 3449 "P3449" 3428 "P3428" 3426 "P3426" 3424 "P3424" 3422 "P3422" 3421 "P3421" 3419 "P3419" 3383 "P3383" 3381 "P3381" 3379 "P3379" 3378 "P3378" 3377 "P3377" 3375 "P3375" 3374 "P3374" 3372 "P3372" 3371 "P3371" 3369 "P3369" 3368 "P3368" 3366 "P3366" 3365 "P3365" 3364 "P3364" 3363 "P3363" 3361 "P3361" 3360 "P3360" 3358 "P3358" 3357 "P3357" 3355 "P3355" 3354 "P3354" 3352 "P3352" 3351 "P3351" 3349 "P3349" 3323 "P3323" 3322 "P3322" 3321 "P3321" 3320 "P3320" 3319 "P3319" 3318 "P3318" 3317 "P3317" 3316 "P3316" 3315 "P3315" 3314 "P3314" 3313 "P3313" 3312 "P3312" 3311 "P3311" 3310 "P3310" 3309 "P3309" 3308 "P3308" 3307 "P3307" 3306 "P3306" 3305 "P3305" 3304 "P3304" 3303 "P3303" 3302 "P3302" 3301 "P3301" 3300 "P3300" 3299 "P3299" 3298 "P3298" 3297 "P3297" 3296 "P3296" 3295 "P3295" 3294 "P3294" 3293 "P3293" 3292 "P3292" 3291 "P3291" 3290 "P3290" 3289 "P3289" 3288 "P3288" 3287 "P3287" 3285 "P3285" 3253 "P3253" 3252 "P3252" 3251 "P3251" 3250 "P3250" 3249 "P3249" 3248 "P3248" 3247 "P3247" 3246 "P3246" 3245 "P3245" 3244 "P3244" 3243 "P3243" 3242 "P3242" 3241 "P3241" 3240 "P3240" 3239 "P3239" 3238 "P3238" 3237 "P3237" 3235 "P3235" 3219 "P3219" 3217 "P3217" 3215 "P3215" 3213 "P3213" 3211 "P3211" 3209 "P3209" 3207 "P3207" 3205 "P3205" 3203 "P3203" 3189 "P3189" 3187 "P3187" 3185 "P3185" 3183 "P3183" 3170 "P3170" 3168 "P3168" 3166 "P3166" 3164 "P3164" 3162 "P3162" 3160 "P3160" 3134 "P3134" 3133 "P3133" 3132 "P3132" 3130 "P3130" 3128 "P3128" 3126 "P3126" 3125 "P3125" 3124 "P3124" 3123 "P3123" 3122 "P3122" 3120 "P3120" 3097 "P3097" 3095 "P3095" 3093 "P3093" 3091 "P3091" 3090 "P3090" 3089 "P3089" 3088 "P3088" 3086 "P3086" 3084 "P3084" 3082 "P3082" 3081 "P3081" 3080 "P3080" 3078 "P3078" 3076 "P3076" 3074 "P3074" 3073 "P3073" 3072 "P3072" ;
+VAL_ 2565823230 TX_Rate_stat_msg_6_S 255 "No Change" 0 "Transmission Stop" ;
+VAL_ 2565823230 TX_Rate_stat_msg_5_S 255 "No Change" 0 "Transmission Stop" ;
+VAL_ 2565823230 TX_Rate_stat_msg_4_S 255 "No Change" 0 "Transmission stop" ;
+VAL_ 2565823230 TX_Rate_stat_msg_3_S 255 "No Change" 0 "Transmission stop" ;
+VAL_ 2565823230 TX_Rate_stat_msg_2_S 255 "No Change" 0 "Transmission stop" ;
+VAL_ 2565823230 TX_Rate_stat_msg_1_S 255 "No Change" 0 "Transmission stop" ;
+VAL_ 2565823230 TX_Rate_stat_msg_OP_S 255 "No change" 0 "No change" ;
+VAL_ 2565823230 Req_ANS_capture_S 3 "Reserved" 2 "Rightmost position" 1 "Neutral position" 0 "Leftmost position" ;
+VAL_ 2565823230 Req_Sensor5V_S 3 "No Change" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_ 2565823230 Req_CSS_S 3 "No Change" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_ 2565823230 Req_service_mode_S 3 "Joystick Calibration" 2 "Spool Calibration" 1 "Wheel Angle Sensor Calibration" 0 "Direct Output Control" ;
+VAL_ 2565823230 Req_service_mode_chk_S 21845 "Joystick Calibration" 21930 "Direct Output Control" 42405 "Wheel Angle Sensor Calibration" 23130 "Spool Calibration" ;
+VAL_ 2565823230 SER_TOOL_REQ_XID_S 136 "Status Message Request2" 150 "Soft Reset Request" 146 "Calibration reset request " 144 "Parameter update request " 140 "Spool calibration start request " 134 "Parameter Read Request" 132 "Status Message Request" 142 "Position Capture Request " 130 "Direct output control request " 128 "Enter Service Mode" ;
+VAL_ 2565805054 TX_Rate_stat_msg_8_M 255 "No change" 0 "Transmission Stop" ;
+VAL_ 2565805054 TX_Rate_stat_msg_7_M 255 "No change" 0 "Transmission Stop" ;
+VAL_ 2565805054 Req_param_address_M 3814 "P3814" 3822 "P3822" 3812 "P3812" 3811 "P3811" 3810 "P3810" 3808 "P3808" 3806 "P3806" 3804 "P3804" 3802 "P3802" 3801 "P3801" 3799 "P3799" 3797 "P3797" 3795 "P3795" 3793 "P3793" 3791 "P3791" 3789 "P3789" 3776 "P3776" 3774 "P3774" 3772 "P3772" 3775 "P3775" 3773 "P3773" 3771 "P3771" 3769 "P3769" 3719 "P3719" 3718 "P3718" 3716 "P3716" 3714 "P3714" 3712 "P3712" 3710 "P3710" 3708 "P3708" 3706 "P3706" 3705 "P3705" 3703 "P3703" 3701 "P3701" 3700 "P3700" 3699 "P3699" 3698 "P3698" 3697 "P3697" 3696 "P3696" 3694 "P3694" 3692 "P3692" 3690 "P3690" 3689 "P3689" 3688 "P3688" 3686 "P3686" 3684 "P3684" 3682 "P3682" 3681 "P3681" 3680 "P3680" 3678 "P3678" 3676 "P3676" 3674 "P3674" 3673 "P3673" 3672 "P3672" 3670 "P3670" 3668 "P3668" 3666 "P3666" 3665 "P3665" 3664 "P3664" 3662 "P3662" 3660 "P3660" 3658 "P3658" 3657 "P3657" 3656 "P3656" 3654 "P3654" 3652 "P3652" 3650 "P3650" 3649 "P3649" 3648 "P3648" 3647 "P3647" 3646 "P3646" 3644 "P3644" 3584 "P3584" 3583 "P3583" 3582 "P3582" 3580 "P3580" 3578 "P3578" 3576 "P3576" 3574 "P3574" 3573 "P3573" 3572 "P3572" 3571 "P3571" 3570 "P3570" 3569 "P3569" 3568 "P3568" 3566 "P3566" 3564 "P3564" 3562 "P3562" 3561 "P3561" 3560 "P3560" 3558 "P3558" 3556 "P3556" 3554 "P3554" 3553 "P3553" 3552 "P3552" 3550 "P3550" 3548 "P3548" 3546 "P3546" 3545 "P3545" 3544 "P3544" 3542 "P3542" 3540 "P3540" 3538 "P3538" 3537 "P3537" 3536 "P3536" 3534 "P3534" 3532 "P3532" 3530 "P3530" 3529 "P3529" 3528 "P3528" 3526 "P3526" 3524 "P3524" 3522 "P3522" 3521 "P3521" 3519 "P3519" 3484 "P3484" 3483 "P3483" 3482 "P3482" 3481 "P3481" 3480 "P3480" 3479 "P3479" 3478 "P3478" 3477 "P3477" 3476 "P3476" 3475 "P3475" 3474 "P3474" 3473 "P3473" 3469 "P3469" 3467 "P3467" 3465 "P3465" 3463 "P3463" 3461 "P3461" 3459 "P3459" 3457 "P3457" 3455 "P3455" 3453 "P3453" 3451 "P3451" 3449 "P3449" 3428 "P3428" 3426 "P3426" 3424 "P3424" 3422 "P3422" 3421 "P3421" 3419 "P3419" 3383 "P3383" 3381 "P3381" 3379 "P3379" 3378 "P3378" 3377 "P3377" 3375 "P3375" 3374 "P3374" 3372 "P3372" 3371 "P3371" 3369 "P3369" 3368 "P3368" 3366 "P3366" 3365 "P3365" 3364 "P3364" 3363 "P3363" 3361 "P3361" 3360 "P3360" 3358 "P3358" 3357 "P3357" 3355 "P3355" 3354 "P3354" 3352 "P3352" 3351 "P3351" 3349 "P3349" 3323 "P3323" 3322 "P3322" 3321 "P3321" 3320 "P3320" 3319 "P3319" 3318 "P3318" 3317 "P3317" 3316 "P3316" 3315 "P3315" 3314 "P3314" 3313 "P3313" 3312 "P3312" 3311 "P3311" 3310 "P3310" 3309 "P3309" 3308 "P3308" 3307 "P3307" 3306 "P3306" 3305 "P3305" 3304 "P3304" 3303 "P3303" 3302 "P3302" 3301 "P3301" 3300 "P3300" 3299 "P3299" 3298 "P3298" 3297 "P3297" 3296 "P3296" 3295 "P3295" 3294 "P3294" 3293 "P3293" 3292 "P3292" 3291 "P3291" 3290 "P3290" 3289 "P3289" 3288 "P3288" 3287 "P3287" 3285 "P3285" 3253 "P3253" 3252 "P3252" 3251 "P3251" 3250 "P3250" 3249 "P3249" 3248 "P3248" 3247 "P3247" 3246 "P3246" 3245 "P3245" 3244 "P3244" 3243 "P3243" 3242 "P3242" 3241 "P3241" 3240 "P3240" 3239 "P3239" 3238 "P3238" 3237 "P3237" 3235 "P3235" 3219 "P3219" 3217 "P3217" 3215 "P3215" 3213 "P3213" 3211 "P3211" 3209 "P3209" 3207 "P3207" 3205 "P3205" 3203 "P3203" 3189 "P3189" 3187 "P3187" 3185 "P3185" 3183 "P3183" 3170 "P3170" 3168 "P3168" 3166 "P3166" 3164 "P3164" 3162 "P3162" 3160 "P3160" 3134 "P3134" 3133 "P3133" 3132 "P3132" 3130 "P3130" 3128 "P3128" 3126 "P3126" 3125 "P3125" 3124 "P3124" 3123 "P3123" 3122 "P3122" 3120 "P3120" 3097 "P3097" 3095 "P3095" 3093 "P3093" 3091 "P3091" 3090 "P3090" 3089 "P3089" 3088 "P3088" 3086 "P3086" 3084 "P3084" 3082 "P3082" 3081 "P3081" 3080 "P3080" 3078 "P3078" 3076 "P3076" 3074 "P3074" 3073 "P3073" 3072 "P3072" ;
+VAL_ 2565805054 TX_Rate_stat_msg_OP_M 255 "No change" 0 "No change" ;
+VAL_ 2565805054 TX_Rate_stat_msg_6_M 255 "No change" 0 "Transmission Stop" ;
+VAL_ 2565805054 TX_Rate_stat_msg_5_M 255 "No Change" 0 "Transmission Stop" ;
+VAL_ 2565805054 TX_Rate_stat_msg_4_M 255 "No Change" 0 "Transmission Stop" ;
+VAL_ 2565805054 TX_Rate_stat_msg_3_M 255 "No Change" 0 "Transmission Stop" ;
+VAL_ 2565805054 TX_Rate_stat_msg_2_M 255 "No Change" 0 "Transmission stop" ;
+VAL_ 2565805054 TX_Rate_stat_msg_1_M 255 "No change" 0 "Transmission stop" ;
+VAL_ 2565805054 Req_ANS_capture_M 3 "Reserved" 2 "Rightmost position" 1 "Neutral position" 0 "Leftmost position" ;
+VAL_ 2565805054 Req_Sensor5V_M 3 "No Change" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_ 2565805054 Req_CSS_M 3 "No Change" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_ 2565805054 Req_service_mode_M 3 "Joystick Calibration" 2 "Spool Calibration" 1 "Wheel Angle Sensor Calibration" 0 "Direct Output Control" ;
+VAL_ 2565805054 Req_service_mode_chk_M 21845 "Joystick Calibration" 21930 "Direct Output Control" 42405 "Wheel Angle Sensor Calibration" 23130 "Spool Calibration" ;
+VAL_ 2565805054 SER_TOOL_REQ_XID_M 136 "Status Message Request2" 150 "Soft Reset Request" 146 "Calibration reset request " 144 "Parameter update request " 140 "Spool calibration start request " 134 "Parameter Read Request" 132 "Status Message Request" 142 "Position Capture Request " 130 "Direct output control request " 128 "Enter Service Mode" ;
+VAL_ 2365528154 IMD_STW_Status_S 3 "Information not available" 2 "Reserved" 1 "Steering wheel inactive" 0 "Steering wheel active" ;
+VAL_ 2365528154 STR_FB_STW_L2L_S 255 "Not Available" ;
+VAL_ 2365528083 IMD_STW_Status_M 3 "Information not available" 2 "Reserved" 1 "Steering wheel inactive" 0 "Steering wheel active" ;
+VAL_ 2365528083 STR_FB_STW_L2L_M 255 "Not Available" ;
+VAL_ 2365527630 AUX_JOY_CL_error_code_P 15 "No Error" 14 "Reserved" 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "Reserved" 1 "Reserved" 0 "Reserved" ;
+VAL_ 2365527630 AUX_JOY_CL_enable_P 3 "Information not available" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_ 2365527886 AUX_JOY_CL_error_code_R 15 "No Error" 14 "Reserved" 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "Reserved" 1 "Reserved" 0 "Reserved" ;
+VAL_ 2365527886 AUX_JOY_CL_enable_R 3 "Information not available" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_ 2365527375 AUX_STW_error_code_R 15 "No Error" 14 "Temperature warning" 7 "Force feedback failure" 6 "Memory failure" 5 "CPU failure" 4 "Power failure" 3 "CAN input message failure" 2 "Steering angle failure" 1 "Sensor chip error" 0 "Reserved" ;
+VAL_ 2365527119 AUX_STW_error_code_P 15 "No Error" 14 "Temperature warning" 7 "Force feedback failure" 6 "Memory failure" 5 "CPU failure" 4 "Power failure" 3 "CAN input message failure" 2 "Steering angle failure" 1 "Sensor chip error" 0 "Reserved" ;
+VAL_ 2365526349 STW_error_code_R 15 "No error" 14 "Temperature Warning" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Memory failure" 5 "CPU failure" 4 "Power failure" 3 "CAN input message failure" 2 "Steering angle failure" 1 "Sensor Chip error" 0 "Reserved" ;
+VAL_ 2365526093 STW_error_code_P 15 "No error" 14 "Temperature Warning" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Memory failure" 5 "CPU failure" 4 "Power failure" 3 "CAN input message failure" 2 "Steering angle failure" 1 "Sensor Chip error" 0 "Reserved" ;
+VAL_ 2566858074 Spl_Diag_S 3 "No Spool diagnostics active" 2 "|| exe of Spl mntrng & Spl mvmnt" 1 "Spool Movement check active" 0 "Spool monitoring active" ;
+VAL_ 2566858074 Spl_Ctrl_S 3 "Information Not available" 2 "Error condition" 1 "Spool control enabled" 0 "Spool control disabled" ;
+VAL_ 2566858074 FDA_Muted_S 3 "Information Not Available" 2 "Reserved" 1 "Fault detection algo enabled" 0 "Fault detection algo muted" ;
+VAL_ 2566858074 FDA_WAS_indication_S 3 "Information Not Available" 2 "Right" 1 "Neutral" 0 "Left" ;
+VAL_ 2566858074 FDA_STW_indication_S 3 "Information Not Available" 2 "Right" 1 "Neutral" 0 "Left" ;
+VAL_ 2566858074 FDA_Spl_indication_S 3 "Information Not Available" 2 "Right" 1 "Neutral" 0 "Left" ;
+VAL_ 2566858074 FDA_Fault_condition_S 3 "Information Not Available" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_ 2566858074 FDA_Err_condition_S 3 "Information Not Available" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_ 2566858003 Spl_Diag_M 3 "No Spool diagnostics active" 2 "|| exe of Spl mntrng & Spl mvmnt" 1 "Spool Movement check active" 0 "Spool monitoring active" ;
+VAL_ 2566858003 Spl_Ctrl_M 3 "Information Not available" 2 "Error condition" 1 "Spool control enabled" 0 "Spool control disabled" ;
+VAL_ 2566858003 FDA_Muted_M 3 "Information Not Available" 2 "Reserved" 1 "Fault detection algo enabled" 0 "Fault detection algo muted" ;
+VAL_ 2566858003 FDA_WAS_indication_M 3 "Information Not Available" 2 "Right" 1 "Neutral" 0 "Left" ;
+VAL_ 2566858003 FDA_STW_indication_M 3 "Information Not Available" 2 "Right" 1 "Neutral" 0 "Left" ;
+VAL_ 2566858003 FDA_Spl_indication_M 3 "Information Not Available" 2 "Right" 1 "Neutral" 0 "Left" ;
+VAL_ 2566858003 FDA_Fault_condition_M 3 "Information Not Available" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_ 2566858003 FDA_Err_condition_M 3 "Information Not Available" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_ 2360089619 GPS1_Limit_status 7 "Reserved" 6 "Non-recoverable fault" 5 "Reserved" 4 "Reserved" 3 "Limited low " 2 "Limited high" 1 "Reserved" 0 "Not limited" ;
+VAL_ 2360089619 GPS1_Exit_reason 63 "Reserved" 62 "Error (Safe state)" 61 "Reserved" 60 "Reserved" 59 "Reserved" 58 "Reserved" 57 "Reserved" 56 "Reserved" 55 "Reserved" 54 "Reserved" 53 "Reserved" 52 "Reserved" 51 "Reserved" 50 "Reserved" 49 "Reserved" 48 "Reserved" 47 "Reserved" 46 "Reserved" 45 "Reserved" 44 "Reserved" 43 "Reserved" 42 "Reserved" 41 "Reserved" 40 "Reserved" 39 "Reserved" 38 "Reserved" 37 "Reserved" 36 "Reserved" 35 "Reserved" 34 "Reserved" 33 "Reserved" 32 "Reserved" 31 "Reserved" 30 "Reserved" 29 "Reserved" 28 "Reserved" 27 "Reserved" 26 "Reserved" 25 "Altrnte guidnce or no sys active" 24 "Vehicle speed too high" 23 "Reserved" 22 "Reserved" 21 "Reserved" 20 "Reserved" 19 "Reserved" 18 "Reserved" 17 "Reserved" 16 "Reserved" 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "GMC out of range/invalid" 5 "GMC timeout" 4 "Reserved" 3 "Operator override of function" 2 "Reserved" 1 "Reserved" 0 "No reason/all clear" ;
+VAL_ 2360089619 GPS1_System_ready 3 "Information not available" 2 "Error condition" 1 "System is ready" 0 "System is not ready" ;
+VAL_ 2360089619 GPS1_Str_input_pos_status 3 "Information Not available" 2 "Error condition" 1 "Correct position" 0 "Incorrect position" ;
+VAL_ 2360089619 GPS1_Req_reset 3 "Not available" 2 "Error condition" 1 "Reset required" 0 "Reset not required" ;
+VAL_ 2360089619 GPS1_System_lockout 3 "Information Not available" 2 "Error Condition" 1 "Active" 0 "Not active" ;
+VAL_ 2360152860 GPS1_Str_cmd_status 3 "Information not available" 2 "Error condition" 1 "Intended for steering" 0 "Not intended for steering" ;
+VAL_ 2364496636 MMI_AUX_mode_req_R 52 "AUX Program 5" 51 "AUX Program 4" 50 "AUX Program 3" 49 "AUX Program 2" 48 "AUX Program 1" ;
+VAL_ 2364496636 MMI_Lockout_GPS_R 3 "Reserved" 2 "GPS2 receiver selected" 1 "GPS receiver selected" 0 "No GPS receiver selected (GPS steering prohibited)" ;
+VAL_ 2364496636 MMI_Lockout_AUX_R 3 "Information not available" 2 "Error condition" 1 "AUX Steering prohobited" 0 "AUX steering allowed" ;
+VAL_ 2364496636 MMI_Str_mode_req_R 255 "Safe state" 240 "Initialization" 224 "Service mode" 64 "GPS steering" 48 "AUX steering" 36 "STW program 5" 35 "STW program 4" 34 "STW program 3" 33 "STW program 2" 32 "STW program 1" 17 "Off-road non-reaction" 16 "Off-road reaction" 0 "On-road" ;
+VAL_ 2364478460 MMI_AUX_mode_req_P 52 "AUX Program 5" 51 "AUX Program 4" 50 "AUX Program 3" 49 "AUX Program 2" 48 "AUX Program 1" ;
+VAL_ 2364478460 MMI_Lockout_GPS_P 3 "No information available" 2 "GPS2 receiver selected" 1 "GPS receiver selected" 0 "No GPS receiver selected (GPS steering prohibited)" ;
+VAL_ 2364478460 MMI_Lockout_AUX_P 3 "Information not available" 2 "Error condition" 1 "AUX Steering prohobited" 0 "AUX steering allowed" ;
+VAL_ 2364478460 MMI_Str_mode_req_P 36 "STW program 5" 35 "STW program 4" 34 "STW program 3" 33 "STW program 2" 32 "STW program 1" 17 "Off-road non-reaction" 16 "Off-road reaction" 0 "On-road" ;
+VAL_ 2365538811 VSP_Dir_R 3 "Information Not available" 2 "Error condition" 1 "Reverse" 0 "Forward " ;
+VAL_ 2365538555 VSP_Dir_P 3 "Information not available" 2 "Error condition" 1 "Reverse" 0 "Forward" ;
+VAL_ 2566857562 Spl_ctrl_status_S 3 "Information not available" 2 "Error condition" 1 "Spool control released" 0 "Spool is controlled actively" ;
+VAL_ 2566857491 Spl_ctrl_status_M 3 "Information not available" 2 "Error condition" 1 "Spool control released" 0 "Spool is controlled actively" ;
+VAL_ 2566857306 SRC_CL_WA_setpoint_S 3 "GPS" 2 "Reserved" 1 "AUX" 0 "Reserved" ;
+VAL_ 2566857306 State_CSS_S 3 "Information not available" 2 "Error condition" 1 "ON" 0 "OFF" ;
+VAL_ 2566857306 Dout_state_S 3 "Information not available" 2 "Error condition" 1 "In good condition" 0 "Reserved" ;
+VAL_ 2566857235 SRC_CL_WA_setpoint_M 3 "GPS" 2 "Reserved" 1 "AUX" 0 "Reserved" ;
+VAL_ 2566857235 State_CSS_M 3 "Information not available" 2 "Error condition" 1 "ON" 0 "OFF" ;
+VAL_ 2566857235 Dout_state_M 3 "Information not available" 2 "Error condition" 1 "In good condition" 0 "Reserved" ;
+VAL_ 2566856794 Service_mode_state_S 253 "No analog joystick configured" 254 "No wheel angle sensor configured" 63 "Joystick calibration complete" 62 "Joystick calibration failure" 61 "Joystick calibration cntr update" 49 "Joystick calibration in progress" 48 "Joystick calibration Reset" 0 "Direct output control reset" 1 "Direct output control " 16 "WAS calibration Reset" 17 "WAS calibration in progress" 29 "WAS calibration counter update" 30 "WAS calibration failure" 31 "WAS calibration complete" 32 "Spool calibration reset" 33 "Spool calibration inactive" 34 "Spool calibration getting armed" 35 "Spool calibration armed" 36 "Spool calibration in progress" 37 "Spool param plausibility check" 38 "Spool parameters ready to update" 39 "Spool parameters update" 45 "Spool calibration counter update" 46 "Spool calibration failure" 47 "Spool calibration complete" 255 "Information not available " ;
+VAL_ 2566856794 Lockout_GPS_S 3 "Reserved" 2 "GPS 2 Steering selected" 1 "GPS Steering selected" 0 "No GPS receiver selected" ;
+VAL_ 2566856794 Lockout_AUX_S 3 "Information not available" 2 "Error condition" 1 "AUX Steering prohobited" 0 "AUX steering allowed" ;
+VAL_ 2566856794 Lockout_EH_steering_S 3 "Information not available" 2 "Error condition" 1 "EH-steering prohibited" 0 "EH-steering allowed" ;
+VAL_ 2566856794 Lockout_program_change_S 3 "Information not available" 2 "Error Condition" 1 "Program changes prohibited" 0 "Program changes Allowed" ;
+VAL_ 2566856794 Lockout_device_change_S 3 "Information not available" 2 "Error Condition" 1 "Steering dev changes prohibited" 0 "Steering dev changes allowed " ;
+VAL_ 2566856794 OperationState_S 227 "Service mod-Joystick Calibration" 226 "Service mode - Spool Calibration" 225 "Service mode - WAS Calibration" 65 "GPS2 steering" 52 "AUX Program 5" 51 "AUX Program 4" 50 "AUX Program 3" 49 "AUX Program 2" 208 "Off-Road safety Checks" 255 "Safe state" 240 "Initialization" 224 "Service mode - Direct o/p cntrl" 64 "GPS steering" 48 "AUX Program 1" 36 "STW program 5" 35 "STW program 4" 34 "STW program 3" 33 "STW program 2" 32 "STW program 1" 17 "Off-road non-reaction" 16 "Off-road reaction" 0 "On-road" ;
+VAL_ 2566856723 Service_mode_state_M 253 "No analog joystick configured" 254 "No wheel angle sensor configured" 63 "Joystick calibration complete" 62 "Joystick calibration failure" 61 "Joystick calibration cntr update" 49 "Joystick calibration in progress" 48 "Joystick calibration Reset" 0 "Direct output control reset" 1 "Direct output control " 16 "WAS calibration Reset" 17 "WAS calibration in progress" 29 "WAS calibration counter update" 30 "WAS calibration failure" 31 "WAS calibration complete" 32 "Spool calibration reset" 33 "Spool calibration inactive" 34 "Spool calibration getting armed" 35 "Spool calibration armed" 36 "Spool calibration in progress" 37 "Spool param plausibility check" 38 "Spool parameters ready to update" 39 "Spool parameters update" 45 "Spool calibration counter update" 46 "Spool calibration failure" 47 "Spool calibration complete" 255 "Information not available " ;
+VAL_ 2566856723 Lockout_GPS_M 3 "Reserved" 2 "GPS 2 Steering selected" 1 "GPS  Steering selected" 0 "No GPS receiver selected" ;
+VAL_ 2566856723 Lockout_AUX_M 3 "Information not available" 2 "Error condition" 1 "AUX Steering prohobited" 0 "AUX steering allowed" ;
+VAL_ 2566856723 Lockout_EH_steering_M 3 "Information not available" 2 "Error condition" 1 "EH-steering prohibited" 0 "EH-steering allowed" ;
+VAL_ 2566856723 Lockout_program_change_M 3 "Information not available" 2 "Error Condition" 1 "Program changes prohibited" 0 "Program changes allowed " ;
+VAL_ 2566856723 Lockout_device_change_M 3 "Information not available" 2 "Error Condition" 1 "Steering dev changes prohibited" 0 "Steering dev changes allowed " ;
+VAL_ 2566856723 OperationState_M 227 "Service mod-Joystick Calibration" 226 "Service mode - Spool Calibration" 225 "Service mode - WAS Calibration" 65 "GPS2 steering" 52 "AUX Program 5" 51 "AUX Program 4" 50 "AUX Program 3" 49 "AUX Program 2" 208 "Off-Road safety Checks" 255 "Safe state" 240 "Initialization" 224 "Service mode - Direct o/p cntrl" 64 "GPS steering" 48 "AUX Program 1" 36 "STW program 5" 35 "STW program 4" 34 "STW program 3" 33 "STW program 2" 32 "STW program 1" 17 "Off-road non-reaction" 16 "Off-road reaction" 0 "On-road" ;
+
+SG_MUL_VAL_ 2565865050 P3822_S Reply_param_address_S 3822-3822;
+SG_MUL_VAL_ 2565865050 P3814_S Reply_param_address_S 3814-3814;
+SG_MUL_VAL_ 2565865050 P3812_S Reply_param_address_S 3812-3812;
+SG_MUL_VAL_ 2565865050 P3811_S Reply_param_address_S 3811-3811;
+SG_MUL_VAL_ 2565865050 P3810_S Reply_param_address_S 3810-3810;
+SG_MUL_VAL_ 2565865050 P3808_S Reply_param_address_S 3808-3808;
+SG_MUL_VAL_ 2565865050 P3806_S Reply_param_address_S 3806-3806;
+SG_MUL_VAL_ 2565865050 P3804_S Reply_param_address_S 3804-3804;
+SG_MUL_VAL_ 2565865050 P3802_S Reply_param_address_S 3802-3802;
+SG_MUL_VAL_ 2565865050 P3801_S Reply_param_address_S 3801-3801;
+SG_MUL_VAL_ 2565865050 P3799_S Reply_param_address_S 3799-3799;
+SG_MUL_VAL_ 2565865050 P3797_S Reply_param_address_S 3797-3797;
+SG_MUL_VAL_ 2565865050 P3795_S Reply_param_address_S 3795-3795;
+SG_MUL_VAL_ 2565865050 P3793_S Reply_param_address_S 3793-3793;
+SG_MUL_VAL_ 2565865050 P3791_S Reply_param_address_S 3791-3791;
+SG_MUL_VAL_ 2565865050 P3789_S Reply_param_address_S 3789-3789;
+SG_MUL_VAL_ 2565865050 P3776_S Reply_param_address_S 3776-3776;
+SG_MUL_VAL_ 2565865050 P3775_S Reply_param_address_S 3775-3775;
+SG_MUL_VAL_ 2565865050 P3774_S Reply_param_address_S 3774-3774;
+SG_MUL_VAL_ 2565865050 P3773_S Reply_param_address_S 3773-3773;
+SG_MUL_VAL_ 2565865050 P3772_S Reply_param_address_S 3772-3772;
+SG_MUL_VAL_ 2565865050 P3771_S Reply_param_address_S 3771-3771;
+SG_MUL_VAL_ 2565865050 P3769_S Reply_param_address_S 3769-3769;
+SG_MUL_VAL_ 2565865050 P3719_S Reply_param_address_S 3719-3719;
+SG_MUL_VAL_ 2565865050 P3718_S Reply_param_address_S 3718-3718;
+SG_MUL_VAL_ 2565865050 P3716_S Reply_param_address_S 3716-3716;
+SG_MUL_VAL_ 2565865050 P3714_S Reply_param_address_S 3714-3714;
+SG_MUL_VAL_ 2565865050 P3712_S Reply_param_address_S 3712-3712;
+SG_MUL_VAL_ 2565865050 P3710_S Reply_param_address_S 3710-3710;
+SG_MUL_VAL_ 2565865050 P3708_S Reply_param_address_S 3708-3708;
+SG_MUL_VAL_ 2565865050 P3706_S Reply_param_address_S 3706-3706;
+SG_MUL_VAL_ 2565865050 P3705_S Reply_param_address_S 3705-3705;
+SG_MUL_VAL_ 2565865050 P3703_S Reply_param_address_S 3703-3703;
+SG_MUL_VAL_ 2565865050 P3701_S Reply_param_address_S 3701-3701;
+SG_MUL_VAL_ 2565865050 P3700_S Reply_param_address_S 3700-3700;
+SG_MUL_VAL_ 2565865050 P3699_S Reply_param_address_S 3699-3699;
+SG_MUL_VAL_ 2565865050 P3698_S Reply_param_address_S 3698-3698;
+SG_MUL_VAL_ 2565865050 P3697_S Reply_param_address_S 3697-3697;
+SG_MUL_VAL_ 2565865050 P3696_S Reply_param_address_S 3696-3696;
+SG_MUL_VAL_ 2565865050 P3694_S Reply_param_address_S 3694-3694;
+SG_MUL_VAL_ 2565865050 P3692_S Reply_param_address_S 3692-3692;
+SG_MUL_VAL_ 2565865050 P3690_S Reply_param_address_S 3690-3690;
+SG_MUL_VAL_ 2565865050 P3689_S Reply_param_address_S 3689-3689;
+SG_MUL_VAL_ 2565865050 P3688_S Reply_param_address_S 3688-3688;
+SG_MUL_VAL_ 2565865050 P3686_S Reply_param_address_S 3686-3686;
+SG_MUL_VAL_ 2565865050 P3684_S Reply_param_address_S 3684-3684;
+SG_MUL_VAL_ 2565865050 P3682_S Reply_param_address_S 3682-3682;
+SG_MUL_VAL_ 2565865050 P3681_S Reply_param_address_S 3681-3681;
+SG_MUL_VAL_ 2565865050 P3680_S Reply_param_address_S 3680-3680;
+SG_MUL_VAL_ 2565865050 P3678_S Reply_param_address_S 3678-3678;
+SG_MUL_VAL_ 2565865050 P3676_S Reply_param_address_S 3676-3676;
+SG_MUL_VAL_ 2565865050 P3674_S Reply_param_address_S 3674-3674;
+SG_MUL_VAL_ 2565865050 P3673_S Reply_param_address_S 3673-3673;
+SG_MUL_VAL_ 2565865050 P3672_S Reply_param_address_S 3672-3672;
+SG_MUL_VAL_ 2565865050 P3670_S Reply_param_address_S 3670-3670;
+SG_MUL_VAL_ 2565865050 P3668_S Reply_param_address_S 3668-3668;
+SG_MUL_VAL_ 2565865050 P3666_S Reply_param_address_S 3666-3666;
+SG_MUL_VAL_ 2565865050 P3665_S Reply_param_address_S 3665-3665;
+SG_MUL_VAL_ 2565865050 P3664_S Reply_param_address_S 3664-3664;
+SG_MUL_VAL_ 2565865050 P3662_S Reply_param_address_S 3662-3662;
+SG_MUL_VAL_ 2565865050 P3660_S Reply_param_address_S 3660-3660;
+SG_MUL_VAL_ 2565865050 P3658_S Reply_param_address_S 3658-3658;
+SG_MUL_VAL_ 2565865050 P3657_S Reply_param_address_S 3657-3657;
+SG_MUL_VAL_ 2565865050 P3656_S Reply_param_address_S 3656-3656;
+SG_MUL_VAL_ 2565865050 P3654_S Reply_param_address_S 3654-3654;
+SG_MUL_VAL_ 2565865050 P3652_S Reply_param_address_S 3652-3652;
+SG_MUL_VAL_ 2565865050 P3650_S Reply_param_address_S 3650-3650;
+SG_MUL_VAL_ 2565865050 P3649_S Reply_param_address_S 3649-3649;
+SG_MUL_VAL_ 2565865050 P3648_S Reply_param_address_S 3648-3648;
+SG_MUL_VAL_ 2565865050 P3647_S Reply_param_address_S 3647-3647;
+SG_MUL_VAL_ 2565865050 P3646_S Reply_param_address_S 3646-3646;
+SG_MUL_VAL_ 2565865050 P3644_S Reply_param_address_S 3644-3644;
+SG_MUL_VAL_ 2565865050 P3584_S Reply_param_address_S 3584-3584;
+SG_MUL_VAL_ 2565865050 P3583_S Reply_param_address_S 3583-3583;
+SG_MUL_VAL_ 2565865050 P3582_S Reply_param_address_S 3582-3582;
+SG_MUL_VAL_ 2565865050 P3580_S Reply_param_address_S 3580-3580;
+SG_MUL_VAL_ 2565865050 P3578_S Reply_param_address_S 3578-3578;
+SG_MUL_VAL_ 2565865050 P3576_S Reply_param_address_S 3576-3576;
+SG_MUL_VAL_ 2565865050 P3574_S Reply_param_address_S 3574-3574;
+SG_MUL_VAL_ 2565865050 P3573_S Reply_param_address_S 3573-3573;
+SG_MUL_VAL_ 2565865050 P3572_S Reply_param_address_S 3572-3572;
+SG_MUL_VAL_ 2565865050 P3571_S Reply_param_address_S 3571-3571;
+SG_MUL_VAL_ 2565865050 P3570_S Reply_param_address_S 3570-3570;
+SG_MUL_VAL_ 2565865050 P3569_S Reply_param_address_S 3569-3569;
+SG_MUL_VAL_ 2565865050 P3568_S Reply_param_address_S 3568-3568;
+SG_MUL_VAL_ 2565865050 P3566_S Reply_param_address_S 3566-3566;
+SG_MUL_VAL_ 2565865050 P3564_S Reply_param_address_S 3564-3564;
+SG_MUL_VAL_ 2565865050 P3562_S Reply_param_address_S 3562-3562;
+SG_MUL_VAL_ 2565865050 P3561_S Reply_param_address_S 3561-3561;
+SG_MUL_VAL_ 2565865050 P3560_S Reply_param_address_S 3560-3560;
+SG_MUL_VAL_ 2565865050 P3558_S Reply_param_address_S 3558-3558;
+SG_MUL_VAL_ 2565865050 P3556_S Reply_param_address_S 3556-3556;
+SG_MUL_VAL_ 2565865050 P3554_S Reply_param_address_S 3554-3554;
+SG_MUL_VAL_ 2565865050 P3553_S Reply_param_address_S 3553-3553;
+SG_MUL_VAL_ 2565865050 P3552_S Reply_param_address_S 3552-3552;
+SG_MUL_VAL_ 2565865050 P3550_S Reply_param_address_S 3550-3550;
+SG_MUL_VAL_ 2565865050 P3548_S Reply_param_address_S 3548-3548;
+SG_MUL_VAL_ 2565865050 P3546_S Reply_param_address_S 3546-3546;
+SG_MUL_VAL_ 2565865050 P3545_S Reply_param_address_S 3545-3545;
+SG_MUL_VAL_ 2565865050 P3544_S Reply_param_address_S 3544-3544;
+SG_MUL_VAL_ 2565865050 P3542_S Reply_param_address_S 3542-3542;
+SG_MUL_VAL_ 2565865050 P3540_S Reply_param_address_S 3540-3540;
+SG_MUL_VAL_ 2565865050 P3538_S Reply_param_address_S 3538-3538;
+SG_MUL_VAL_ 2565865050 P3537_S Reply_param_address_S 3537-3537;
+SG_MUL_VAL_ 2565865050 P3536_S Reply_param_address_S 3536-3536;
+SG_MUL_VAL_ 2565865050 P3534_S Reply_param_address_S 3534-3534;
+SG_MUL_VAL_ 2565865050 P3532_S Reply_param_address_S 3532-3532;
+SG_MUL_VAL_ 2565865050 P3530_S Reply_param_address_S 3530-3530;
+SG_MUL_VAL_ 2565865050 P3529_S Reply_param_address_S 3529-3529;
+SG_MUL_VAL_ 2565865050 P3528_S Reply_param_address_S 3528-3528;
+SG_MUL_VAL_ 2565865050 P3526_S Reply_param_address_S 3526-3526;
+SG_MUL_VAL_ 2565865050 P3524_S Reply_param_address_S 3524-3524;
+SG_MUL_VAL_ 2565865050 P3522_S Reply_param_address_S 3522-3522;
+SG_MUL_VAL_ 2565865050 P3521_S Reply_param_address_S 3521-3521;
+SG_MUL_VAL_ 2565865050 P3519_S Reply_param_address_S 3519-3519;
+SG_MUL_VAL_ 2565865050 P3484_S Reply_param_address_S 3484-3484;
+SG_MUL_VAL_ 2565865050 P3483_S Reply_param_address_S 3483-3483;
+SG_MUL_VAL_ 2565865050 P3482_S Reply_param_address_S 3482-3482;
+SG_MUL_VAL_ 2565865050 P3481_S Reply_param_address_S 3481-3481;
+SG_MUL_VAL_ 2565865050 P3480_S Reply_param_address_S 3480-3480;
+SG_MUL_VAL_ 2565865050 P3479_S Reply_param_address_S 3479-3479;
+SG_MUL_VAL_ 2565865050 P3478_S Reply_param_address_S 3478-3478;
+SG_MUL_VAL_ 2565865050 P3477_S Reply_param_address_S 3477-3477;
+SG_MUL_VAL_ 2565865050 P3476_S Reply_param_address_S 3476-3476;
+SG_MUL_VAL_ 2565865050 P3475_S Reply_param_address_S 3475-3475;
+SG_MUL_VAL_ 2565865050 P3474_S Reply_param_address_S 3474-3474;
+SG_MUL_VAL_ 2565865050 P3473_S Reply_param_address_S 3473-3473;
+SG_MUL_VAL_ 2565865050 P3469_S Reply_param_address_S 3469-3469;
+SG_MUL_VAL_ 2565865050 P3467_S Reply_param_address_S 3467-3467;
+SG_MUL_VAL_ 2565865050 P3465_S Reply_param_address_S 3465-3465;
+SG_MUL_VAL_ 2565865050 P3463_S Reply_param_address_S 3463-3463;
+SG_MUL_VAL_ 2565865050 P3461_S Reply_param_address_S 3461-3461;
+SG_MUL_VAL_ 2565865050 P3459_S Reply_param_address_S 3459-3459;
+SG_MUL_VAL_ 2565865050 P3457_S Reply_param_address_S 3457-3457;
+SG_MUL_VAL_ 2565865050 P3455_S Reply_param_address_S 3455-3455;
+SG_MUL_VAL_ 2565865050 P3453_S Reply_param_address_S 3453-3453;
+SG_MUL_VAL_ 2565865050 P3451_S Reply_param_address_S 3451-3451;
+SG_MUL_VAL_ 2565865050 P3449_S Reply_param_address_S 3449-3449;
+SG_MUL_VAL_ 2565865050 P3428_S Reply_param_address_S 3428-3428;
+SG_MUL_VAL_ 2565865050 P3426_S Reply_param_address_S 3426-3426;
+SG_MUL_VAL_ 2565865050 P3424_S Reply_param_address_S 3424-3424;
+SG_MUL_VAL_ 2565865050 P3422_S Reply_param_address_S 3422-3422;
+SG_MUL_VAL_ 2565865050 P3421_S Reply_param_address_S 3421-3421;
+SG_MUL_VAL_ 2565865050 P3419_S Reply_param_address_S 3419-3419;
+SG_MUL_VAL_ 2565865050 P3383_S Reply_param_address_S 3383-3383;
+SG_MUL_VAL_ 2565865050 P3381_S Reply_param_address_S 3381-3381;
+SG_MUL_VAL_ 2565865050 P3379_S Reply_param_address_S 3379-3379;
+SG_MUL_VAL_ 2565865050 P3378_S Reply_param_address_S 3378-3378;
+SG_MUL_VAL_ 2565865050 P3377_S Reply_param_address_S 3377-3377;
+SG_MUL_VAL_ 2565865050 P3375_S Reply_param_address_S 3375-3375;
+SG_MUL_VAL_ 2565865050 P3374_S Reply_param_address_S 3374-3374;
+SG_MUL_VAL_ 2565865050 P3372_S Reply_param_address_S 3372-3372;
+SG_MUL_VAL_ 2565865050 P3371_S Reply_param_address_S 3371-3371;
+SG_MUL_VAL_ 2565865050 P3369_S Reply_param_address_S 3369-3369;
+SG_MUL_VAL_ 2565865050 P3368_S Reply_param_address_S 3368-3368;
+SG_MUL_VAL_ 2565865050 P3366_S Reply_param_address_S 3366-3366;
+SG_MUL_VAL_ 2565865050 P3365_S Reply_param_address_S 3365-3365;
+SG_MUL_VAL_ 2565865050 P3364_S Reply_param_address_S 3364-3364;
+SG_MUL_VAL_ 2565865050 P3363_S Reply_param_address_S 3363-3363;
+SG_MUL_VAL_ 2565865050 P3361_S Reply_param_address_S 3361-3361;
+SG_MUL_VAL_ 2565865050 P3360_S Reply_param_address_S 3360-3360;
+SG_MUL_VAL_ 2565865050 P3358_S Reply_param_address_S 3358-3358;
+SG_MUL_VAL_ 2565865050 P3357_S Reply_param_address_S 3357-3357;
+SG_MUL_VAL_ 2565865050 P3355_S Reply_param_address_S 3355-3355;
+SG_MUL_VAL_ 2565865050 P3354_S Reply_param_address_S 3354-3354;
+SG_MUL_VAL_ 2565865050 P3352_S Reply_param_address_S 3352-3352;
+SG_MUL_VAL_ 2565865050 P3351_S Reply_param_address_S 3351-3351;
+SG_MUL_VAL_ 2565865050 P3349_S Reply_param_address_S 3349-3349;
+SG_MUL_VAL_ 2565865050 P3323_S Reply_param_address_S 3323-3323;
+SG_MUL_VAL_ 2565865050 P3322_S Reply_param_address_S 3322-3322;
+SG_MUL_VAL_ 2565865050 P3321_S Reply_param_address_S 3321-3321;
+SG_MUL_VAL_ 2565865050 P3320_S Reply_param_address_S 3320-3320;
+SG_MUL_VAL_ 2565865050 P3319_S Reply_param_address_S 3319-3319;
+SG_MUL_VAL_ 2565865050 P3318_S Reply_param_address_S 3318-3318;
+SG_MUL_VAL_ 2565865050 P3317_S Reply_param_address_S 3317-3317;
+SG_MUL_VAL_ 2565865050 P3316_S Reply_param_address_S 3316-3316;
+SG_MUL_VAL_ 2565865050 P3315_S Reply_param_address_S 3315-3315;
+SG_MUL_VAL_ 2565865050 P3314_S Reply_param_address_S 3314-3314;
+SG_MUL_VAL_ 2565865050 P3313_S Reply_param_address_S 3313-3313;
+SG_MUL_VAL_ 2565865050 P3312_S Reply_param_address_S 3312-3312;
+SG_MUL_VAL_ 2565865050 P3311_S Reply_param_address_S 3311-3311;
+SG_MUL_VAL_ 2565865050 P3310_S Reply_param_address_S 3310-3310;
+SG_MUL_VAL_ 2565865050 P3309_S Reply_param_address_S 3309-3309;
+SG_MUL_VAL_ 2565865050 P3308_S Reply_param_address_S 3308-3308;
+SG_MUL_VAL_ 2565865050 P3307_S Reply_param_address_S 3307-3307;
+SG_MUL_VAL_ 2565865050 P3306_S Reply_param_address_S 3306-3306;
+SG_MUL_VAL_ 2565865050 P3305_S Reply_param_address_S 3305-3305;
+SG_MUL_VAL_ 2565865050 P3304_S Reply_param_address_S 3304-3304;
+SG_MUL_VAL_ 2565865050 P3303_S Reply_param_address_S 3303-3303;
+SG_MUL_VAL_ 2565865050 P3302_S Reply_param_address_S 3302-3302;
+SG_MUL_VAL_ 2565865050 P3301_S Reply_param_address_S 3301-3301;
+SG_MUL_VAL_ 2565865050 P3300_S Reply_param_address_S 3300-3300;
+SG_MUL_VAL_ 2565865050 P3299_S Reply_param_address_S 3299-3299;
+SG_MUL_VAL_ 2565865050 P3298_S Reply_param_address_S 3298-3298;
+SG_MUL_VAL_ 2565865050 P3297_S Reply_param_address_S 3297-3297;
+SG_MUL_VAL_ 2565865050 P3296_S Reply_param_address_S 3296-3296;
+SG_MUL_VAL_ 2565865050 P3295_S Reply_param_address_S 3295-3295;
+SG_MUL_VAL_ 2565865050 P3294_S Reply_param_address_S 3294-3294;
+SG_MUL_VAL_ 2565865050 P3293_S Reply_param_address_S 3293-3293;
+SG_MUL_VAL_ 2565865050 P3292_S Reply_param_address_S 3292-3292;
+SG_MUL_VAL_ 2565865050 P3291_S Reply_param_address_S 3291-3291;
+SG_MUL_VAL_ 2565865050 P3290_S Reply_param_address_S 3290-3290;
+SG_MUL_VAL_ 2565865050 P3289_S Reply_param_address_S 3289-3289;
+SG_MUL_VAL_ 2565865050 P3288_S Reply_param_address_S 3288-3288;
+SG_MUL_VAL_ 2565865050 P3287_S Reply_param_address_S 3287-3287;
+SG_MUL_VAL_ 2565865050 P3285_S Reply_param_address_S 3285-3285;
+SG_MUL_VAL_ 2565865050 P3253_S Reply_param_address_S 3253-3253;
+SG_MUL_VAL_ 2565865050 P3252_S Reply_param_address_S 3252-3252;
+SG_MUL_VAL_ 2565865050 P3251_S Reply_param_address_S 3251-3251;
+SG_MUL_VAL_ 2565865050 P3250_S Reply_param_address_S 3250-3250;
+SG_MUL_VAL_ 2565865050 P3249_S Reply_param_address_S 3249-3249;
+SG_MUL_VAL_ 2565865050 P3248_S Reply_param_address_S 3248-3248;
+SG_MUL_VAL_ 2565865050 P3247_S Reply_param_address_S 3247-3247;
+SG_MUL_VAL_ 2565865050 P3246_S Reply_param_address_S 3246-3246;
+SG_MUL_VAL_ 2565865050 P3245_S Reply_param_address_S 3245-3245;
+SG_MUL_VAL_ 2565865050 P3244_S Reply_param_address_S 3244-3244;
+SG_MUL_VAL_ 2565865050 P3243_S Reply_param_address_S 3243-3243;
+SG_MUL_VAL_ 2565865050 P3242_S Reply_param_address_S 3242-3242;
+SG_MUL_VAL_ 2565865050 P3241_S Reply_param_address_S 3241-3241;
+SG_MUL_VAL_ 2565865050 P3240_S Reply_param_address_S 3240-3240;
+SG_MUL_VAL_ 2565865050 P3239_S Reply_param_address_S 3239-3239;
+SG_MUL_VAL_ 2565865050 P3238_S Reply_param_address_S 3238-3238;
+SG_MUL_VAL_ 2565865050 P3237_S Reply_param_address_S 3237-3237;
+SG_MUL_VAL_ 2565865050 P3235_S Reply_param_address_S 3235-3235;
+SG_MUL_VAL_ 2565865050 P3219_S Reply_param_address_S 3219-3219;
+SG_MUL_VAL_ 2565865050 P3217_S Reply_param_address_S 3217-3217;
+SG_MUL_VAL_ 2565865050 P3215_S Reply_param_address_S 3215-3215;
+SG_MUL_VAL_ 2565865050 P3213_S Reply_param_address_S 3213-3213;
+SG_MUL_VAL_ 2565865050 P3211_S Reply_param_address_S 3211-3211;
+SG_MUL_VAL_ 2565865050 P3209_S Reply_param_address_S 3209-3209;
+SG_MUL_VAL_ 2565865050 P3207_S Reply_param_address_S 3207-3207;
+SG_MUL_VAL_ 2565865050 P3205_S Reply_param_address_S 3205-3205;
+SG_MUL_VAL_ 2565865050 P3203_S Reply_param_address_S 3203-3203;
+SG_MUL_VAL_ 2565865050 P3189_S Reply_param_address_S 3189-3189;
+SG_MUL_VAL_ 2565865050 P3187_S Reply_param_address_S 3187-3187;
+SG_MUL_VAL_ 2565865050 P3185_S Reply_param_address_S 3185-3185;
+SG_MUL_VAL_ 2565865050 P3183_S Reply_param_address_S 3183-3183;
+SG_MUL_VAL_ 2565865050 P3170_S Reply_param_address_S 3170-3170;
+SG_MUL_VAL_ 2565865050 P3168_S Reply_param_address_S 3168-3168;
+SG_MUL_VAL_ 2565865050 P3166_S Reply_param_address_S 3166-3166;
+SG_MUL_VAL_ 2565865050 P3164_S Reply_param_address_S 3164-3164;
+SG_MUL_VAL_ 2565865050 P3162_S Reply_param_address_S 3162-3162;
+SG_MUL_VAL_ 2565865050 P3160_S Reply_param_address_S 3160-3160;
+SG_MUL_VAL_ 2565865050 P3134_S Reply_param_address_S 3134-3134;
+SG_MUL_VAL_ 2565865050 P3133_S Reply_param_address_S 3133-3133;
+SG_MUL_VAL_ 2565865050 P3132_S Reply_param_address_S 3132-3132;
+SG_MUL_VAL_ 2565865050 P3130_S Reply_param_address_S 3130-3130;
+SG_MUL_VAL_ 2565865050 P3128_S Reply_param_address_S 3128-3128;
+SG_MUL_VAL_ 2565865050 P3126_S Reply_param_address_S 3126-3126;
+SG_MUL_VAL_ 2565865050 P3125_S Reply_param_address_S 3125-3125;
+SG_MUL_VAL_ 2565865050 P3124_S Reply_param_address_S 3124-3124;
+SG_MUL_VAL_ 2565865050 P3123_S Reply_param_address_S 3123-3123;
+SG_MUL_VAL_ 2565865050 P3122_S Reply_param_address_S 3122-3122;
+SG_MUL_VAL_ 2565865050 P3120_S Reply_param_address_S 3120-3120;
+SG_MUL_VAL_ 2565865050 P3097_S Reply_param_address_S 3097-3097;
+SG_MUL_VAL_ 2565865050 P3095_S Reply_param_address_S 3095-3095;
+SG_MUL_VAL_ 2565865050 P3093_S Reply_param_address_S 3093-3093;
+SG_MUL_VAL_ 2565865050 P3091_S Reply_param_address_S 3091-3091;
+SG_MUL_VAL_ 2565865050 P3090_S Reply_param_address_S 3090-3090;
+SG_MUL_VAL_ 2565865050 P3089_S Reply_param_address_S 3089-3089;
+SG_MUL_VAL_ 2565865050 P3088_S Reply_param_address_S 3088-3088;
+SG_MUL_VAL_ 2565865050 P3086_S Reply_param_address_S 3086-3086;
+SG_MUL_VAL_ 2565865050 P3084_S Reply_param_address_S 3084-3084;
+SG_MUL_VAL_ 2565865050 P3082_S Reply_param_address_S 3082-3082;
+SG_MUL_VAL_ 2565865050 P3081_S Reply_param_address_S 3081-3081;
+SG_MUL_VAL_ 2565865050 P3080_S Reply_param_address_S 3080-3080;
+SG_MUL_VAL_ 2565865050 P3078_S Reply_param_address_S 3078-3078;
+SG_MUL_VAL_ 2565865050 P3076_S Reply_param_address_S 3076-3076;
+SG_MUL_VAL_ 2565865050 P3074_S Reply_param_address_S 3074-3074;
+SG_MUL_VAL_ 2565865050 P3073_S Reply_param_address_S 3073-3073;
+SG_MUL_VAL_ 2565865050 P3072_S Reply_param_address_S 3072-3072;
+SG_MUL_VAL_ 2565865050 Reply_Calibration_progress_S SER_TOOL_REPLY_XID_S 145-145;
+SG_MUL_VAL_ 2565865050 Reply_Sensor_voltage_S SER_TOOL_REPLY_XID_S 143-143;
+SG_MUL_VAL_ 2565865050 Reply_param_address_S SER_TOOL_REPLY_XID_S 135-135;
+SG_MUL_VAL_ 2565865050 Reply_param_data_length_S SER_TOOL_REPLY_XID_S 135-135;
+SG_MUL_VAL_ 2565865050 Reply_T_last_move_S SER_TOOL_REPLY_XID_S 145-145;
+SG_MUL_VAL_ 2565865050 Reply_Spl_set_last_S SER_TOOL_REPLY_XID_S 145-145;
+SG_MUL_VAL_ 2565865050 Reply_WA_mov_status_L_S SER_TOOL_REPLY_XID_S 145-145;
+SG_MUL_VAL_ 2565865050 Reply_WA_mov_status_R_S SER_TOOL_REPLY_XID_S 145-145;
+SG_MUL_VAL_ 2565865050 Reply_Calib_err_code_S SER_TOOL_REPLY_XID_S 145-145;
+SG_MUL_VAL_ 2565865050 Reply_WAS_captured_S SER_TOOL_REPLY_XID_S 143-143;
+SG_MUL_VAL_ 2565865050 Reply_result_from_ECU_S SER_TOOL_REPLY_XID_S 143-143;
+SG_MUL_VAL_ 2565865050 Reply_Pos_captured_S SER_TOOL_REPLY_XID_S 143-143;
+SG_MUL_VAL_ 2565865050 Reply_Input_status_S SER_TOOL_REPLY_XID_S 143-143;
+SG_MUL_VAL_ 2565865050 Reply_Consistency_chk_S SER_TOOL_REPLY_XID_S 143-143;
+SG_MUL_VAL_ 2565865050 Reply_AD2_S SER_TOOL_REPLY_XID_S 143-143;
+SG_MUL_VAL_ 2565865050 Reply_AD1_S SER_TOOL_REPLY_XID_S 143-143;
+SG_MUL_VAL_ 2565865050 Reply_Sensor5V_state_S SER_TOOL_REPLY_XID_S 131-131;
+SG_MUL_VAL_ 2565865050 Reply_req_spool_pos_S SER_TOOL_REPLY_XID_S 131-131;
+SG_MUL_VAL_ 2565865050 Reply_req_COV_PWM_S SER_TOOL_REPLY_XID_S 131-131;
+SG_MUL_VAL_ 2565865050 Reply_CSS_state_S SER_TOOL_REPLY_XID_S 131-131;
+SG_MUL_VAL_ 2565864979 P3822_M Reply_param_address_M 3822-3822;
+SG_MUL_VAL_ 2565864979 P3814_M Reply_param_address_M 3814-3814;
+SG_MUL_VAL_ 2565864979 P3812_M Reply_param_address_M 3812-3812;
+SG_MUL_VAL_ 2565864979 P3811_M Reply_param_address_M 3811-3811;
+SG_MUL_VAL_ 2565864979 P3810_M Reply_param_address_M 3810-3810;
+SG_MUL_VAL_ 2565864979 P3808_M Reply_param_address_M 3808-3808;
+SG_MUL_VAL_ 2565864979 P3806_M Reply_param_address_M 3806-3806;
+SG_MUL_VAL_ 2565864979 P3804_M Reply_param_address_M 3804-3804;
+SG_MUL_VAL_ 2565864979 P3802_M Reply_param_address_M 3802-3802;
+SG_MUL_VAL_ 2565864979 P3801_M Reply_param_address_M 3801-3801;
+SG_MUL_VAL_ 2565864979 P3799_M Reply_param_address_M 3799-3799;
+SG_MUL_VAL_ 2565864979 P3797_M Reply_param_address_M 3797-3797;
+SG_MUL_VAL_ 2565864979 P3795_M Reply_param_address_M 3795-3795;
+SG_MUL_VAL_ 2565864979 P3793_M Reply_param_address_M 3793-3793;
+SG_MUL_VAL_ 2565864979 P3791_M Reply_param_address_M 3791-3791;
+SG_MUL_VAL_ 2565864979 P3789_M Reply_param_address_M 3789-3789;
+SG_MUL_VAL_ 2565864979 P3776_M Reply_param_address_M 3776-3776;
+SG_MUL_VAL_ 2565864979 P3775_M Reply_param_address_M 3775-3775;
+SG_MUL_VAL_ 2565864979 P3774_M Reply_param_address_M 3774-3774;
+SG_MUL_VAL_ 2565864979 P3773_M Reply_param_address_M 3773-3773;
+SG_MUL_VAL_ 2565864979 P3772_M Reply_param_address_M 3772-3772;
+SG_MUL_VAL_ 2565864979 P3771_M Reply_param_address_M 3771-3771;
+SG_MUL_VAL_ 2565864979 P3769_M Reply_param_address_M 3769-3769;
+SG_MUL_VAL_ 2565864979 P3719_M Reply_param_address_M 3719-3719;
+SG_MUL_VAL_ 2565864979 P3718_M Reply_param_address_M 3718-3718;
+SG_MUL_VAL_ 2565864979 P3716_M Reply_param_address_M 3716-3716;
+SG_MUL_VAL_ 2565864979 P3714_M Reply_param_address_M 3714-3714;
+SG_MUL_VAL_ 2565864979 P3712_M Reply_param_address_M 3712-3712;
+SG_MUL_VAL_ 2565864979 P3710_M Reply_param_address_M 3710-3710;
+SG_MUL_VAL_ 2565864979 P3708_M Reply_param_address_M 3708-3708;
+SG_MUL_VAL_ 2565864979 P3706_M Reply_param_address_M 3706-3706;
+SG_MUL_VAL_ 2565864979 P3705_M Reply_param_address_M 3705-3705;
+SG_MUL_VAL_ 2565864979 P3703_M Reply_param_address_M 3703-3703;
+SG_MUL_VAL_ 2565864979 P3701_M Reply_param_address_M 3701-3701;
+SG_MUL_VAL_ 2565864979 P3700_M Reply_param_address_M 3700-3700;
+SG_MUL_VAL_ 2565864979 P3699_M Reply_param_address_M 3699-3699;
+SG_MUL_VAL_ 2565864979 P3698_M Reply_param_address_M 3698-3698;
+SG_MUL_VAL_ 2565864979 P3697_M Reply_param_address_M 3697-3697;
+SG_MUL_VAL_ 2565864979 P3696_M Reply_param_address_M 3696-3696;
+SG_MUL_VAL_ 2565864979 P3694_M Reply_param_address_M 3694-3694;
+SG_MUL_VAL_ 2565864979 P3692_M Reply_param_address_M 3692-3692;
+SG_MUL_VAL_ 2565864979 P3690_M Reply_param_address_M 3690-3690;
+SG_MUL_VAL_ 2565864979 P3689_M Reply_param_address_M 3689-3689;
+SG_MUL_VAL_ 2565864979 P3688_M Reply_param_address_M 3688-3688;
+SG_MUL_VAL_ 2565864979 P3686_M Reply_param_address_M 3686-3686;
+SG_MUL_VAL_ 2565864979 P3684_M Reply_param_address_M 3684-3684;
+SG_MUL_VAL_ 2565864979 P3682_M Reply_param_address_M 3682-3682;
+SG_MUL_VAL_ 2565864979 P3681_M Reply_param_address_M 3681-3681;
+SG_MUL_VAL_ 2565864979 P3680_M Reply_param_address_M 3680-3680;
+SG_MUL_VAL_ 2565864979 P3678_M Reply_param_address_M 3678-3678;
+SG_MUL_VAL_ 2565864979 P3676_M Reply_param_address_M 3676-3676;
+SG_MUL_VAL_ 2565864979 P3674_M Reply_param_address_M 3674-3674;
+SG_MUL_VAL_ 2565864979 P3673_M Reply_param_address_M 3673-3673;
+SG_MUL_VAL_ 2565864979 P3672_M Reply_param_address_M 3672-3672;
+SG_MUL_VAL_ 2565864979 P3670_M Reply_param_address_M 3670-3670;
+SG_MUL_VAL_ 2565864979 P3668_M Reply_param_address_M 3668-3668;
+SG_MUL_VAL_ 2565864979 P3666_M Reply_param_address_M 3666-3666;
+SG_MUL_VAL_ 2565864979 P3665_M Reply_param_address_M 3665-3665;
+SG_MUL_VAL_ 2565864979 P3664_M Reply_param_address_M 3664-3664;
+SG_MUL_VAL_ 2565864979 P3662_M Reply_param_address_M 3662-3662;
+SG_MUL_VAL_ 2565864979 P3660_M Reply_param_address_M 3660-3660;
+SG_MUL_VAL_ 2565864979 P3658_M Reply_param_address_M 3658-3658;
+SG_MUL_VAL_ 2565864979 P3657_M Reply_param_address_M 3657-3657;
+SG_MUL_VAL_ 2565864979 P3656_M Reply_param_address_M 3656-3656;
+SG_MUL_VAL_ 2565864979 P3654_M Reply_param_address_M 3654-3654;
+SG_MUL_VAL_ 2565864979 P3652_M Reply_param_address_M 3652-3652;
+SG_MUL_VAL_ 2565864979 P3650_M Reply_param_address_M 3650-3650;
+SG_MUL_VAL_ 2565864979 P3649_M Reply_param_address_M 3649-3649;
+SG_MUL_VAL_ 2565864979 P3648_M Reply_param_address_M 3648-3648;
+SG_MUL_VAL_ 2565864979 P3647_M Reply_param_address_M 3647-3647;
+SG_MUL_VAL_ 2565864979 P3646_M Reply_param_address_M 3646-3646;
+SG_MUL_VAL_ 2565864979 P3644_M Reply_param_address_M 3644-3644;
+SG_MUL_VAL_ 2565864979 P3584_M Reply_param_address_M 3584-3584;
+SG_MUL_VAL_ 2565864979 P3583_M Reply_param_address_M 3583-3583;
+SG_MUL_VAL_ 2565864979 P3582_M Reply_param_address_M 3582-3582;
+SG_MUL_VAL_ 2565864979 P3580_M Reply_param_address_M 3580-3580;
+SG_MUL_VAL_ 2565864979 P3578_M Reply_param_address_M 3578-3578;
+SG_MUL_VAL_ 2565864979 P3576_M Reply_param_address_M 3576-3576;
+SG_MUL_VAL_ 2565864979 P3574_M Reply_param_address_M 3574-3574;
+SG_MUL_VAL_ 2565864979 P3573_M Reply_param_address_M 3573-3573;
+SG_MUL_VAL_ 2565864979 P3572_M Reply_param_address_M 3572-3572;
+SG_MUL_VAL_ 2565864979 P3571_M Reply_param_address_M 3571-3571;
+SG_MUL_VAL_ 2565864979 P3570_M Reply_param_address_M 3570-3570;
+SG_MUL_VAL_ 2565864979 P3569_M Reply_param_address_M 3569-3569;
+SG_MUL_VAL_ 2565864979 P3568_M Reply_param_address_M 3568-3568;
+SG_MUL_VAL_ 2565864979 P3566_M Reply_param_address_M 3566-3566;
+SG_MUL_VAL_ 2565864979 P3564_M Reply_param_address_M 3564-3564;
+SG_MUL_VAL_ 2565864979 P3562_M Reply_param_address_M 3562-3562;
+SG_MUL_VAL_ 2565864979 P3561_M Reply_param_address_M 3561-3561;
+SG_MUL_VAL_ 2565864979 P3560_M Reply_param_address_M 3560-3560;
+SG_MUL_VAL_ 2565864979 P3558_M Reply_param_address_M 3558-3558;
+SG_MUL_VAL_ 2565864979 P3556_M Reply_param_address_M 3556-3556;
+SG_MUL_VAL_ 2565864979 P3554_M Reply_param_address_M 3554-3554;
+SG_MUL_VAL_ 2565864979 P3553_M Reply_param_address_M 3553-3553;
+SG_MUL_VAL_ 2565864979 P3552_M Reply_param_address_M 3552-3552;
+SG_MUL_VAL_ 2565864979 P3550_M Reply_param_address_M 3550-3550;
+SG_MUL_VAL_ 2565864979 P3548_M Reply_param_address_M 3548-3548;
+SG_MUL_VAL_ 2565864979 P3546_M Reply_param_address_M 3546-3546;
+SG_MUL_VAL_ 2565864979 P3545_M Reply_param_address_M 3545-3545;
+SG_MUL_VAL_ 2565864979 P3544_M Reply_param_address_M 3544-3544;
+SG_MUL_VAL_ 2565864979 P3542_M Reply_param_address_M 3542-3542;
+SG_MUL_VAL_ 2565864979 P3540_M Reply_param_address_M 3540-3540;
+SG_MUL_VAL_ 2565864979 P3538_M Reply_param_address_M 3538-3538;
+SG_MUL_VAL_ 2565864979 P3537_M Reply_param_address_M 3537-3537;
+SG_MUL_VAL_ 2565864979 P3536_M Reply_param_address_M 3536-3536;
+SG_MUL_VAL_ 2565864979 P3534_M Reply_param_address_M 3534-3534;
+SG_MUL_VAL_ 2565864979 P3532_M Reply_param_address_M 3532-3532;
+SG_MUL_VAL_ 2565864979 P3530_M Reply_param_address_M 3530-3530;
+SG_MUL_VAL_ 2565864979 P3529_M Reply_param_address_M 3529-3529;
+SG_MUL_VAL_ 2565864979 P3528_M Reply_param_address_M 3528-3528;
+SG_MUL_VAL_ 2565864979 P3526_M Reply_param_address_M 3526-3526;
+SG_MUL_VAL_ 2565864979 P3524_M Reply_param_address_M 3524-3524;
+SG_MUL_VAL_ 2565864979 P3522_M Reply_param_address_M 3522-3522;
+SG_MUL_VAL_ 2565864979 P3521_M Reply_param_address_M 3521-3521;
+SG_MUL_VAL_ 2565864979 P3519_M Reply_param_address_M 3519-3519;
+SG_MUL_VAL_ 2565864979 P3484_M Reply_param_address_M 3484-3484;
+SG_MUL_VAL_ 2565864979 P3483_M Reply_param_address_M 3483-3483;
+SG_MUL_VAL_ 2565864979 P3482_M Reply_param_address_M 3482-3482;
+SG_MUL_VAL_ 2565864979 P3481_M Reply_param_address_M 3481-3481;
+SG_MUL_VAL_ 2565864979 P3480_M Reply_param_address_M 3480-3480;
+SG_MUL_VAL_ 2565864979 P3479_M Reply_param_address_M 3479-3479;
+SG_MUL_VAL_ 2565864979 P3478_M Reply_param_address_M 3478-3478;
+SG_MUL_VAL_ 2565864979 P3477_M Reply_param_address_M 3477-3477;
+SG_MUL_VAL_ 2565864979 P3476_M Reply_param_address_M 3476-3476;
+SG_MUL_VAL_ 2565864979 P3475_M Reply_param_address_M 3475-3475;
+SG_MUL_VAL_ 2565864979 P3474_M Reply_param_address_M 3474-3474;
+SG_MUL_VAL_ 2565864979 P3473_M Reply_param_address_M 3473-3473;
+SG_MUL_VAL_ 2565864979 P3469_M Reply_param_address_M 3469-3469;
+SG_MUL_VAL_ 2565864979 P3467_M Reply_param_address_M 3467-3467;
+SG_MUL_VAL_ 2565864979 P3465_M Reply_param_address_M 3465-3465;
+SG_MUL_VAL_ 2565864979 P3463_M Reply_param_address_M 3463-3463;
+SG_MUL_VAL_ 2565864979 P3461_M Reply_param_address_M 3461-3461;
+SG_MUL_VAL_ 2565864979 P3459_M Reply_param_address_M 3459-3459;
+SG_MUL_VAL_ 2565864979 P3457_M Reply_param_address_M 3457-3457;
+SG_MUL_VAL_ 2565864979 P3455_M Reply_param_address_M 3455-3455;
+SG_MUL_VAL_ 2565864979 P3453_M Reply_param_address_M 3453-3453;
+SG_MUL_VAL_ 2565864979 P3451_M Reply_param_address_M 3451-3451;
+SG_MUL_VAL_ 2565864979 P3449_M Reply_param_address_M 3449-3449;
+SG_MUL_VAL_ 2565864979 P3428_M Reply_param_address_M 3428-3428;
+SG_MUL_VAL_ 2565864979 P3426_M Reply_param_address_M 3426-3426;
+SG_MUL_VAL_ 2565864979 P3424_M Reply_param_address_M 3424-3424;
+SG_MUL_VAL_ 2565864979 P3422_M Reply_param_address_M 3422-3422;
+SG_MUL_VAL_ 2565864979 P3421_M Reply_param_address_M 3421-3421;
+SG_MUL_VAL_ 2565864979 P3419_M Reply_param_address_M 3419-3419;
+SG_MUL_VAL_ 2565864979 P3383_M Reply_param_address_M 3383-3383;
+SG_MUL_VAL_ 2565864979 P3381_M Reply_param_address_M 3381-3381;
+SG_MUL_VAL_ 2565864979 P3379_M Reply_param_address_M 3379-3379;
+SG_MUL_VAL_ 2565864979 P3378_M Reply_param_address_M 3378-3378;
+SG_MUL_VAL_ 2565864979 P3377_M Reply_param_address_M 3377-3377;
+SG_MUL_VAL_ 2565864979 P3375_M Reply_param_address_M 3375-3375;
+SG_MUL_VAL_ 2565864979 P3374_M Reply_param_address_M 3374-3374;
+SG_MUL_VAL_ 2565864979 P3372_M Reply_param_address_M 3372-3372;
+SG_MUL_VAL_ 2565864979 P3371_M Reply_param_address_M 3371-3371;
+SG_MUL_VAL_ 2565864979 P3369_M Reply_param_address_M 3369-3369;
+SG_MUL_VAL_ 2565864979 P3368_M Reply_param_address_M 3368-3368;
+SG_MUL_VAL_ 2565864979 P3366_M Reply_param_address_M 3366-3366;
+SG_MUL_VAL_ 2565864979 P3365_M Reply_param_address_M 3365-3365;
+SG_MUL_VAL_ 2565864979 P3364_M Reply_param_address_M 3364-3364;
+SG_MUL_VAL_ 2565864979 P3363_M Reply_param_address_M 3363-3363;
+SG_MUL_VAL_ 2565864979 P3361_M Reply_param_address_M 3361-3361;
+SG_MUL_VAL_ 2565864979 P3360_M Reply_param_address_M 3360-3360;
+SG_MUL_VAL_ 2565864979 P3358_M Reply_param_address_M 3358-3358;
+SG_MUL_VAL_ 2565864979 P3357_M Reply_param_address_M 3357-3357;
+SG_MUL_VAL_ 2565864979 P3355_M Reply_param_address_M 3355-3355;
+SG_MUL_VAL_ 2565864979 P3354_M Reply_param_address_M 3354-3354;
+SG_MUL_VAL_ 2565864979 P3352_M Reply_param_address_M 3352-3352;
+SG_MUL_VAL_ 2565864979 P3351_M Reply_param_address_M 3351-3351;
+SG_MUL_VAL_ 2565864979 P3349_M Reply_param_address_M 3349-3349;
+SG_MUL_VAL_ 2565864979 P3323_M Reply_param_address_M 3323-3323;
+SG_MUL_VAL_ 2565864979 P3322_M Reply_param_address_M 3322-3322;
+SG_MUL_VAL_ 2565864979 P3321_M Reply_param_address_M 3321-3321;
+SG_MUL_VAL_ 2565864979 P3320_M Reply_param_address_M 3320-3320;
+SG_MUL_VAL_ 2565864979 P3319_M Reply_param_address_M 3319-3319;
+SG_MUL_VAL_ 2565864979 P3318_M Reply_param_address_M 3318-3318;
+SG_MUL_VAL_ 2565864979 P3317_M Reply_param_address_M 3317-3317;
+SG_MUL_VAL_ 2565864979 P3316_M Reply_param_address_M 3316-3316;
+SG_MUL_VAL_ 2565864979 P3315_M Reply_param_address_M 3315-3315;
+SG_MUL_VAL_ 2565864979 P3314_M Reply_param_address_M 3314-3314;
+SG_MUL_VAL_ 2565864979 P3313_M Reply_param_address_M 3313-3313;
+SG_MUL_VAL_ 2565864979 P3312_M Reply_param_address_M 3312-3312;
+SG_MUL_VAL_ 2565864979 P3311_M Reply_param_address_M 3311-3311;
+SG_MUL_VAL_ 2565864979 P3310_M Reply_param_address_M 3310-3310;
+SG_MUL_VAL_ 2565864979 P3309_M Reply_param_address_M 3309-3309;
+SG_MUL_VAL_ 2565864979 P3308_M Reply_param_address_M 3308-3308;
+SG_MUL_VAL_ 2565864979 P3307_M Reply_param_address_M 3307-3307;
+SG_MUL_VAL_ 2565864979 P3306_M Reply_param_address_M 3306-3306;
+SG_MUL_VAL_ 2565864979 P3305_M Reply_param_address_M 3305-3305;
+SG_MUL_VAL_ 2565864979 P3304_M Reply_param_address_M 3304-3304;
+SG_MUL_VAL_ 2565864979 P3303_M Reply_param_address_M 3303-3303;
+SG_MUL_VAL_ 2565864979 P3302_M Reply_param_address_M 3302-3302;
+SG_MUL_VAL_ 2565864979 P3301_M Reply_param_address_M 3301-3301;
+SG_MUL_VAL_ 2565864979 P3300_M Reply_param_address_M 3300-3300;
+SG_MUL_VAL_ 2565864979 P3299_M Reply_param_address_M 3299-3299;
+SG_MUL_VAL_ 2565864979 P3298_M Reply_param_address_M 3298-3298;
+SG_MUL_VAL_ 2565864979 P3297_M Reply_param_address_M 3297-3297;
+SG_MUL_VAL_ 2565864979 P3296_M Reply_param_address_M 3296-3296;
+SG_MUL_VAL_ 2565864979 P3295_M Reply_param_address_M 3295-3295;
+SG_MUL_VAL_ 2565864979 P3294_M Reply_param_address_M 3294-3294;
+SG_MUL_VAL_ 2565864979 P3293_M Reply_param_address_M 3293-3293;
+SG_MUL_VAL_ 2565864979 P3292_M Reply_param_address_M 3292-3292;
+SG_MUL_VAL_ 2565864979 P3291_M Reply_param_address_M 3291-3291;
+SG_MUL_VAL_ 2565864979 P3290_M Reply_param_address_M 3290-3290;
+SG_MUL_VAL_ 2565864979 P3289_M Reply_param_address_M 3289-3289;
+SG_MUL_VAL_ 2565864979 P3288_M Reply_param_address_M 3288-3288;
+SG_MUL_VAL_ 2565864979 P3287_M Reply_param_address_M 3287-3287;
+SG_MUL_VAL_ 2565864979 P3285_M Reply_param_address_M 3285-3285;
+SG_MUL_VAL_ 2565864979 P3253_M Reply_param_address_M 3253-3253;
+SG_MUL_VAL_ 2565864979 P3252_M Reply_param_address_M 3252-3252;
+SG_MUL_VAL_ 2565864979 P3251_M Reply_param_address_M 3251-3251;
+SG_MUL_VAL_ 2565864979 P3250_M Reply_param_address_M 3250-3250;
+SG_MUL_VAL_ 2565864979 P3249_M Reply_param_address_M 3249-3249;
+SG_MUL_VAL_ 2565864979 P3248_M Reply_param_address_M 3248-3248;
+SG_MUL_VAL_ 2565864979 P3247_M Reply_param_address_M 3247-3247;
+SG_MUL_VAL_ 2565864979 P3246_M Reply_param_address_M 3246-3246;
+SG_MUL_VAL_ 2565864979 P3245_M Reply_param_address_M 3245-3245;
+SG_MUL_VAL_ 2565864979 P3244_M Reply_param_address_M 3244-3244;
+SG_MUL_VAL_ 2565864979 P3243_M Reply_param_address_M 3243-3243;
+SG_MUL_VAL_ 2565864979 P3242_M Reply_param_address_M 3242-3242;
+SG_MUL_VAL_ 2565864979 P3241_M Reply_param_address_M 3241-3241;
+SG_MUL_VAL_ 2565864979 P3240_M Reply_param_address_M 3240-3240;
+SG_MUL_VAL_ 2565864979 P3239_M Reply_param_address_M 3239-3239;
+SG_MUL_VAL_ 2565864979 P3238_M Reply_param_address_M 3238-3238;
+SG_MUL_VAL_ 2565864979 P3237_M Reply_param_address_M 3237-3237;
+SG_MUL_VAL_ 2565864979 P3235_M Reply_param_address_M 3235-3235;
+SG_MUL_VAL_ 2565864979 P3219_M Reply_param_address_M 3219-3219;
+SG_MUL_VAL_ 2565864979 P3217_M Reply_param_address_M 3217-3217;
+SG_MUL_VAL_ 2565864979 P3215_M Reply_param_address_M 3215-3215;
+SG_MUL_VAL_ 2565864979 P3213_M Reply_param_address_M 3213-3213;
+SG_MUL_VAL_ 2565864979 P3211_M Reply_param_address_M 3211-3211;
+SG_MUL_VAL_ 2565864979 P3209_M Reply_param_address_M 3209-3209;
+SG_MUL_VAL_ 2565864979 P3207_M Reply_param_address_M 3207-3207;
+SG_MUL_VAL_ 2565864979 P3205_M Reply_param_address_M 3205-3205;
+SG_MUL_VAL_ 2565864979 P3203_M Reply_param_address_M 3203-3203;
+SG_MUL_VAL_ 2565864979 P3189_M Reply_param_address_M 3189-3189;
+SG_MUL_VAL_ 2565864979 P3187_M Reply_param_address_M 3187-3187;
+SG_MUL_VAL_ 2565864979 P3185_M Reply_param_address_M 3185-3185;
+SG_MUL_VAL_ 2565864979 P3183_M Reply_param_address_M 3183-3183;
+SG_MUL_VAL_ 2565864979 P3170_M Reply_param_address_M 3170-3170;
+SG_MUL_VAL_ 2565864979 P3168_M Reply_param_address_M 3168-3168;
+SG_MUL_VAL_ 2565864979 P3166_M Reply_param_address_M 3166-3166;
+SG_MUL_VAL_ 2565864979 P3164_M Reply_param_address_M 3164-3164;
+SG_MUL_VAL_ 2565864979 P3162_M Reply_param_address_M 3162-3162;
+SG_MUL_VAL_ 2565864979 P3160_M Reply_param_address_M 3160-3160;
+SG_MUL_VAL_ 2565864979 P3134_M Reply_param_address_M 3134-3134;
+SG_MUL_VAL_ 2565864979 P3133_M Reply_param_address_M 3133-3133;
+SG_MUL_VAL_ 2565864979 P3132_M Reply_param_address_M 3132-3132;
+SG_MUL_VAL_ 2565864979 P3130_M Reply_param_address_M 3130-3130;
+SG_MUL_VAL_ 2565864979 P3128_M Reply_param_address_M 3128-3128;
+SG_MUL_VAL_ 2565864979 P3126_M Reply_param_address_M 3126-3126;
+SG_MUL_VAL_ 2565864979 P3125_M Reply_param_address_M 3125-3125;
+SG_MUL_VAL_ 2565864979 P3124_M Reply_param_address_M 3124-3124;
+SG_MUL_VAL_ 2565864979 P3123_M Reply_param_address_M 3123-3123;
+SG_MUL_VAL_ 2565864979 P3122_M Reply_param_address_M 3122-3122;
+SG_MUL_VAL_ 2565864979 P3120_M Reply_param_address_M 3120-3120;
+SG_MUL_VAL_ 2565864979 P3097_M Reply_param_address_M 3097-3097;
+SG_MUL_VAL_ 2565864979 P3095_M Reply_param_address_M 3095-3095;
+SG_MUL_VAL_ 2565864979 P3093_M Reply_param_address_M 3093-3093;
+SG_MUL_VAL_ 2565864979 P3091_M Reply_param_address_M 3091-3091;
+SG_MUL_VAL_ 2565864979 P3090_M Reply_param_address_M 3090-3090;
+SG_MUL_VAL_ 2565864979 P3089_M Reply_param_address_M 3089-3089;
+SG_MUL_VAL_ 2565864979 P3088_M Reply_param_address_M 3088-3088;
+SG_MUL_VAL_ 2565864979 P3086_M Reply_param_address_M 3086-3086;
+SG_MUL_VAL_ 2565864979 P3084_M Reply_param_address_M 3084-3084;
+SG_MUL_VAL_ 2565864979 P3082_M Reply_param_address_M 3082-3082;
+SG_MUL_VAL_ 2565864979 P3081_M Reply_param_address_M 3081-3081;
+SG_MUL_VAL_ 2565864979 P3080_M Reply_param_address_M 3080-3080;
+SG_MUL_VAL_ 2565864979 P3078_M Reply_param_address_M 3078-3078;
+SG_MUL_VAL_ 2565864979 P3076_M Reply_param_address_M 3076-3076;
+SG_MUL_VAL_ 2565864979 P3074_M Reply_param_address_M 3074-3074;
+SG_MUL_VAL_ 2565864979 P3073_M Reply_param_address_M 3073-3073;
+SG_MUL_VAL_ 2565864979 P3072_M Reply_param_address_M 3072-3072;
+SG_MUL_VAL_ 2565864979 Reply_Calibration_progress_M SER_TOOL_REPLY_XID_M 145-145;
+SG_MUL_VAL_ 2565864979 Reply_WA_mov_status_L_M SER_TOOL_REPLY_XID_M 145-145;
+SG_MUL_VAL_ 2565864979 Reply_Sensor_voltage_M SER_TOOL_REPLY_XID_M 143-143;
+SG_MUL_VAL_ 2565864979 Reply_param_address_M SER_TOOL_REPLY_XID_M 135-135;
+SG_MUL_VAL_ 2565864979 Reply_param_data_length_M SER_TOOL_REPLY_XID_M 135-135;
+SG_MUL_VAL_ 2565864979 Reply_T_last_move_M SER_TOOL_REPLY_XID_M 145-145;
+SG_MUL_VAL_ 2565864979 Reply_Spl_set_last_M SER_TOOL_REPLY_XID_M 145-145;
+SG_MUL_VAL_ 2565864979 Reply_WA_mov_status_R_M SER_TOOL_REPLY_XID_M 145-145;
+SG_MUL_VAL_ 2565864979 Reply_Calib_err_code_M SER_TOOL_REPLY_XID_M 145-145;
+SG_MUL_VAL_ 2565864979 Reply_result_from_ECU_M SER_TOOL_REPLY_XID_M 143-143;
+SG_MUL_VAL_ 2565864979 Reply_Pos_captured_M SER_TOOL_REPLY_XID_M 143-143;
+SG_MUL_VAL_ 2565864979 Reply_Input_status_M SER_TOOL_REPLY_XID_M 143-143;
+SG_MUL_VAL_ 2565864979 Reply_Consistency_chk_M SER_TOOL_REPLY_XID_M 143-143;
+SG_MUL_VAL_ 2565864979 Reply_AD2_M SER_TOOL_REPLY_XID_M 143-143;
+SG_MUL_VAL_ 2565864979 Reply_AD1_M SER_TOOL_REPLY_XID_M 143-143;
+SG_MUL_VAL_ 2565864979 Reply_WAS_captured_M SER_TOOL_REPLY_XID_M 143-143;
+SG_MUL_VAL_ 2565864979 Reply_req_COV_PWM_M SER_TOOL_REPLY_XID_M 131-131;
+SG_MUL_VAL_ 2565864979 Reply_req_spool_pos_M SER_TOOL_REPLY_XID_M 131-131;
+SG_MUL_VAL_ 2565864979 Reply_Sensor5V_state_M SER_TOOL_REPLY_XID_M 131-131;
+SG_MUL_VAL_ 2565864979 Reply_CSS_state_M SER_TOOL_REPLY_XID_M 131-131;
