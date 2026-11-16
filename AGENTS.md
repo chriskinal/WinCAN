@@ -96,12 +96,18 @@ git tag v0.1.3
 git push origin v0.1.3
 ```
 
+- **tag-on-main**: gate that fails the run unless the tagged commit is reachable from `main`
+  (`git merge-base --is-ancestor $GITHUB_SHA origin/main`). Tags on unmerged branches or side
+  commits never reach the build; merge into `main` first, then move/re-push the tag.
 - **build-test** (windows-latest, .NET 10.0.404): restore (NuGet cache), Release build and
-  `dotnet test` (298 tests).
+  `dotnet test` (311 tests). Needs `tag-on-main`.
 - **publish**: self-contained `win-x64` (zip) and `linux-x64` (tar.gz) artifacts, one runner
   per RID. The tag (without the leading `v`) becomes the assembly/package version.
 - **release**: creates the GitHub Release for the pushed tag with the generated notes and both
   packages.
+
+`publish` and `release` require the gate **and** the previous job to succeed, so a tag that
+fails the gate produces no build, package or release.
 
 ## Progress so far
 
